@@ -1,10 +1,16 @@
+using Game.Scripts.Services.Input;
 using Reflex.Core;
+using Reflex.Enums;
 using UnityEngine;
+using Resolution = Reflex.Enums.Resolution;
 
-public class ProjectInstaller : MonoBehaviour, IInstaller
+namespace Game.Scripts.ReflexInjection
 {
-    public void InstallBindings(ContainerBuilder containerBuilder)
+    public class ProjectInstaller : MonoBehaviour, IInstaller
     {
-        containerBuilder.RegisterValue("Hello");
+        public void InstallBindings(ContainerBuilder containerBuilder)
+        {
+            containerBuilder.RegisterType(typeof(InputService), Lifetime.Singleton, Resolution.Lazy);
+        }
     }
 }
