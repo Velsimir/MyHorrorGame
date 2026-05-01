@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Game.Scripts.Services.Input
 {
-    public class InputService
+    public class InputService : IInputService
     {
         private readonly InputActions _inputActions;
 
@@ -30,5 +30,11 @@ namespace Game.Scripts.Services.Input
             
             return vector;
         }
+    }
+
+    public interface IInputService
+    {
+        ReactiveProperty<Vector2> Move { get; }
+        ReactiveProperty<Vector2> Look { get; }
     }
 }

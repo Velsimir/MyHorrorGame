@@ -13,7 +13,7 @@ namespace Game.Scripts
         {
             ContainerScope.OnSceneContainerBuilding += InstallExtra;
 
-            var loadHandle = Addressables.LoadSceneAsync("PlayRoom", LoadSceneMode.Single);
+            AsyncOperationHandle<SceneInstance> loadHandle = Addressables.LoadSceneAsync("PlayRoom", LoadSceneMode.Single);
 
             loadHandle.Completed += OnSceneLoaded;
         }

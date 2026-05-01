@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24feef98-cd39-40a4-ae90-22215568f129" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/InputReaderTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/InputReaderTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Input/InputService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/ReflexInjection/Installers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/CoroutineRunner.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/CoroutineRunnerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/CoroutineRunnerService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingScenesService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingScenesService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/IUpdatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/IUpdatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/IUpdateService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/IUpdateService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/UpdateService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/UpdateService.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyHorrorGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyHorrorGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/PlayRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/PlayRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Greeter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Greeter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GreeterInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GreeterInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/InputReaderTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/InputReaderTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Loader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/ReflexInjection/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/ReflexInjection/ProjectInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Services/Input/InputService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +44,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Greeter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/GreeterInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InputReaderTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Loader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ReflexInjection/PlayRoomSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ReflexInjection/ProjectInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingScenesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/UpdateService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.gustavopsantos.reflex@3a57628be427/Core/ContainerScope.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@57d0e36f6123/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -42,23 +61,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.8f1\Editor\Unity.exe" />
@@ -80,15 +99,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="26152">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26152" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -110,6 +127,7 @@
       <workItem from="1774730935576" duration="520000" />
       <workItem from="1775163584043" duration="29000" />
       <workItem from="1776112873581" duration="5645000" />
+      <workItem from="1776443221963" duration="10553000" />
     </task>
     <servers />
   </component>
