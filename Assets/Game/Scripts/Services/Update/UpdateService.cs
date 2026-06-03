@@ -16,7 +16,7 @@ namespace Game.Scripts.Services.Update
         public void Remove(IUpdatable updatable)
         {
             if (_updatables.Contains(updatable))
-                _updatables.Add(updatable);
+                _updatables.Remove(updatable);
         }
 
         private void FixedUpdate()
