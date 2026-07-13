@@ -41,24 +41,13 @@ namespace Game.Scripts.Services.SceneLoader
             int sceneCount = SceneManager.sceneCountInBuildSettings;
 
             for (int i = 0; i < sceneCount; i++)
-            {
                 _loadedScenes.Add(SceneManager.GetSceneByBuildIndex(i).name);
-                Debug.Log($"Loaded scene #{SceneManager.GetSceneByBuildIndex(i).name}: {_loadedScenes.Count}");
-            }
         }
-    }
-
-    public interface ISceneLoader
-    {
-        UniTask LoadSceneAddictiveAsync(ScenesName sceneName, Action<DiContainer> callback = null);
-        UniTask LoadSceneSingleAsync(ScenesName sceneName, Action<DiContainer> callback = null);
-        UniTask UnloadSceneAsync(ScenesName sceneName);
     }
 
     public enum ScenesName
     {
         Init,
-        Loading,
         Playroom
     }
 }

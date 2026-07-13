@@ -46,15 +46,83 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="5" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/ProjectInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/SceneLoader/SceneLoaderService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/UpdateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@36f51bae0ae2/Runtime/Internal/Log.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@36f51bae0ae2/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@57d0e36f6123/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@191c0d7e3b69/Runtime/VisualScripting.Core/Utilities/CoroutineRunner.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.7170539774747875" />
+      <entry key="MS500" value="3.601914680006499" />
+      <entry key="S2" value="4.574613121591674" />
+      <entry key="S5" value="4.833128655381726" />
+      <entry key="S10" value="5.2064936075331" />
+      <entry key="S30" value="8.098436287539917" />
+      <entry key="S60" value="10.888253804470956" />
+      <entry key="M2" value="13.287502485301072" />
+      <entry key="M5" value="15.977120109780227" />
+      <entry key="M10" value="19.290997442339737" />
+      <entry key="M15" value="22.970708442117736" />
+      <entry key="M30" value="38.670261636340385" />
+      <entry key="H1" value="73.44487067838557" />
+      <entry key="H2" value="117.29963541547173" />
+      <entry key="H4" value="153.74349952355087" />
+      <entry key="D1" value="195.91373000115723" />
+      <entry key="W1" value="204.5209905038228" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.9857778347071703E-171" />
+      <entry key="MS500" value="7.237459254639608E-35" />
+      <entry key="S2" value="2.9168349313064565E-9" />
+      <entry key="S5" value="3.918237539644918E-4" />
+      <entry key="S10" value="0.022180998669484586" />
+      <entry key="S30" value="0.4588025633614739" />
+      <entry key="S60" value="1.2816128351189204" />
+      <entry key="M2" value="2.41100318072016" />
+      <entry key="M5" value="3.7448245149295594" />
+      <entry key="M10" value="4.878427102889316" />
+      <entry key="M15" value="6.047851570835329" />
+      <entry key="M30" value="10.965874195629686" />
+      <entry key="H1" value="22.847061897939533" />
+      <entry key="H2" value="38.88172210651952" />
+      <entry key="H4" value="52.695437862639736" />
+      <entry key="D1" value="69.04391280953195" />
+      <entry key="W1" value="72.41890905426766" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.6070557788898423" />
+      <entry key="MS500" value="3.5503598295218937" />
+      <entry key="S2" value="4.557693007067485" />
+      <entry key="S5" value="4.826148332080293" />
+      <entry key="S10" value="5.221124111430999" />
+      <entry key="S30" value="8.535439515530163" />
+      <entry key="S60" value="12.144884642481065" />
+      <entry key="M2" value="15.677694551542526" />
+      <entry key="M5" value="19.709842762863868" />
+      <entry key="M10" value="24.161128450256797" />
+      <entry key="M15" value="29.010834337371485" />
+      <entry key="M30" value="49.626454598769165" />
+      <entry key="H1" value="96.27957204628298" />
+      <entry key="H2" value="156.17003597772793" />
+      <entry key="H4" value="206.4310519542861" />
+      <entry key="D1" value="264.9558885916184" />
+      <entry key="W1" value="276.9396359621112" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -68,6 +136,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -81,7 +150,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -106,15 +175,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="11100">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11100" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -137,7 +204,11 @@
       <workItem from="1775163584043" duration="29000" />
       <workItem from="1776112873581" duration="5645000" />
       <workItem from="1776443221963" duration="10553000" />
-      <workItem from="1780507008041" duration="8572000" />
+      <workItem from="1780507008041" duration="10318000" />
+      <workItem from="1783084812557" duration="58000" />
+      <workItem from="1783595532971" duration="3809000" />
+      <workItem from="1783858702921" duration="660000" />
+      <workItem from="1783962378257" duration="6509000" />
     </task>
     <servers />
   </component>
@@ -169,20 +240,11 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/Services/SceneLoader/SceneLoaderService.cs</url>
-          <line>40</line>
-          <properties documentPath="C:\Projects\HomeUnity\MyHorrorGame\Assets\Game\Scripts\Services\SceneLoader\SceneLoaderService.cs" containingFunctionPresentation="Method 'CacheBuildScenes'">
-            <startOffsets>
-              <option value="1322" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1378" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
