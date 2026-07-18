@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Game.Scripts.Services.Loading;
 using Game.Scripts.Services.Loading.Operations;
 using Game.Scripts.Services.SceneLoader;
@@ -28,7 +29,7 @@ namespace Game.Scripts.Services.Booststrap
                 new LoadingSceneOperation(_sceneLoader, ScenesName.Playroom) 
             };
 
-            _loadingService.BeginLoading(operations);
+            _loadingService.BeginLoadingAsync(operations).Forget();
         }
     }
 }

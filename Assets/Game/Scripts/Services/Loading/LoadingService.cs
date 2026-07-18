@@ -12,7 +12,7 @@ namespace Game.Scripts.Services.Loading
             _curtain = curtain;
         }
 
-        public async UniTask BeginLoading(ILoadingOperation[] operations)
+        public async UniTask BeginLoadingAsync(ILoadingOperation[] operations)
         {
             await _curtain.ShowAsync();
 

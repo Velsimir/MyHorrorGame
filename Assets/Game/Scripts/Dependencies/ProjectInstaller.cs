@@ -22,7 +22,7 @@ namespace Game.Scripts.Dependencies
             
             _curtain = Instantiate(_curtain);
             DontDestroyOnLoad(_curtain);
-            Container.BindInterfacesAndSelfTo<ICurtain>().FromInstance(_curtain).AsSingle();
+            Container.Bind<ICurtain>().FromInstance(_curtain).AsSingle();
             
             Container.BindInterfacesTo<InputService>().AsSingle().NonLazy();
             
