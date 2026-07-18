@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,12 +11,9 @@ namespace Game.Scripts.Services.SceneLoader
     {
         private readonly ZenjectSceneLoader _sceneLoader;
         
-        private HashSet<string> _loadedScenes;
-        
         public SceneLoaderService(ZenjectSceneLoader sceneLoader)
         {
             _sceneLoader = sceneLoader;
-            CacheBuildScenes();
         }
         
         public async UniTask LoadSceneAddictiveAsync(ScenesName sceneName, Action<DiContainer> callback = null)
@@ -33,15 +29,6 @@ namespace Game.Scripts.Services.SceneLoader
         public async UniTask UnloadSceneAsync(ScenesName sceneName)
         {
             await SceneManager.UnloadSceneAsync(sceneName.HumanName());
-        }
-
-        private void CacheBuildScenes()
-        {
-            _loadedScenes = new HashSet<string>();
-            int sceneCount = SceneManager.sceneCountInBuildSettings;
-
-            for (int i = 0; i < sceneCount; i++)
-                _loadedScenes.Add(SceneManager.GetSceneByBuildIndex(i).name);
         }
     }
 

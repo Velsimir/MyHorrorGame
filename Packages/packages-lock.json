@@ -21,6 +21,12 @@
       "dependencies": {},
       "hash": "ec31a279be809bc98f5d1ed9f2add1ce3ddc77fc"
     },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.addressables": {
       "version": "2.8.1",
       "depth": 0,
@@ -92,7 +98,7 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-      "version": "3.0.39",
+      "version": "3.0.40",
       "depth": 0,
       "source": "registry",
       "dependencies": {

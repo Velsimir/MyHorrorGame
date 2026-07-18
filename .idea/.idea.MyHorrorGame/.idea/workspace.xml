@@ -54,8 +54,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/ProjectInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Booststrap/GameBootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/ILoadingOperation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/Operations/LoadingSceneOperation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/SceneLoader/SceneLoaderService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Update/UpdateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@36f51bae0ae2/Runtime/Install/Contexts/SceneContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@36f51bae0ae2/Runtime/Internal/Log.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.svermeulen.extenject@36f51bae0ae2/Runtime/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@57d0e36f6123/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -67,61 +72,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.7170539774747875" />
-      <entry key="MS500" value="3.601914680006499" />
-      <entry key="S2" value="4.574613121591674" />
-      <entry key="S5" value="4.833128655381726" />
-      <entry key="S10" value="5.2064936075331" />
-      <entry key="S30" value="8.098436287539917" />
-      <entry key="S60" value="10.888253804470956" />
-      <entry key="M2" value="13.287502485301072" />
-      <entry key="M5" value="15.977120109780227" />
-      <entry key="M10" value="19.290997442339737" />
-      <entry key="M15" value="22.970708442117736" />
-      <entry key="M30" value="38.670261636340385" />
-      <entry key="H1" value="73.44487067838557" />
-      <entry key="H2" value="117.29963541547173" />
-      <entry key="H4" value="153.74349952355087" />
-      <entry key="D1" value="195.91373000115723" />
-      <entry key="W1" value="204.5209905038228" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="9.242583329838549E-128" />
+      <entry key="S5" value="1.5358489954486295E-51" />
+      <entry key="S10" value="3.96533694383964E-26" />
+      <entry key="S30" value="4.62743475872911E-9" />
+      <entry key="S60" value="1.1185865238038386E-4" />
+      <entry key="M2" value="0.02649144808733978" />
+      <entry key="M5" value="1.8256379570282086" />
+      <entry key="M10" value="11.671035329838691" />
+      <entry key="M15" value="24.08988629152767" />
+      <entry key="M30" value="58.43616027722552" />
+      <entry key="H1" value="116.46628772964088" />
+      <entry key="H2" value="203.74774831176728" />
+      <entry key="H4" value="303.5399246011958" />
+      <entry key="D1" value="463.32329443337636" />
+      <entry key="W1" value="502.9323397838237" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.9857778347071703E-171" />
-      <entry key="MS500" value="7.237459254639608E-35" />
-      <entry key="S2" value="2.9168349313064565E-9" />
-      <entry key="S5" value="3.918237539644918E-4" />
-      <entry key="S10" value="0.022180998669484586" />
-      <entry key="S30" value="0.4588025633614739" />
-      <entry key="S60" value="1.2816128351189204" />
-      <entry key="M2" value="2.41100318072016" />
-      <entry key="M5" value="3.7448245149295594" />
-      <entry key="M10" value="4.878427102889316" />
-      <entry key="M15" value="6.047851570835329" />
-      <entry key="M30" value="10.965874195629686" />
-      <entry key="H1" value="22.847061897939533" />
-      <entry key="H2" value="38.88172210651952" />
-      <entry key="H4" value="52.695437862639736" />
-      <entry key="D1" value="69.04391280953195" />
-      <entry key="W1" value="72.41890905426766" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.00000108298586" />
+      <entry key="S60" value="1.002091542290868" />
+      <entry key="M2" value="1.1116278551847572" />
+      <entry key="M5" value="2.920170511486506" />
+      <entry key="M10" value="8.28063906713665" />
+      <entry key="M15" value="13.612346324428792" />
+      <entry key="M30" value="25.053554079126712" />
+      <entry key="H1" value="39.33426124186946" />
+      <entry key="H2" value="60.5272275458514" />
+      <entry key="H4" value="87.61530332197815" />
+      <entry key="D1" value="135.3712144541331" />
+      <entry key="W1" value="147.7694581309124" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.6070557788898423" />
-      <entry key="MS500" value="3.5503598295218937" />
-      <entry key="S2" value="4.557693007067485" />
-      <entry key="S5" value="4.826148332080293" />
-      <entry key="S10" value="5.221124111430999" />
-      <entry key="S30" value="8.535439515530163" />
-      <entry key="S60" value="12.144884642481065" />
-      <entry key="M2" value="15.677694551542526" />
-      <entry key="M5" value="19.709842762863868" />
-      <entry key="M10" value="24.161128450256797" />
-      <entry key="M15" value="29.010834337371485" />
-      <entry key="M30" value="49.626454598769165" />
-      <entry key="H1" value="96.27957204628298" />
-      <entry key="H2" value="156.17003597772793" />
-      <entry key="H4" value="206.4310519542861" />
-      <entry key="D1" value="264.9558885916184" />
-      <entry key="W1" value="276.9396359621112" />
+      <entry key="MS100" value="0.04836140604819968" />
+      <entry key="MS500" value="0.5456319385274675" />
+      <entry key="S2" value="0.8594585689789126" />
+      <entry key="S5" value="0.9412174674674535" />
+      <entry key="S10" value="0.9701636292231602" />
+      <entry key="S30" value="0.989955028895028" />
+      <entry key="S60" value="0.9971462804052663" />
+      <entry key="M2" value="1.1347475276347683" />
+      <entry key="M5" value="4.734413595871565" />
+      <entry key="M10" value="19.92669460193425" />
+      <entry key="M15" value="37.67190724634695" />
+      <entry key="M30" value="83.45883733888387" />
+      <entry key="H1" value="155.77400579708618" />
+      <entry key="H2" value="264.25322345818415" />
+      <entry key="H4" value="391.13914389952726" />
+      <entry key="D1" value="598.6903558503712" />
+      <entry key="W1" value="650.7011510215834" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,28 +137,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.8f1\Editor\Unity.exe" />
@@ -175,13 +180,15 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="22532">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22532" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -209,6 +216,8 @@
       <workItem from="1783595532971" duration="3809000" />
       <workItem from="1783858702921" duration="660000" />
       <workItem from="1783962378257" duration="6509000" />
+      <workItem from="1784292553915" duration="5435000" />
+      <workItem from="1784364927386" duration="3762000" />
     </task>
     <servers />
   </component>

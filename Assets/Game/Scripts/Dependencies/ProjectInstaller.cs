@@ -1,5 +1,6 @@
 using Game.Scripts.Services.CoroutineRunner;
 using Game.Scripts.Services.Input;
+using Game.Scripts.Services.Loading;
 using Game.Scripts.Services.SceneLoader;
 using Game.Scripts.Views.CurtainLogic;
 using Game.Scripts.Services.Update;
@@ -21,7 +22,7 @@ namespace Game.Scripts.Dependencies
             
             _curtain = Instantiate(_curtain);
             DontDestroyOnLoad(_curtain);
-            Container.Bind<Curtain>().FromInstance(_curtain).AsSingle();
+            Container.BindInterfacesAndSelfTo<ICurtain>().FromInstance(_curtain).AsSingle();
             
             Container.BindInterfacesTo<InputService>().AsSingle().NonLazy();
             
@@ -32,6 +33,7 @@ namespace Game.Scripts.Dependencies
             Container.Bind<UpdateService>().FromInstance(updateService).AsSingle().NonLazy();
             
             Container.BindInterfacesTo<SceneLoaderService>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<LoadingService>().AsSingle().NonLazy();
         }
     }
 }
