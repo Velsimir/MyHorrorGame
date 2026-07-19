@@ -4,7 +4,7 @@ using Game.Scripts.Services.Loading.Operations;
 using Game.Scripts.Services.SceneLoader;
 using Zenject;
 
-namespace Game.Scripts.Services.Booststrap
+namespace Game.Scripts.Services.Booststraps
 {
     public class GameBootstrapper : IInitializable
     {

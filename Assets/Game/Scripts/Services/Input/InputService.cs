@@ -31,10 +31,4 @@ namespace Game.Scripts.Services.Input
             return vector;
         }
     }
-
-    public interface IInputService
-    {
-        ReactiveProperty<Vector2> Move { get; }
-        ReactiveProperty<Vector2> Look { get; }
-    }
 }

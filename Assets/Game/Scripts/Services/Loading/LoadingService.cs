@@ -14,12 +14,13 @@ namespace Game.Scripts.Services.Loading
 
         public async UniTask BeginLoadingAsync(ILoadingOperation[] operations)
         {
-            await _curtain.ShowAsync();
+            //TODO включить экран загрузки, когда будет нужен, для тестов отключил
+            //await _curtain.ShowAsync();
 
             foreach (ILoadingOperation operation in operations)
                 await operation.ExecuteAsync();
             
-            await _curtain.HideAsync();
+            //await _curtain.HideAsync();
         }
     }
 }

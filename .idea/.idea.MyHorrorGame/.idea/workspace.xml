@@ -47,15 +47,22 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="5" />
+    <option name="cachedIndexableFilesCount" value="7" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Configs/PlayerConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/ConfigsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/MonoInstallers/PlaySceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Dependencies/ProjectInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Booststrap/GameBootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Booststrap/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Components/LookDirection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Components/PlayerRefs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Components/VerticalMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/EcsStartup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/IEcsWorldProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Systems/PlayerHorizontalMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/ILoadingOperation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/Operations/LoadingSceneOperation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,60 +81,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.000000000000013" />
-      <entry key="S60" value="1.0000001153298257" />
-      <entry key="M2" value="1.000375548981499" />
-      <entry key="M5" value="1.0847328445655338" />
-      <entry key="M10" value="2.2907387101772643" />
-      <entry key="M15" value="5.891280025477894" />
-      <entry key="M30" value="26.349856177387842" />
-      <entry key="H1" value="77.43459181234111" />
-      <entry key="H2" value="166.43265494812076" />
-      <entry key="H4" value="275.61288818132925" />
-      <entry key="D1" value="460.3075016403736" />
-      <entry key="W1" value="507.523513393071" />
+      <entry key="MS500" value="1.000000000000001" />
+      <entry key="S2" value="1.0002692795827688" />
+      <entry key="S5" value="1.1070513896115262" />
+      <entry key="S10" value="1.9018490186387107" />
+      <entry key="S30" value="4.892584522331126" />
+      <entry key="S60" value="6.853331636142236" />
+      <entry key="M2" value="8.57067265133086" />
+      <entry key="M5" value="16.02461156257241" />
+      <entry key="M10" value="44.309830316507444" />
+      <entry key="M15" value="74.91904740962082" />
+      <entry key="M30" value="146.6507461376524" />
+      <entry key="H1" value="237.94866676796767" />
+      <entry key="H2" value="341.16305941533466" />
+      <entry key="H4" value="470.2496856835408" />
+      <entry key="D1" value="990.561475924503" />
+      <entry key="W1" value="1246.5942546131116" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="5.671492761779195E-211" />
-      <entry key="S5" value="1.0028228401876991E-84" />
-      <entry key="S10" value="1.3530488513906817E-42" />
-      <entry key="S30" value="1.7435577530766122E-14" />
-      <entry key="S60" value="1.983045206133797E-7" />
-      <entry key="M2" value="7.919899190008174E-4" />
-      <entry key="M5" value="0.16704612181071135" />
-      <entry key="M10" value="1.5566346949687395" />
-      <entry key="M15" value="4.1429379232756975" />
-      <entry key="M30" value="13.851300611153917" />
-      <entry key="H1" value="30.302436057443632" />
-      <entry key="H2" value="54.634171270655365" />
-      <entry key="H4" value="85.28341637027499" />
-      <entry key="D1" value="140.64412325764164" />
-      <entry key="W1" value="155.34218420958373" />
+      <entry key="MS500" value="2.9877376483290918E-96" />
+      <entry key="S2" value="1.955216938645851E-24" />
+      <entry key="S5" value="4.913889608291224E-10" />
+      <entry key="S10" value="3.1279529041193154E-5" />
+      <entry key="S30" value="0.0499908976587698" />
+      <entry key="S60" value="0.3163621966012797" />
+      <entry key="M2" value="0.8395309811371533" />
+      <entry key="M5" value="3.604698706703207" />
+      <entry key="M10" value="11.796784039659704" />
+      <entry key="M15" value="19.475337077810536" />
+      <entry key="M30" value="36.15838281269901" />
+      <entry key="H1" value="58.007927210509756" />
+      <entry key="H2" value="85.00110322451518" />
+      <entry key="H4" value="123.91628539129317" />
+      <entry key="D1" value="294.3073858605698" />
+      <entry key="W1" value="378.4593760490421" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.015227997042897E-21" />
-      <entry key="MS500" value="9.315546929690913E-5" />
-      <entry key="S2" value="0.09824310715034483" />
-      <entry key="S5" value="0.39529455830197197" />
-      <entry key="S10" value="0.6287245488303856" />
-      <entry key="S30" value="0.8566829811529324" />
-      <entry key="S60" value="0.9255720113502117" />
-      <entry key="M2" value="0.9632212842974915" />
-      <entry key="M5" value="1.2355317624273954" />
-      <entry key="M10" value="3.835351496468085" />
-      <entry key="M15" value="10.020785434415615" />
-      <entry key="M30" value="40.18290294493029" />
-      <entry key="H1" value="107.71659651972548" />
-      <entry key="H2" value="221.0474682246894" />
-      <entry key="H4" value="360.88085621290435" />
-      <entry key="D1" value="600.947351846348" />
-      <entry key="W1" value="662.8650236502508" />
+      <entry key="MS100" value="0.10806715391348314" />
+      <entry key="MS500" value="0.640823962080097" />
+      <entry key="S2" value="0.8949376616700175" />
+      <entry key="S5" value="1.0571240289363482" />
+      <entry key="S10" value="1.8539124245172154" />
+      <entry key="S30" value="4.895648973636126" />
+      <entry key="S60" value="7.1294327696116255" />
+      <entry key="M2" value="9.378441669666069" />
+      <entry key="M5" value="19.598494058246335" />
+      <entry key="M10" value="56.06365291502264" />
+      <entry key="M15" value="94.34729610420563" />
+      <entry key="M30" value="182.76351890794012" />
+      <entry key="H1" value="295.9175308057093" />
+      <entry key="H2" value="426.13366918512514" />
+      <entry key="H4" value="594.1427807724139" />
+      <entry key="D1" value="1284.859521570724" />
+      <entry key="W1" value="1625.0519182364988" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -181,15 +188,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="22532">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22532" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -218,7 +223,8 @@
       <workItem from="1783858702921" duration="660000" />
       <workItem from="1783962378257" duration="6509000" />
       <workItem from="1784292553915" duration="5435000" />
-      <workItem from="1784364927386" duration="6476000" />
+      <workItem from="1784364927386" duration="15148000" />
+      <workItem from="1784458004440" duration="13539000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,9 @@
+using Game.Scripts.Services.Booststraps;
 using Zenject;
 
-namespace Game.Scripts.Services.Booststrap
+namespace Game.Scripts.Dependencies.MonoInstallers
 {
-    public class GameInstaller : MonoInstaller
+    public class InitSceneInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {

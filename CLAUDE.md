@@ -60,7 +60,23 @@ Assets/Game/
 
 ## Текущее состояние (обновлять по мере развития)
 
-- Каркас в зачатке: есть ProjectInstaller, InputService, SceneLoaderService,
-  UpdateService, CoroutineRunnerService.
-- LeoEcs Lite установлен, но ещё не подключён (нет миров/систем).
+- Работает полный цикл загрузки: Init → GameBootstrapper (IInitializable) →
+  LoadingService (ILoadingOperation[]) → Curtain (интро-лого → цикл, UniTask) → PlayRoom.
+- Сервисы: InputService, SceneLoaderService, UpdateService, CoroutineRunnerService.
+- LeoEcs Lite подключён: EcsStartup (IInitializable/ITickable/IDisposable) + IEcsWorldProvider
+  (владеет единственным миром), сущности рождаются через PlayerAuthoring (MonoBehaviour в сцене,
+  мост в мир через компонент PlayerRefs). Мир живёт со сценой PlayRoom.
+- Движение от первого лица на ECS: конвейер PlayerInputSystem → CameraFirstPersonRotationSystem
+  → PlayerHorizontalMovementSystem. Инпут читается только Input-системой (пишет в компоненты
+  через ref), apply-системы читают компоненты. Настройки — в PlayerConfig (ScriptableObject).
 - Addressables настроены, загрузка контента через них не реализована.
+
+## Уроки/принципы, усвоенные в этом проекте (для наставничества)
+
+- Система ECS = одно преобразование (глагол), режем по оси «источник→приёмник + причина
+  меняться + порядок», НЕ по доменам (взгляд/движение). Чтение инпута — одна система;
+  применение взгляда и движения — разные (разный порядок, разная эволюция).
+- Компоненты — структуры (данные, которых много); системы и сервисы — классы (по одному).
+- Забыть `ref` в pool.Get / потерять возвращаемое значение (ClampMagnitude) — типовые
+  «тихие» баги, компилятор молчит.
+- FPS-камера: yaw на тело, pitch на камеру (локальный yaw камеры = 0), иначе двойной поворот.
