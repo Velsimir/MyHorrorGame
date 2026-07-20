@@ -17,6 +17,7 @@ namespace Game.Scripts.ECS.Providers
             int player = _ecsWorldProvider.World.NewEntity();
             _ecsWorldProvider.World.GetPool<PlayerTag>().Add(player);
             _ecsWorldProvider.World.GetPool<HorizontalMovement>().Add(player);
+            _ecsWorldProvider.World.GetPool<VerticalMovement>().Add(player);
             _ecsWorldProvider.World.GetPool<LookDirection>().Add(player);
             
             ref var playerRefs = ref _ecsWorldProvider.World.GetPool<PlayerRefs>().Add(player);

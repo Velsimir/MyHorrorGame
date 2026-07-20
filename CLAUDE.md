@@ -66,9 +66,12 @@ Assets/Game/
 - LeoEcs Lite подключён: EcsStartup (IInitializable/ITickable/IDisposable) + IEcsWorldProvider
   (владеет единственным миром), сущности рождаются через PlayerAuthoring (MonoBehaviour в сцене,
   мост в мир через компонент PlayerRefs). Мир живёт со сценой PlayRoom.
-- Движение от первого лица на ECS: конвейер PlayerInputSystem → CameraFirstPersonRotationSystem
-  → PlayerHorizontalMovementSystem. Инпут читается только Input-системой (пишет в компоненты
-  через ref), apply-системы читают компоненты. Настройки — в PlayerConfig (ScriptableObject).
+- Движение от первого лица на ECS работает: конвейер PlayerInputSystem →
+  CameraFirstPersonRotationSystem → GravitySystem → PlayerMovementSystem. Инпут читается только
+  Input-системой (пишет в компоненты через ref), apply-системы читают компоненты.
+  PlayerMovementSystem — единственная, кто зовёт CharacterController.Move (горизонталь +
+  вертикаль одним вектором), она же пишет IsGrounded после Move.
+  Настройки — в PlayerConfig (ScriptableObject).
 - Addressables настроены, загрузка контента через них не реализована.
 
 ## Уроки/принципы, усвоенные в этом проекте (для наставничества)
@@ -80,3 +83,8 @@ Assets/Game/
 - Забыть `ref` в pool.Get / потерять возвращаемое значение (ClampMagnitude) — типовые
   «тихие» баги, компилятор молчит.
 - FPS-камера: yaw на тело, pitch на камеру (локальный yaw камеры = 0), иначе двойной поворот.
+- Считающие системы идут ДО применяющей; применяющая одна и только она зовёт Move
+  (два Move за кадр = дрожь на склонах). Гравитация — считающая, движение — применяющая.
+- CharacterController не даёт гравитации сам; isGrounded достоверен только ПОСЛЕ Move.
+- Не обобщать заранее: общие компоненты-мосты (CharacterControllerRef и т.п.) вводить, когда
+  реально появится вторая сущность, а не «на будущее» — преждевременное обобщение путает.

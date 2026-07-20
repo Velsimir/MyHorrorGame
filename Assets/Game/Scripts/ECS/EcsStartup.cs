@@ -35,7 +35,8 @@ namespace Game.Scripts.ECS
             _systems
                 .Add(new PlayerInputSystem(_inputService))
                 .Add(new CameraFirstPersonRotationSystem(_playerConfig))
-                .Add(new PlayerHorizontalMovementSystem(_playerConfig))
+                .Add(new GravitySystem())
+                .Add(new PlayerMovementSystem(_playerConfig))
                 .Init();
         }
 
