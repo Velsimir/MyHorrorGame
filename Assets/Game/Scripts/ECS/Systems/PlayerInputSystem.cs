@@ -17,16 +17,16 @@ namespace Game.Scripts.ECS.Systems
         public void Run(IEcsSystems systems)
         {
             EcsWorld world = systems.GetWorld();
-            EcsFilter filter = world.Filter<PlayerTag>().Inc<HorizontalMovement>().Inc<LookDirection>().End();
+            EcsFilter filter = world.Filter<PlayerTag>().Inc<HorizontalMovement>().Inc<MouseInputDirection>().End();
             EcsPool<HorizontalMovement> horizontalPool = world.GetPool<HorizontalMovement>();
-            EcsPool<LookDirection> lookPool = world.GetPool<LookDirection>();
+            EcsPool<MouseInputDirection> lookPool = world.GetPool<MouseInputDirection>();
             
             foreach (int entity in filter)
             {
                 ref HorizontalMovement horizontalMovement = ref horizontalPool.Get(entity);
-                ref LookDirection lookDirection = ref lookPool.Get(entity);
+                ref MouseInputDirection mouseInputDirection = ref lookPool.Get(entity);
 
-                lookDirection.Direction = _inputService.Look.CurrentValue;
+                mouseInputDirection.Direction = _inputService.Look.CurrentValue;
                 horizontalMovement.Direction = _inputService.Move.CurrentValue;
             }
         }

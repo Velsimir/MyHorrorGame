@@ -8,7 +8,7 @@ namespace Game.Scripts.ECS.Providers
     {
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _playerTransform;
-        [SerializeField] private Transform _cameraTransform;
+        [SerializeField] private Transform _headTransform;
         
         [Inject] private IEcsWorldProvider _ecsWorldProvider;
         
@@ -18,12 +18,12 @@ namespace Game.Scripts.ECS.Providers
             _ecsWorldProvider.World.GetPool<PlayerTag>().Add(player);
             _ecsWorldProvider.World.GetPool<HorizontalMovement>().Add(player);
             _ecsWorldProvider.World.GetPool<VerticalMovement>().Add(player);
-            _ecsWorldProvider.World.GetPool<LookDirection>().Add(player);
+            _ecsWorldProvider.World.GetPool<MouseInputDirection>().Add(player);
+            _ecsWorldProvider.World.GetPool<LookRotation>().Add(player);
             
             ref var playerRefs = ref _ecsWorldProvider.World.GetPool<PlayerRefs>().Add(player);
             playerRefs.CharacterController = _characterController;
-            playerRefs.CameraTransform = _cameraTransform;
-            playerRefs.PlayerTransform = _playerTransform;
+            playerRefs.HeadTransform = _headTransform;
         }
     }
 }

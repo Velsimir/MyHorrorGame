@@ -8,9 +8,6 @@ namespace Game.Scripts.ECS.Systems
     public class CameraFirstPersonRotationSystem : IEcsRunSystem
     {
         private readonly PlayerConfig _playerConfig;
-
-        private float _yaw;
-        private float _pitch;
         
         public CameraFirstPersonRotationSystem(PlayerConfig playerConfig)
         {
@@ -20,30 +17,32 @@ namespace Game.Scripts.ECS.Systems
         public void Run(IEcsSystems systems)
         {
             var world = systems.GetWorld();
-            var filer = world.Filter<PlayerTag>().Inc<LookDirection>().End();
-            var poolLookRotation = world.GetPool<LookDirection>();
+            var filer = world.Filter<PlayerTag>().Inc<MouseInputDirection>().Inc<LookRotation>().End();
+            var poolLookDirection = world.GetPool<MouseInputDirection>();
             var poolPlayerRef = world.GetPool<PlayerRefs>();
+            var poolLookRotation = world.GetPool<LookRotation>();
 
             foreach (int entity in filer)
             {
-                ref var lookDirection = ref poolLookRotation.Get(entity);
+                ref var lookDirection = ref poolLookDirection.Get(entity);
                 ref var playerRef = ref poolPlayerRef.Get(entity);
+                ref var lLookRotation = ref poolLookRotation.Get(entity);
                 
-                Rotate(ref lookDirection, ref playerRef);
+                Rotate(ref lookDirection, ref playerRef, ref lLookRotation);
             }
         }
         
-        private void Rotate(ref LookDirection lookDirection,  ref PlayerRefs playerRef)
+        private void Rotate(ref MouseInputDirection mouseInputDirection, ref PlayerRefs playerRef, ref LookRotation lLookRotation)
         {
-            float mouseX = lookDirection.Direction.x * _playerConfig.MouseSensitivityX;
-            float mouseY = lookDirection.Direction.y * _playerConfig.MouseSensitivityY;
+            float mouseX = mouseInputDirection.Direction.x * _playerConfig.MouseSensitivityX;
+            float mouseY = mouseInputDirection.Direction.y * _playerConfig.MouseSensitivityY;
                 
-            _pitch -= mouseY;
-            _pitch = Mathf.Clamp(_pitch, _playerConfig.MinRotationX, _playerConfig.MaxRotationX);
-            _yaw += mouseX;
+            lLookRotation.Pitch -= mouseY;
+            lLookRotation.Pitch = Mathf.Clamp(lLookRotation.Pitch, _playerConfig.MinRotationX, _playerConfig.MaxRotationX);
+            lLookRotation.Yaw += mouseX;
             
-            playerRef.CameraTransform.localEulerAngles = new Vector3(_pitch, 0f, 0f);
-            playerRef.CharacterController.transform.localEulerAngles = new Vector3(0f, _yaw, 0f);
+            playerRef.HeadTransform.localEulerAngles = new Vector3(lLookRotation.Pitch, 0f, 0f);
+            playerRef.CharacterController.transform.localEulerAngles = new Vector3(0f, lLookRotation.Yaw, 0f);
         }
     }
 }

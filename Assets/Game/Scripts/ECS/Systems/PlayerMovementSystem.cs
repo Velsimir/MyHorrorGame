@@ -35,7 +35,7 @@ namespace Game.Scripts.ECS.Systems
         private void Move(ref HorizontalMovement horizontalMovement, ref VerticalMovement verticalMovement,ref PlayerRefs playerRef)
         {
             Vector3 move = new Vector3(horizontalMovement.Direction.x, 0, horizontalMovement.Direction.y);
-            move = Quaternion.Euler(0, playerRef.PlayerTransform.eulerAngles.y, 0) * move;
+            move = Quaternion.Euler(0, playerRef.HeadTransform.eulerAngles.y, 0) * move;
             move = Vector3.ClampMagnitude(move, 1f);
             move *= _playerConfig.Speed;
             move.y += verticalMovement.Velocity;

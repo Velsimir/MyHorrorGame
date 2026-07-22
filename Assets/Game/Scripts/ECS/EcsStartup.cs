@@ -37,6 +37,13 @@ namespace Game.Scripts.ECS
                 .Add(new CameraFirstPersonRotationSystem(_playerConfig))
                 .Add(new GravitySystem())
                 .Add(new PlayerMovementSystem(_playerConfig))
+#if UNITY_EDITOR
+                // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:
+                // .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ("events"))
+                .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
+                // Регистрируем отладочные системы по контролю за текущей группой систем. 
+                .Add (new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem ())
+#endif
                 .Init();
         }
 
