@@ -1564,6 +1564,8 @@ GameObject:
   - component: {fileID: 1991676003}
   - component: {fileID: 1991676006}
   - component: {fileID: 1991676005}
+  - component: {fileID: 1991676007}
+  - component: {fileID: 1991676008}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -1655,6 +1657,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineHardLockToTarget
   Damping: 0
+--- !u!114 &1991676007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991676002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBasicMultiChannelPerlin
+  NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 0
+  FrequencyGain: 0
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &1991676008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991676002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397cf57685584fa29c5059c33c0d8d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.ECS.Providers.CameraAuthoring
+  _cinemachineCamera: {fileID: 1991676003}
+  _cinemachineCameraPerlin: {fileID: 1991676007}
 --- !u!1001 &4399747235051503811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1663,10 +1696,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 762319030685635039, guid: 184586bd053d333409a19b9857861f5a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1182769315730835795, guid: 184586bd053d333409a19b9857861f5a, type: 3}
       propertyPath: m_Name
       value: Player

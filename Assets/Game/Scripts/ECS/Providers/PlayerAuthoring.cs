@@ -7,7 +7,6 @@ namespace Game.Scripts.ECS.Providers
     public class PlayerAuthoring : MonoBehaviour
     {
         [SerializeField] private CharacterController _characterController;
-        [SerializeField] private Transform _playerTransform;
         [SerializeField] private Transform _headTransform;
         
         [Inject] private IEcsWorldProvider _ecsWorldProvider;
@@ -20,6 +19,7 @@ namespace Game.Scripts.ECS.Providers
             _ecsWorldProvider.World.GetPool<VerticalMovement>().Add(player);
             _ecsWorldProvider.World.GetPool<MouseInputDirection>().Add(player);
             _ecsWorldProvider.World.GetPool<LookRotation>().Add(player);
+            _ecsWorldProvider.World.GetPool<FearFactor>().Add(player);
             
             ref var playerRefs = ref _ecsWorldProvider.World.GetPool<PlayerRefs>().Add(player);
             playerRefs.CharacterController = _characterController;

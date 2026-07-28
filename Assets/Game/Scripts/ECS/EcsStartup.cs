@@ -1,6 +1,5 @@
 using System;
 using Game.Scripts.Configs;
-using Game.Scripts.ECS.Components;
 using Game.Scripts.ECS.Systems;
 using Game.Scripts.Services.Input;
 using Leopotam.EcsLite;
@@ -31,20 +30,19 @@ namespace Game.Scripts.ECS
         private void CreateSystems()
         {
             _systems = new EcsSystems(_ecsWorldProvider.World);
-
+            
             _systems
-                .Add(new PlayerInputSystem(_inputService))
-                .Add(new CameraFirstPersonRotationSystem(_playerConfig))
-                .Add(new GravitySystem())
+                .Add(new FirstPersonLookRotationSystem(_playerConfig))
                 .Add(new PlayerMovementSystem(_playerConfig))
+                .Add(new CameraShakeSystem())
+                .Add(new PlayerInputSystem(_inputService))
+                .Add(new GravitySystem())
+                .Add(new DebugFearSystem())
 #if UNITY_EDITOR
-                // Регистрируем отладочные системы по контролю за состоянием каждого отдельного мира:
-                // .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ("events"))
-                .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
-                // Регистрируем отладочные системы по контролю за текущей группой систем. 
-                .Add (new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem ())
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
 #endif
-                .Init();
+            .Init();
         }
 
         public void Tick()

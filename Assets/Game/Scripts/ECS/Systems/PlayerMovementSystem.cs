@@ -17,25 +17,27 @@ namespace Game.Scripts.ECS.Systems
         public void Run(IEcsSystems systems)
         {
             EcsWorld world = systems.GetWorld();
-            var filter = world.Filter<PlayerTag>().Inc<HorizontalMovement>().Inc<VerticalMovement>().End();
+            var filter = world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<HorizontalMovement>().Inc<VerticalMovement>().Inc<LookRotation>().End();
             var poolHorizontalMovement = world.GetPool<HorizontalMovement>();
             var poolPlayerRef = world.GetPool<PlayerRefs>();
             var poolVerticalMovement = world.GetPool<VerticalMovement>();
+            var poolLookRotation = world.GetPool<LookRotation>();
 
             foreach (int entity in filter)
             {
                 ref var horizontalMovement = ref poolHorizontalMovement.Get(entity);
                 ref var playerRef = ref poolPlayerRef.Get(entity);
                 ref var verticalMovement = ref poolVerticalMovement.Get(entity);
+                ref var lookRotation = ref poolLookRotation.Get(entity);
                 
-                Move(ref horizontalMovement, ref verticalMovement,ref playerRef);
+                Move(ref horizontalMovement, ref verticalMovement,ref lookRotation, ref playerRef);
             }
         }
         
-        private void Move(ref HorizontalMovement horizontalMovement, ref VerticalMovement verticalMovement,ref PlayerRefs playerRef)
+        private void Move(ref HorizontalMovement horizontalMovement, ref VerticalMovement verticalMovement, ref LookRotation lookRotation, ref PlayerRefs playerRef)
         {
             Vector3 move = new Vector3(horizontalMovement.Direction.x, 0, horizontalMovement.Direction.y);
-            move = Quaternion.Euler(0, playerRef.HeadTransform.eulerAngles.y, 0) * move;
+            move = Quaternion.Euler(0, lookRotation.Yaw, 0) * move;
             move = Vector3.ClampMagnitude(move, 1f);
             move *= _playerConfig.Speed;
             move.y += verticalMovement.Velocity;
