@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Scripts.ECS.Components
+namespace Game.Scripts.ECS.Components.MonoBehaviourRefs
 {
     public struct PlayerRefs
     {

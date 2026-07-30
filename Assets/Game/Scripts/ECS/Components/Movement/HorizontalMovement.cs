@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace Game.Scripts.ECS.Components
+namespace Game.Scripts.ECS.Components.Movement
 {
     public struct HorizontalMovement
     {

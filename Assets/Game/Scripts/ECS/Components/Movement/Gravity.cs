@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Game.Scripts.ECS.Components
+namespace Game.Scripts.ECS.Components.Movement
 {
     public struct Gravity
     {

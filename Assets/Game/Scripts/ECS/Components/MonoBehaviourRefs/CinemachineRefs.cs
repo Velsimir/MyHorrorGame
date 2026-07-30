@@ -1,6 +1,6 @@
 using Unity.Cinemachine;
 
-namespace Game.Scripts.ECS.Components
+namespace Game.Scripts.ECS.Components.MonoBehaviourRefs
 {
     public struct CinemachineRefs
     {

@@ -7,5 +7,6 @@ namespace Game.Scripts.Services.Input
     {
         ReactiveProperty<Vector2> Move { get; }
         ReactiveProperty<Vector2> Look { get; }
+        ReactiveProperty<bool> Interact { get; }
     }
 }

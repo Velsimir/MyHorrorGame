@@ -1,4 +1,5 @@
 using Game.Scripts.ECS.Components;
+using Game.Scripts.ECS.Components.Movement;
 using Leopotam.EcsLite;
 using UnityEngine;
 

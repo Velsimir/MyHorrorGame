@@ -1,5 +1,9 @@
 using Game.Scripts.Configs;
 using Game.Scripts.ECS.Components;
+using Game.Scripts.ECS.Components.Input;
+using Game.Scripts.ECS.Components.MonoBehaviourRefs;
+using Game.Scripts.ECS.Components.Movement;
+using Game.Scripts.ECS.Components.Tags;
 using Leopotam.EcsLite;
 using UnityEngine;
 

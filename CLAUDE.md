@@ -27,6 +27,7 @@
 - Асинхронность: UniTask (NuGetForUnity → `Assets/Packages/`)
 - Реактивность: R3 (NuGetForUnity → `Assets/Packages/`)
 - Ввод:新 Input System (v1.18)
+- Камера: Cinemachine 3.1.7 (CinemachineCamera + CinemachineBrain, имена 3.x)
 - Addressables 2.8.1 (настроены, пока не используются в коде)
 - NuGetForUnity — менеджер .NET-пакетов; его пакеты лежат в `Assets/Packages/`, не редактировать руками
 
@@ -40,6 +41,11 @@ Assets/Game/
   Scripts/
     Dependencies/   инсталлеры Zenject (ProjectInstaller — глобальные сервисы)
     Services/       сервисный слой: папка на сервис, интерфейс + реализация
+    Configs/        ScriptableObject-конфиги (PlayerConfig)
+    ECS/
+      Components/   структуры-компоненты, разложены по темам (Movement, Interaction, Tags, ...)
+      Systems/      системы, одна на файл
+      Providers/    authoring-MonoBehaviour: рождают сущности из объектов сцены
   Resources/    ProjectContext.prefab (точка входа Zenject), префабы, арт, анимации
 ```
 
@@ -66,12 +72,27 @@ Assets/Game/
 - LeoEcs Lite подключён: EcsStartup (IInitializable/ITickable/IDisposable) + IEcsWorldProvider
   (владеет единственным миром), сущности рождаются через PlayerAuthoring (MonoBehaviour в сцене,
   мост в мир через компонент PlayerRefs). Мир живёт со сценой PlayRoom.
-- Движение от первого лица на ECS работает: конвейер PlayerInputSystem →
-  CameraFirstPersonRotationSystem → GravitySystem → PlayerMovementSystem. Инпут читается только
-  Input-системой (пишет в компоненты через ref), apply-системы читают компоненты.
-  PlayerMovementSystem — единственная, кто зовёт CharacterController.Move (горизонталь +
-  вертикаль одним вектором), она же пишет IsGrounded после Move.
-  Настройки — в PlayerConfig (ScriptableObject).
+- Движение от первого лица на ECS работает. Порядок систем (он же контракт):
+  PlayerInputSystem → FirstPersonLookRotationSystem → InteractionRaycastSystem → GravitySystem →
+  PlayerMovementSystem → CameraShakeSystem. Инпут читается только Input-системой (пишет в
+  компоненты через ref), apply-системы читают компоненты. PlayerMovementSystem — единственная,
+  кто зовёт CharacterController.Move (горизонталь + вертикаль одним вектором), она же пишет
+  IsGrounded после Move. Накопленный поворот живёт в компоненте LookRotation {Yaw, Pitch},
+  не в полях системы. Настройки — в PlayerConfig (ScriptableObject).
+- Камера через Cinemachine: ECS крутит HeadTransform внутри игрока (yaw на тело, pitch на голову),
+  CinemachineCamera (Hard Lock To Target + Rotate With Follow Target, Damping 0) следует за
+  головой, реальную Camera пишет только Brain. Камера и vcam лежат в корне сцены, НЕ внутри
+  игрока. Cinemachine-инпут (PanTilt/InputAxisController) намеренно не используется — состояние
+  взгляда обязано жить в ECS.
+- Страх как данные: компонент FearFactor {Value 0..1} на игроке, CameraShakeSystem читает его и
+  пишет в CinemachineBasicMultiChannelPerlin (AmplitudeGain / FrequencyGain). Профиль шума —
+  готовый NoiseSettings из пакета. Источников страха пока нет (Value всегда 0), отладочная
+  синусоида удалена. Планируемые представления: пост-эффекты, дыхание, UI — все читают одно число.
+- Взаимодействие, сделана первая половина: Interactor {Distance, Mask} на игроке,
+  InteractionRaycastSystem пускает луч из головы и двигает тег Focused между целями.
+  Мост «коллайдер → сущность» — InteractionObjectAuthoring хранит EcsPackedEntity.
+  Ещё не сделано: InteractionRequest на цель, диспетчер по кнопке, система-уборщик
+  однокадровых компонентов, системы по типам (DoorTag/ItemTag заведены, обработчиков нет).
 - Addressables настроены, загрузка контента через них не реализована.
 
 ## Уроки/принципы, усвоенные в этом проекте (для наставничества)
@@ -88,3 +109,30 @@ Assets/Game/
 - CharacterController не даёт гравитации сам; isGrounded достоверен только ПОСЛЕ Move.
 - Не обобщать заранее: общие компоненты-мосты (CharacterControllerRef и т.п.) вводить, когда
   реально появится вторая сущность, а не «на будущее» — преждевременное обобщение путает.
+- Состояние сущности живёт в компоненте, а не в приватном поле системы: поле не даёт второй
+  сущности собственного значения и не позволяет задать значение извне (катсцена, джампскейр).
+- Всё, что система делает pool.Get(), обязано быть в её фильтре. Иначе первая же сущность без
+  этого компонента даёт исключение, а фильтр перестаёт быть декларацией зависимостей системы.
+- Типовая ошибка перехода на ECS: фильтр из компонентов, лежащих на РАЗНЫХ сущностях —
+  совпадений не будет никогда. Если данные на разных сущностях, нужны два фильтра
+  («чтение синглтона»: filter.GetEntitiesCount() + GetRawEntities()[0]) либо перенос компонента.
+- Компонент-событие вешать на ту сущность, К КОТОРОЙ оно относится, а не на инициатора:
+  InteractionRequest живёт на цели → фильтры вида Inc<InteractionRequest>().Inc<DoorTag>()
+  работают напрямую, полиморфизм получается через композицию компонентов, без switch и наследования.
+- Однокадровые компоненты снимает одна система-уборщик в конце тика, а не потребители: иначе
+  второй потребитель падает на снятии, а необработанный запрос повисает навсегда.
+- Сущность, живущая дольше одного кадра или хранимая вне мира (в MonoBehaviour), — только
+  EcsPackedEntity через world.PackEntity(): индексы переиспользуются, Gen ловит протухание.
+  Собирать пакет руками (packed.Id = entity) нельзя — Gen новой сущности равен 1, не 0.
+- Authoring, создавший сущность, обязан удалить её в OnDestroy (Unpack сам прикроет
+  уже уничтоженный мир) — иначе сущности утекают при уничтожении объектов сцены.
+- Разделять «характер» и «интенсивность» эффекта: профиль шума (SO) задаёт характер и меняется
+  редко, gain'ы — непрерывный канал из кода. Подменять SO в рантайме под непрерывную величину
+  нельзя: нечего интерполировать, получится лестница из порогов.
+- Системы делить по стадиям конвейера (Input → Simulation → Presentation), а не по «читает/пишет»:
+  читают и пишут все. Ценность деления в том, что Simulation не знает про Unity и переезжает
+  в следующую игру серии как есть.
+- `#if UNITY_EDITOR` не должен разрывать одно выражение (цепочку .Add(...);) — в редакторе
+  соберётся, в плеерном билде синтаксическая ошибка.
+- Не читать Transform там, где те же данные есть в компонентах: Transform — выход конвейера,
+  не вход. Единственный законный обратный поток — isGrounded, его считает физика.

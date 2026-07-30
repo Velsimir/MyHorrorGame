@@ -10,6 +10,7 @@ namespace Game.Scripts.Services.Input
 
         public ReactiveProperty<Vector2> Move { get; private set; }
         public ReactiveProperty<Vector2> Look { get; private set; }
+        public ReactiveProperty<bool> Interact { get; private set; }
 
         public InputService()
         {
@@ -18,6 +19,7 @@ namespace Game.Scripts.Services.Input
 
             Move = BindMovementInput(_inputActions.Player.Move);
             Look = BindMovementInput(_inputActions.Player.Look);
+            Interact = BindInteractInput(_inputActions.Player.Interact);
         }
 
         private ReactiveProperty<Vector2> BindMovementInput(InputAction playerMove)
@@ -29,6 +31,16 @@ namespace Game.Scripts.Services.Input
             playerMove.canceled  += ctx => vector.Value = Vector2.zero;
             
             return vector;
+        }
+
+        private ReactiveProperty<bool> BindInteractInput(InputAction playerInteract)
+        {
+            ReactiveProperty<bool> interact = new ReactiveProperty<bool>(false);
+
+            playerInteract.performed += ctx => interact.Value = true;
+            playerInteract.canceled += ctx => interact.Value = false;
+            
+            return interact;
         }
     }
 }
