@@ -47,7 +47,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="9" />
+    <option name="cachedIndexableFilesCount" value="8" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Providers/CameraAuthoring.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Systems/CameraShakeSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Systems/GravitySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/ECS/Systems/InteractWithFocusSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/ILoadingOperation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/LoadingService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Services/Loading/Operations/LoadingSceneOperation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,61 +85,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.7922266283678061E-115" />
-      <entry key="MS500" value="1.2483318957738951E-23" />
-      <entry key="S2" value="3.2637938171507383E-6" />
-      <entry key="S5" value="0.011839397919241879" />
-      <entry key="S10" value="0.1879313399960866" />
-      <entry key="S30" value="1.6350444740296743" />
-      <entry key="S60" value="3.9991157775893336" />
-      <entry key="M2" value="7.153041322023243" />
-      <entry key="M5" value="13.298077734705949" />
-      <entry key="M10" value="27.289718133519557" />
-      <entry key="M15" value="45.815234905208285" />
-      <entry key="M30" value="112.5215942723738" />
-      <entry key="H1" value="246.90231556853328" />
-      <entry key="H2" value="496.59690414905407" />
-      <entry key="H4" value="877.1392533256459" />
-      <entry key="D1" value="1986.818142541474" />
-      <entry key="W1" value="2493.019717842034" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000306879872536" />
+      <entry key="S2" value="1.0797583907433301" />
+      <entry key="S5" value="1.6183010706848902" />
+      <entry key="S10" value="3.6462603622696235" />
+      <entry key="S30" value="13.985276067945092" />
+      <entry key="S60" value="22.63840411370326" />
+      <entry key="M2" value="29.70622351356596" />
+      <entry key="M5" value="37.4826315998785" />
+      <entry key="M10" value="48.61567700017645" />
+      <entry key="M15" value="63.456156274746625" />
+      <entry key="M30" value="122.48484485139707" />
+      <entry key="H1" value="252.05388871105316" />
+      <entry key="H2" value="500.4691978378718" />
+      <entry key="H4" value="884.7203770543038" />
+      <entry key="D1" value="2014.4106272508266" />
+      <entry key="W1" value="2530.790315398265" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.000000000003167" />
-      <entry key="MS500" value="1.005013382412355" />
-      <entry key="S2" value="1.2660925456133398" />
-      <entry key="S5" value="1.5888614033713981" />
-      <entry key="S10" value="1.76746564339724" />
-      <entry key="S30" value="1.9607629509918958" />
-      <entry key="S60" value="2.169791781772301" />
-      <entry key="M2" value="2.457231181679164" />
-      <entry key="M5" value="3.410807789505327" />
-      <entry key="M10" value="7.893237888615756" />
-      <entry key="M15" value="14.05904288967661" />
-      <entry key="M30" value="32.72420298034906" />
-      <entry key="H1" value="64.38325807697325" />
-      <entry key="H2" value="119.0953421287403" />
-      <entry key="H4" value="204.1513644850121" />
-      <entry key="D1" value="495.29032941725916" />
-      <entry key="W1" value="642.3358564876177" />
+      <entry key="MS100" value="1.9754605546508182E-53" />
+      <entry key="MS500" value="2.9494341239168034E-11" />
+      <entry key="S2" value="0.0036570387684219923" />
+      <entry key="S5" value="0.1961648370164078" />
+      <entry key="S10" value="0.8519989323310371" />
+      <entry key="S30" value="3.351447896399332" />
+      <entry key="S60" value="5.358856208734687" />
+      <entry key="M2" value="7.076844107955845" />
+      <entry key="M5" value="9.128899415095457" />
+      <entry key="M10" value="12.43164409540585" />
+      <entry key="M15" value="17.180616368436" />
+      <entry key="M30" value="33.96315697728684" />
+      <entry key="H1" value="65.26939401302441" />
+      <entry key="H2" value="120.41297642198822" />
+      <entry key="H4" value="206.5960795304748" />
+      <entry key="D1" value="502.1959210364894" />
+      <entry key="W1" value="651.76126948766" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0553432999363605E-4" />
-      <entry key="MS500" value="0.16038999136347604" />
-      <entry key="S2" value="0.7491286525863553" />
-      <entry key="S5" value="1.2655654821534128" />
-      <entry key="S10" value="1.7330720384549831" />
-      <entry key="S30" value="3.468994481256182" />
-      <entry key="S60" value="6.078185770023197" />
-      <entry key="M2" value="9.549818558484747" />
-      <entry key="M5" value="16.673201163306732" />
-      <entry key="M10" value="35.14444921592632" />
-      <entry key="M15" value="59.82986724533266" />
-      <entry key="M30" value="145.19504760809147" />
-      <entry key="H1" value="311.23625973795953" />
-      <entry key="H2" value="615.6475130631975" />
-      <entry key="H4" value="1081.2527011195339" />
-      <entry key="D1" value="2482.0931096713107" />
-      <entry key="W1" value="3135.352725045402" />
+      <entry key="MS100" value="0.07588718027469044" />
+      <entry key="MS500" value="0.5970816288323487" />
+      <entry key="S2" value="0.8986657093735816" />
+      <entry key="S5" value="1.5248437089053575" />
+      <entry key="S10" value="4.143703464975173" />
+      <entry key="S30" value="17.009843313970368" />
+      <entry key="S60" value="27.754853028451194" />
+      <entry key="M2" value="36.62842008408118" />
+      <entry key="M5" value="46.53255110939708" />
+      <entry key="M10" value="60.99268025732764" />
+      <entry key="M15" value="80.58581391130691" />
+      <entry key="M30" value="156.3968001554227" />
+      <entry key="H1" value="317.27395356627255" />
+      <entry key="H2" value="620.8372101351708" />
+      <entry key="H4" value="1091.278198393737" />
+      <entry key="D1" value="2516.590991352824" />
+      <entry key="W1" value="3182.548696636567" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -149,28 +150,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.8f1\Editor\Unity.exe" />
@@ -238,7 +239,8 @@
       <workItem from="1785252772411" duration="8933000" />
       <workItem from="1785274808409" duration="805000" />
       <workItem from="1785436284777" duration="1777000" />
-      <workItem from="1785440449129" duration="6284000" />
+      <workItem from="1785440449129" duration="6721000" />
+      <workItem from="1785496672011" duration="603000" />
     </task>
     <servers />
   </component>

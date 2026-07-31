@@ -17,3 +17,7 @@ MonoBehaviour:
   _mouseSensitivityY: 0.1
   _maxRotationX: 80
   _minRotationX: -80
+  _interactionDistance: 5
+  _interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64

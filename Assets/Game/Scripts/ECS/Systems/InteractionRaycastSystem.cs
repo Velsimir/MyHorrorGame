@@ -18,10 +18,10 @@ namespace Game.Scripts.ECS.Systems
             var poolInteractorRefs = world.GetPool<Interactor>();
             var poolFocused = world.GetPool<Focused>();
             
-            foreach (int e in filterFocused) poolFocused.Del(e);
-            
             foreach (var entity in filterPlayer)
             {
+                foreach (int e in filterFocused) poolFocused.Del(e);
+                
                 PlayerRefs playerRefs = poolPlayerRefs.Get(entity);
                 Interactor interactor = poolInteractorRefs.Get(entity);
                 
