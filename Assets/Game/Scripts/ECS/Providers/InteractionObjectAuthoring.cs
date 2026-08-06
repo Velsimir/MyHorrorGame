@@ -1,4 +1,3 @@
-using Game.Scripts.Configs;
 using Game.Scripts.ECS.Components.Interaction;
 using Leopotam.EcsLite;
 using UnityEngine;
@@ -8,11 +7,13 @@ namespace Game.Scripts.ECS.Providers
 {
     public class InteractionObjectAuthoring : MonoBehaviour
     {
+        [SerializeField] private OutlineRefs _outlineRefs;
+            
         [Inject] private IEcsWorldProvider _ecsWorldProvider;
         private EcsPackedEntity _entity;
         
         public EcsPackedEntity Entity => _entity;
-        
+
         private void Start()
         {
             int entity = _ecsWorldProvider.World.NewEntity();
@@ -20,6 +21,11 @@ namespace Game.Scripts.ECS.Providers
             _entity = _ecsWorldProvider.World.PackEntity(entity);
 
             _ecsWorldProvider.World.GetPool<Interactable>().Add(entity);
+            
+            ref var poolOutlineRefs = ref _ecsWorldProvider.World.GetPool<OutlineRefs>().Add(entity);
+            poolOutlineRefs.MeshRenderer = _outlineRefs.MeshRenderer;
+            poolOutlineRefs.WithOutline = _outlineRefs.WithOutline;
+            poolOutlineRefs.Default = _outlineRefs.Default;
         }
         
         private void OnDestroy()

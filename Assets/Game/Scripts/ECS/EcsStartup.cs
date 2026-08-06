@@ -34,10 +34,11 @@ namespace Game.Scripts.ECS
             _systems
                 .Add(new PlayerInputSystem(_inputService))
                 .Add(new FirstPersonLookRotationSystem(_playerConfig))
-                .Add(new InteractionRaycastSystem())
+                .Add(new InteractionRaycastSystem(_playerConfig))
                 .Add(new GravitySystem())
                 .Add(new PlayerMovementSystem(_playerConfig))
                 .Add(new CameraShakeSystem())
+                .Add(new OutlineViewSystem())
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())

@@ -9,8 +9,8 @@ namespace Game.Scripts.Configs
 
         [Space] 
         [Header("Mouse sensitivity")] 
-        [SerializeField] private float _mouseSensitivityX;
-        [SerializeField] private float _mouseSensitivityY;
+        [SerializeField] private float _mouseSensitivityX = 0.5f;
+        [SerializeField] private float _mouseSensitivityY = 0.1f;
 
 
         [Space] 
@@ -20,8 +20,9 @@ namespace Game.Scripts.Configs
         
         [Space] 
         [Header("Interaction")]
-        [SerializeField] private float _interactionDistance;
+        [SerializeField] private float _interactionDistance = 5f;
         [SerializeField] private LayerMask _interactionLayer;
+        [SerializeField] private float _sphereCastRadius = 0.2f;
 
         public float Speed => _speed;
         public float MaxRotationX => _maxRotationX;
@@ -30,5 +31,6 @@ namespace Game.Scripts.Configs
         public float MouseSensitivityY => _mouseSensitivityY;
         public float InteractionDistance => _interactionDistance;
         public LayerMask InteractionLayer => _interactionLayer;
+        public float SphereCastRadius =>  _sphereCastRadius;
     }
 }

@@ -1,3 +1,4 @@
+using Game.Scripts.Configs;
 using Game.Scripts.ECS.Components.Interaction;
 using Game.Scripts.ECS.Components.MonoBehaviourRefs;
 using Game.Scripts.ECS.Components.Tags;
@@ -9,6 +10,13 @@ namespace Game.Scripts.ECS.Systems
 {
     public class InteractionRaycastSystem : IEcsRunSystem
     {
+        private PlayerConfig _playerConfig;
+        
+        public InteractionRaycastSystem(PlayerConfig playerConfig)
+        {
+            _playerConfig = playerConfig;
+        }
+
         public void Run(IEcsSystems systems)
         {
             var world = systems.GetWorld();
@@ -25,12 +33,12 @@ namespace Game.Scripts.ECS.Systems
                 PlayerRefs playerRefs = poolPlayerRefs.Get(entity);
                 Interactor interactor = poolInteractorRefs.Get(entity);
                 
-                if (Physics.Raycast(playerRefs.HeadTransform.position,
+                if (Physics.SphereCast(playerRefs.HeadTransform.position,_playerConfig.SphereCastRadius,
                         playerRefs.HeadTransform.forward, out RaycastHit hit, 
                         interactor.Distance, interactor.Mask))
                 {
                     if (hit.collider.TryGetComponent(out InteractionObjectAuthoring authoring)
-                        && authoring.Entity.Unpack(world, out int targetEntity))
+                        && authoring.Entity.Unpack(world, out int targetEntity) && poolInteractorRefs.Has(targetEntity))
                     {
                         poolFocused.Add(targetEntity);
                     }
