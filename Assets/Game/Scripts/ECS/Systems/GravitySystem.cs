@@ -9,18 +9,15 @@ namespace Game.Scripts.ECS.Systems
         public void Run(IEcsSystems systems)
         {
             var world = systems.GetWorld();
-            var filterVerticalMovement = world.Filter<VerticalMovement>().End();
+            var filterVerticalMovement = world.Filter<VerticalMovement>().Inc<Gravity>().End();
             var poolVerticalMovement = world.GetPool<VerticalMovement>();
-            
-            var filterGravity = world.Filter<Gravity>().End();
             var poolGravity = world.GetPool<Gravity>();
-            
-            var gravity = poolGravity.Get(filterGravity.GetRawEntities()[0]);
             
             foreach (var entity in filterVerticalMovement)
             {
                 ref var verticalMovement = ref poolVerticalMovement.Get(entity);
-
+                ref var gravity = ref poolGravity.Get(entity);
+                
                 if (verticalMovement.IsGrounded)
                     verticalMovement.Velocity = gravity.GroundedVelocity;
                 else

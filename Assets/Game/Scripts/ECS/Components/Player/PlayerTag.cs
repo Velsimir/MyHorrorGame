@@ -1,4 +1,4 @@
-namespace Game.Scripts.ECS.Components.Tags
+namespace Game.Scripts.ECS.Components.Player
 {
     public struct PlayerTag
     {

@@ -1,6 +1,6 @@
 using Game.Scripts.ECS.Components.Input;
 using Game.Scripts.ECS.Components.Movement;
-using Game.Scripts.ECS.Components.Tags;
+using Game.Scripts.ECS.Components.Player;
 using Game.Scripts.Services.Input;
 using Leopotam.EcsLite;
 

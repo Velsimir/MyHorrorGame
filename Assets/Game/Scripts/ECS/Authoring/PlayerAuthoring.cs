@@ -4,7 +4,6 @@ using Game.Scripts.ECS.Components.Input;
 using Game.Scripts.ECS.Components.Interaction;
 using Game.Scripts.ECS.Components.Movement;
 using Game.Scripts.ECS.Components.Player;
-using Game.Scripts.ECS.Components.Tags;
 using UnityEngine;
 using Zenject;
 

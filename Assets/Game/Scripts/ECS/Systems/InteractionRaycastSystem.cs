@@ -2,7 +2,6 @@ using Game.Scripts.Configs;
 using Game.Scripts.ECS.Authoring;
 using Game.Scripts.ECS.Components.Interaction;
 using Game.Scripts.ECS.Components.Player;
-using Game.Scripts.ECS.Components.Tags;
 using Leopotam.EcsLite;
 using Unity.VisualScripting;
 using UnityEngine;

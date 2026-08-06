@@ -1,7 +1,6 @@
 using Game.Scripts.Configs;
 using Game.Scripts.ECS.Components.Movement;
 using Game.Scripts.ECS.Components.Player;
-using Game.Scripts.ECS.Components.Tags;
 using Leopotam.EcsLite;
 using UnityEngine;
 
