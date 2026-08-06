@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game.Scripts.ECS.Authoring
 {
-    [CreateAssetMenu(fileName = "GameConfig", menuName = "Configs/Gravity")]
+    [CreateAssetMenu(fileName = "GravityConfig", menuName = "Configs/Gravity")]
     public class GravityConfig : ScriptableObject
     {
         [SerializeField] private Vector3 _acceleration;

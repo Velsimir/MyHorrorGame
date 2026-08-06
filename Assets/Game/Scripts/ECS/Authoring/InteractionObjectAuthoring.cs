@@ -5,33 +5,39 @@ using Zenject;
 
 namespace Game.Scripts.ECS.Authoring
 {
-    public class InteractionObjectAuthoring : MonoBehaviour
+    public abstract class InteractionObjectAuthoring : MonoBehaviour
     {
         [SerializeField] private OutlineRefs _outlineRefs;
             
-        [Inject] private IEcsWorldProvider _ecsWorldProvider;
+        [Inject] private IEcsWorldProvider EcsWorldProvider;
         private EcsPackedEntity _entity;
         
         public EcsPackedEntity Entity => _entity;
 
         private void Start()
         {
-            int entity = _ecsWorldProvider.World.NewEntity();
+            int entity = EcsWorldProvider.World.NewEntity();
 
-            _entity = _ecsWorldProvider.World.PackEntity(entity);
+            _entity = EcsWorldProvider.World.PackEntity(entity);
 
-            _ecsWorldProvider.World.GetPool<Interactable>().Add(entity);
+            EcsWorldProvider.World.GetPool<Interactable>().Add(entity);
             
-            ref var poolOutlineRefs = ref _ecsWorldProvider.World.GetPool<OutlineRefs>().Add(entity);
+            ref var poolOutlineRefs = ref EcsWorldProvider.World.GetPool<OutlineRefs>().Add(entity);
             poolOutlineRefs.MeshRenderer = _outlineRefs.MeshRenderer;
             poolOutlineRefs.WithOutline = _outlineRefs.WithOutline;
             poolOutlineRefs.Default = _outlineRefs.Default;
+
+            AddSpecificTag(EcsWorldProvider.World, entity);
+            
+            gameObject.layer = 6;
         }
-        
+
+        protected abstract void AddSpecificTag(EcsWorld world, int entity);
+
         private void OnDestroy()
         {
-            if (_entity.Unpack(_ecsWorldProvider.World, out int entity))
-                _ecsWorldProvider.World.DelEntity(entity);
+            if (_entity.Unpack(EcsWorldProvider.World, out int entity))
+                EcsWorldProvider.World.DelEntity(entity);
         }
     }
 }

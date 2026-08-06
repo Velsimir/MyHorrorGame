@@ -1,6 +1,8 @@
 using System;
 using Game.Scripts.Configs;
 using Game.Scripts.ECS.Systems;
+using Game.Scripts.ECS.Systems.Doors;
+using Game.Scripts.ECS.Systems.Interaction;
 using Game.Scripts.Services.Input;
 using Leopotam.EcsLite;
 using Zenject;
@@ -47,7 +49,7 @@ namespace Game.Scripts.ECS
             AddPresentationSystems();
             AddDebugSystems();
             AddCleanupSystems();
-                
+            
             _systems.Init();
         }
         
@@ -62,7 +64,9 @@ namespace Game.Scripts.ECS
                 .Add(new FirstPersonLookRotationSystem(_gameConfigs.PlayerConfig))
                 .Add(new InteractionRaycastSystem())
                 .Add(new InteractionRequestSystem())
-                .Add(new GravitySystem());
+                .Add(new GravitySystem())
+                .Add(new DoorInteractionSystem());
+            
         }
 
         private void AddPresentationSystems()
@@ -70,7 +74,8 @@ namespace Game.Scripts.ECS
             _systems
                 .Add(new PlayerMovementSystem(_gameConfigs.PlayerConfig))
                 .Add(new CameraShakeSystem())
-                .Add(new OutlineViewSystem());
+                .Add(new OutlineViewSystem())
+                .Add(new DoorAnimationSystem());
         }
 
         private void AddDebugSystems()

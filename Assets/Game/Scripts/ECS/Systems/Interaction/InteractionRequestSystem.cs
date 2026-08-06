@@ -4,7 +4,7 @@ using Game.Scripts.ECS.Components.Player;
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace Game.Scripts.ECS.Systems
+namespace Game.Scripts.ECS.Systems.Interaction
 {
     public class InteractionRequestSystem : IEcsRunSystem
     {

@@ -1,7 +1,7 @@
 using Game.Scripts.ECS.Components.Interaction;
 using Leopotam.EcsLite;
 
-namespace Game.Scripts.ECS.Systems
+namespace Game.Scripts.ECS.Systems.Interaction
 {
     public class OutlineViewSystem : IEcsRunSystem
     {

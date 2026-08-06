@@ -1,12 +1,10 @@
-using Game.Scripts.Configs;
 using Game.Scripts.ECS.Authoring;
 using Game.Scripts.ECS.Components.Interaction;
 using Game.Scripts.ECS.Components.Player;
 using Leopotam.EcsLite;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Game.Scripts.ECS.Systems
+namespace Game.Scripts.ECS.Systems.Interaction
 {
     public class InteractionRaycastSystem : IEcsRunSystem
     {

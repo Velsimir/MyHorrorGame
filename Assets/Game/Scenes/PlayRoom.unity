@@ -1228,8 +1228,9 @@ GameObject:
   - component: {fileID: 1303869603}
   - component: {fileID: 1303869602}
   - component: {fileID: 1303869601}
+  - component: {fileID: 1303869605}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1282,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ceabe773f51d322409ceb26cbe70664a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1321,13 +1322,36 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303869600}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.43, y: 0.76, z: 1.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.45, y: 2, z: 0}
+  m_LocalScale: {x: 2.45, y: 4, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303869605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303869600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d59cfd7d27b416d8ef5b48b50f97bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.ECS.Authoring.DoorAuthoring
+  _outlineRefs:
+    MeshRenderer: {fileID: 1303869602}
+    WithOutline:
+    - {fileID: 2100000, guid: ceabe773f51d322409ceb26cbe70664a, type: 2}
+    - {fileID: 2100000, guid: d31802418da658a4c94bf8cf41898c36, type: 2}
+    Default:
+    - {fileID: 2100000, guid: ceabe773f51d322409ceb26cbe70664a, type: 2}
+  _pivot: {fileID: 1303869604}
+  _openingAngle: 90
+  _closingAngle: 0
+  _speed: 10
 --- !u!1 &1543287654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1590,6 @@ GameObject:
   - component: {fileID: 1737435406}
   - component: {fileID: 1737435405}
   - component: {fileID: 1737435404}
-  - component: {fileID: 1737435408}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -1667,25 +1690,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1737435408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737435403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf1c279c0e44acfa7c718acb50af8e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.ECS.Providers.InteractionObject
-  _outlineRefs:
-    MeshRenderer: {fileID: 1737435405}
-    WithOutline:
-    - {fileID: 2100000, guid: e6ec4afaad7d9c94a97af390433fc7b4, type: 2}
-    - {fileID: 2100000, guid: d31802418da658a4c94bf8cf41898c36, type: 2}
-    Default:
-    - {fileID: 2100000, guid: e6ec4afaad7d9c94a97af390433fc7b4, type: 2}
 --- !u!1 &1763537520
 GameObject:
   m_ObjectHideFlags: 0
