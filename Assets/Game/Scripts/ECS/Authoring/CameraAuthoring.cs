@@ -1,11 +1,9 @@
-using Game.Scripts.ECS.Components;
-using Game.Scripts.ECS.Components.MonoBehaviourRefs;
-using Game.Scripts.ECS.Components.Tags;
+using Game.Scripts.ECS.Components.Camera;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
 
-namespace Game.Scripts.ECS.Providers
+namespace Game.Scripts.ECS.Authoring
 {
     public class CameraAuthoring : MonoBehaviour
     {

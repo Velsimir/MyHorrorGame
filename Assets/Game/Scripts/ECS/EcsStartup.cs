@@ -11,41 +11,22 @@ namespace Game.Scripts.ECS
     {
         private readonly IInputService _inputService;
 
-        private IEcsWorldProvider _ecsWorldProvider;
-        private readonly PlayerConfig _playerConfig;
+        private readonly IEcsWorldProvider _ecsWorldProvider;
+        private readonly GameConfigs _gameConfigs;
         private EcsSystems _systems;
 
-        public EcsStartup(IInputService inputService, IEcsWorldProvider ecsWorldProvider, PlayerConfig playerConfig)
+        public EcsStartup(IInputService inputService, IEcsWorldProvider ecsWorldProvider, GameConfigs gameConfigs)
         {
             _inputService = inputService;
             _ecsWorldProvider = ecsWorldProvider;
-            _playerConfig = playerConfig;
+            _gameConfigs = gameConfigs;
         }
 
         public void Initialize()
         {
             CreateSystems();
         }
-
-        private void CreateSystems()
-        {
-            _systems = new EcsSystems(_ecsWorldProvider.World);
-            
-            _systems
-                .Add(new PlayerInputSystem(_inputService))
-                .Add(new FirstPersonLookRotationSystem(_playerConfig))
-                .Add(new InteractionRaycastSystem(_playerConfig))
-                .Add(new GravitySystem())
-                .Add(new PlayerMovementSystem(_playerConfig))
-                .Add(new CameraShakeSystem())
-                .Add(new OutlineViewSystem())
-#if UNITY_EDITOR
-                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
-                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
-#endif
-            .Init();
-        }
-
+        
         public void Tick()
         {
             _systems.Run();
@@ -55,6 +36,54 @@ namespace Game.Scripts.ECS
         {
             _systems.Destroy();
             _ecsWorldProvider.World.Destroy();
+        }
+
+        private void CreateSystems()
+        {
+            _systems = new EcsSystems(_ecsWorldProvider.World);
+            
+            AddInputSystems();
+            AddSimulationSystems();
+            AddPresentationSystems();
+            AddDebugSystems();
+            AddCleanupSystems();
+                
+            _systems.Init();
+        }
+        
+        private void AddInputSystems()
+        {
+            _systems.Add(new PlayerInputSystem(_inputService));
+        }
+
+        private void AddSimulationSystems()
+        {
+            _systems
+                .Add(new FirstPersonLookRotationSystem(_gameConfigs.PlayerConfig))
+                .Add(new InteractionRaycastSystem())
+                .Add(new InteractionRequestSystem())
+                .Add(new GravitySystem());
+        }
+
+        private void AddPresentationSystems()
+        {
+            _systems
+                .Add(new PlayerMovementSystem(_gameConfigs.PlayerConfig))
+                .Add(new CameraShakeSystem())
+                .Add(new OutlineViewSystem());
+        }
+
+        private void AddDebugSystems()
+        {
+#if UNITY_EDITOR
+            _systems.Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem());
+#endif
+        }
+
+        private void AddCleanupSystems()
+        {
+            _systems.Add(new ClearInteractionRequestSystem());
         }
     }
 }

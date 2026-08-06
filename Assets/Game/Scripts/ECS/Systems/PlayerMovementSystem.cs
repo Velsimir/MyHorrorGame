@@ -1,7 +1,6 @@
 using Game.Scripts.Configs;
-using Game.Scripts.ECS.Components;
-using Game.Scripts.ECS.Components.MonoBehaviourRefs;
 using Game.Scripts.ECS.Components.Movement;
+using Game.Scripts.ECS.Components.Player;
 using Game.Scripts.ECS.Components.Tags;
 using Leopotam.EcsLite;
 using UnityEngine;
@@ -43,7 +42,7 @@ namespace Game.Scripts.ECS.Systems
             move = Quaternion.Euler(0, lookRotation.Yaw, 0) * move;
             move = Vector3.ClampMagnitude(move, 1f);
             move *= _playerConfig.Speed;
-            move.y += verticalMovement.Velocity;
+            move += verticalMovement.Velocity;
             playerRef.CharacterController.Move(move * Time.deltaTime);
             verticalMovement.IsGrounded = playerRef.CharacterController.isGrounded;
         }

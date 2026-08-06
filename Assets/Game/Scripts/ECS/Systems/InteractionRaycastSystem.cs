@@ -1,44 +1,40 @@
 using Game.Scripts.Configs;
+using Game.Scripts.ECS.Authoring;
 using Game.Scripts.ECS.Components.Interaction;
-using Game.Scripts.ECS.Components.MonoBehaviourRefs;
+using Game.Scripts.ECS.Components.Player;
 using Game.Scripts.ECS.Components.Tags;
-using Game.Scripts.ECS.Providers;
 using Leopotam.EcsLite;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Game.Scripts.ECS.Systems
 {
     public class InteractionRaycastSystem : IEcsRunSystem
     {
-        private PlayerConfig _playerConfig;
-        
-        public InteractionRaycastSystem(PlayerConfig playerConfig)
-        {
-            _playerConfig = playerConfig;
-        }
-
         public void Run(IEcsSystems systems)
         {
             var world = systems.GetWorld();
             var filterPlayer = world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<Interactor>().End();
             var filterFocused = world.Filter<Focused>().End();
+            
             var poolPlayerRefs = world.GetPool<PlayerRefs>();
             var poolInteractorRefs = world.GetPool<Interactor>();
             var poolFocused = world.GetPool<Focused>();
+            var poolInteractable = world.GetPool<Interactable>();
             
-            foreach (var entity in filterPlayer)
+            foreach (var entityPlayer in filterPlayer)
             {
-                foreach (int e in filterFocused) poolFocused.Del(e);
+                foreach (int entityFocused in filterFocused) poolFocused.Del(entityFocused);
                 
-                PlayerRefs playerRefs = poolPlayerRefs.Get(entity);
-                Interactor interactor = poolInteractorRefs.Get(entity);
-                
-                if (Physics.SphereCast(playerRefs.HeadTransform.position,_playerConfig.SphereCastRadius,
+                PlayerRefs playerRefs = poolPlayerRefs.Get(entityPlayer);
+                Interactor interactor = poolInteractorRefs.Get(entityPlayer);
+
+                if (Physics.SphereCast(playerRefs.HeadTransform.position, interactor.SphereCastRadius,
                         playerRefs.HeadTransform.forward, out RaycastHit hit, 
                         interactor.Distance, interactor.Mask))
                 {
                     if (hit.collider.TryGetComponent(out InteractionObjectAuthoring authoring)
-                        && authoring.Entity.Unpack(world, out int targetEntity) && poolInteractorRefs.Has(targetEntity))
+                        && authoring.Entity.Unpack(world, out int targetEntity) && poolInteractable.Has(targetEntity))
                     {
                         poolFocused.Add(targetEntity);
                     }

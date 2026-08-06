@@ -1,4 +1,4 @@
-namespace Game.Scripts.ECS.Components
+namespace Game.Scripts.ECS.Components.Fear
 {
     public struct FearFactor
     {

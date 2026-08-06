@@ -37,7 +37,7 @@ namespace Game.Scripts.Services.Input
         {
             ReactiveProperty<bool> interact = new ReactiveProperty<bool>(false);
 
-            playerInteract.performed += ctx => interact.Value = true;
+            playerInteract.started += ctx => interact.Value = true;
             playerInteract.canceled += ctx => interact.Value = false;
             
             return interact;

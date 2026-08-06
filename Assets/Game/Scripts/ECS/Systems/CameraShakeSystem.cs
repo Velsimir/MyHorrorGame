@@ -1,5 +1,6 @@
 using Game.Scripts.ECS.Components;
-using Game.Scripts.ECS.Components.MonoBehaviourRefs;
+using Game.Scripts.ECS.Components.Camera;
+using Game.Scripts.ECS.Components.Fear;
 using Game.Scripts.ECS.Components.Tags;
 using Leopotam.EcsLite;
 using UnityEngine;

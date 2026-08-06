@@ -1,9 +1,11 @@
-using System.Numerics;
+
+using UnityEngine;
 
 namespace Game.Scripts.ECS.Components.Movement
 {
     public struct Gravity
     {
-        Vector2 _gravity;
+        public Vector3 Acceleration;
+        public Vector3 GroundedVelocity;
     }
 }

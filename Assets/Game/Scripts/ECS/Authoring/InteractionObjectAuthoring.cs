@@ -3,7 +3,7 @@ using Leopotam.EcsLite;
 using UnityEngine;
 using Zenject;
 
-namespace Game.Scripts.ECS.Providers
+namespace Game.Scripts.ECS.Authoring
 {
     public class InteractionObjectAuthoring : MonoBehaviour
     {

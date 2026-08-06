@@ -1,9 +1,11 @@
 
+using UnityEngine;
+
 namespace Game.Scripts.ECS.Components.Movement
 {
     public struct VerticalMovement 
     {
-        public float Velocity;
+        public Vector3 Velocity;
         public bool IsGrounded;
     }
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9322366e98b44d1485abe6ccf8a048d9, type: 3}
   m_Name: ConfigsInstaller
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Dependencies.ConfigsInstaller
-  _playerConfig: {fileID: 11400000, guid: ad232b17586d2af43a7776af1589c23c, type: 2}
+  _gameConfigs: {fileID: 11400000, guid: f5f1d8fb8a904e0428ff953ee35ed4e6, type: 2}

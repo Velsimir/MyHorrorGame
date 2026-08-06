@@ -1,4 +1,4 @@
-namespace Game.Scripts.ECS.Components.Movement
+namespace Game.Scripts.ECS.Components.Player
 {
     public struct LookRotation
     {

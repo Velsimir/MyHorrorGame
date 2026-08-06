@@ -7,11 +7,11 @@ namespace Game.Scripts.Dependencies
     [CreateAssetMenu(fileName = "ConfigsInstaller", menuName = "Dependencies/ConfigsInstaller")]
     public class ConfigsInstaller : ScriptableObjectInstaller
     {
-        [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private GameConfigs _gameConfigs;
         
         public override void InstallBindings()
         {
-            Container.Bind<PlayerConfig>().FromInstance(_playerConfig).AsSingle();
+            Container.Bind<GameConfigs>().FromInstance(_gameConfigs).AsSingle();
         }
     }
 }
