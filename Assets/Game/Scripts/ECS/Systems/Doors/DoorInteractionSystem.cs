@@ -12,12 +12,15 @@ namespace Game.Scripts.ECS.Systems.Doors
 
             var filter = world.Filter<Door>().Inc<InteractionRequest>().End();
             var pool = world.GetPool<Door>();
+            var poolActing = world.GetPool<Acting>();
 
             foreach (var entity in filter)
             {
                 ref var door = ref pool.Get(entity);
-
                 door.IsOpen = !door.IsOpen;
+                
+                if (poolActing.Has(entity) == false)
+                    poolActing.Add(entity);
             }
         }
     }

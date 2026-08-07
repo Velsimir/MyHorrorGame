@@ -1,6 +1,7 @@
 using System;
 using Game.Scripts.Configs;
 using Game.Scripts.ECS.Systems;
+using Game.Scripts.ECS.Systems.DebugHelpers;
 using Game.Scripts.ECS.Systems.Doors;
 using Game.Scripts.ECS.Systems.Interaction;
 using Game.Scripts.Services.Input;
@@ -82,7 +83,8 @@ namespace Game.Scripts.ECS
         {
 #if UNITY_EDITOR
             _systems.Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
-                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem());
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsSystemsDebugSystem())
+                .Add(new DebugDrawSystem());
 #endif
         }
 

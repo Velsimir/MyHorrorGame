@@ -30,15 +30,13 @@ namespace Game.Scripts.ECS.Systems.Interaction
                         playerRefs.HeadTransform.forward, out RaycastHit hit, 
                         interactor.Distance, interactor.Mask))
                 {
-                    if (hit.collider.TryGetComponent(out InteractionObjectAuthoring authoring)
-                        && authoring.Entity.Unpack(world, out int targetEntity) && poolInteractable.Has(targetEntity))
+                    InteractionObjectAuthoring authoring = hit.collider.GetComponentInParent<InteractionObjectAuthoring>();
+                    
+                    if (authoring != null && authoring.Entity.Unpack(world, out int targetEntity) && poolInteractable.Has(targetEntity))
                     {
                         poolFocused.Add(targetEntity);
                     }
                 }
-
-                Debug.DrawRay(playerRefs.HeadTransform.position, playerRefs.HeadTransform.forward * interactor.Distance,
-                    Color.red);
             }
         }
     }

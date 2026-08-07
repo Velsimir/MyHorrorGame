@@ -16,6 +16,7 @@ namespace Game.Scripts.ECS.Authoring
             ref var door = ref world.GetPool<Door>().Add(entity);
             
             door.Pivot = _pivot;
+            door.InitialRotation = _pivot.localRotation;
             door.OpenAngle = _openingAngle;
             door.CloseAngle = _closingAngle;
             door.Speed = _speed;
