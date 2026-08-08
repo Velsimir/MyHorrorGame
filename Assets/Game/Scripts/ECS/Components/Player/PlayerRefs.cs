@@ -6,5 +6,6 @@ namespace Game.Scripts.ECS.Components.Player
     {
         public CharacterController CharacterController;
         public Transform HeadTransform;
+        public Transform CameraView;
     }
 }

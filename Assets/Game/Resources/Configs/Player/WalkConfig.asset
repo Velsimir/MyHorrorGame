@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850506ac455a4b14a91d0419e4d8a43c, type: 3}
+  m_Name: WalkConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Configs.WalkConfig
+  _bobAmplitudeX: 0.02
+  _bobAmplitudeY: 0.04
+  _bobRollAngle: 0.7
+  _smoothTime: 0.15
+  _strideLength: 1.75

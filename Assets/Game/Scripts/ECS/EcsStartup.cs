@@ -1,9 +1,11 @@
 using System;
 using Game.Scripts.Configs;
 using Game.Scripts.ECS.Systems;
+using Game.Scripts.ECS.Systems.Camera;
 using Game.Scripts.ECS.Systems.DebugHelpers;
 using Game.Scripts.ECS.Systems.Doors;
 using Game.Scripts.ECS.Systems.Interaction;
+using Game.Scripts.ECS.Systems.Walk;
 using Game.Scripts.Services.Input;
 using Leopotam.EcsLite;
 using Zenject;
@@ -62,19 +64,23 @@ namespace Game.Scripts.ECS
         private void AddSimulationSystems()
         {
             _systems
+                .Add(new PlayerMovementSystem(_gameConfigs.PlayerConfig))
                 .Add(new FirstPersonLookRotationSystem(_gameConfigs.PlayerConfig))
+                .Add(new WalkCycleSystem(_gameConfigs.PlayerConfig))
                 .Add(new InteractionRaycastSystem())
                 .Add(new InteractionRequestSystem())
                 .Add(new GravitySystem())
                 .Add(new DoorInteractionSystem());
-            
         }
 
         private void AddPresentationSystems()
         {
             _systems
-                .Add(new PlayerMovementSystem(_gameConfigs.PlayerConfig))
-                .Add(new CameraShakeSystem())
+                .Add(new ClearCameraOffsetSystem())
+                .Add(new CameraWalkBobSystem())
+                .Add(new CameraFearShakeSystem())
+                .Add(new CameraCutsceneSystem())
+                .Add(new CameraApplySystem())
                 .Add(new OutlineViewSystem())
                 .Add(new DoorAnimationSystem());
         }

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Configs.GameConfigs
   _playerConfig: {fileID: 11400000, guid: ad232b17586d2af43a7776af1589c23c, type: 2}
   _gravityConfigs: {fileID: 11400000, guid: 1ac5fc2e1318c5846be3d093ef8970e0, type: 2}
+  _walkConfig: {fileID: 11400000, guid: 7675cc7a58200ee4db0cdd2ba7ac2b0e, type: 2}
