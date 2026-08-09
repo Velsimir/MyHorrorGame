@@ -41,10 +41,11 @@ Assets/Game/
   Scripts/
     Dependencies/   инсталлеры Zenject (ProjectInstaller — глобальные сервисы)
     Services/       сервисный слой: папка на сервис, интерфейс + реализация
-    Configs/        ScriptableObject-конфиги (GameConfigs — агрегат, PlayerConfig, GravityConfig)
+    Configs/        ScriptableObject-конфиги (GameConfigs — агрегат, PlayerConfig, GravityConfig,
+                    WalkConfig)
     ECS/
       Components/   структуры-компоненты, разложены ПО ФИЧАМ
-                    (Player, Movement, Input, Interaction, Doors, Camera, Fear)
+                    (Player, Movement, Input, Interaction, Doors, Camera, Fear, Walk)
       Systems/      системы, одна на файл, те же фич-папки (Camera, Doors, Interaction)
       Authoring/    authoring-MonoBehaviour: рождают сущности из объектов сцены
   Resources/    ProjectContext.prefab (точка входа Zenject), префабы, арт, анимации
@@ -99,7 +100,9 @@ Assets/Game/
   композитные тряски, слои Hytale). На игроке два обнуляемых каждый кадр компонента:
   CameraOffset {Position, Rotation, FovDelta} — формульные вклады, и CameraNoiseBlend
   {Idle, Tense, Panic} — веса шумовых пресетов. Конвейер:
-  ClearCameraStateSystem → вкладчики (+=) → CameraApplySystem (единственная пишет в Cinemachine).
+  ClearCameraOffsetSystem → вкладчики (+=) → CameraApplySystem (единственная применяет: веса
+  в CinemachineMixingCamera, а CameraOffset — абсолютной записью в PlayerRefs.CameraView,
+  localPosition/localRotation; CameraView обязана стоять в нуле относительно головы).
   Шум — CinemachineMixingCamera с тремя дочерними vcam, отличающимися ТОЛЬКО NoiseProfile
   (всё остальное обязано совпадать, иначе камера болтается между положениями). Веса задаются
   через Weight0..2. Интенсивность зашита в сами профили, отдельного гейна нет.
@@ -107,8 +110,22 @@ Assets/Game/
 - Граница «формульное / шумовое»: формульное — то, у чего есть фаза и можно спросить
   «где я в цикле» (шаги, дыхание, сердцебиение) → синусоиды в CameraOffset, из них берутся
   события. Шумовое — фактура без ритма (страх, паника, ранение) → NoiseSettings + веса.
-  Ходьба планируется фазой, растущей от ПРОЙДЕННОГО ПУТИ, а не от времени: бег/присед меняют
+  Ходьба сделана фазой, растущей от ПРОЙДЕННОГО ПУТИ, а не от времени: бег/присед меняют
   темп сами, шаг = пересечение целого значения фазы, событие FootstepEvent для звука и монстров.
+- Покачивание при ходьбе работает. Компонент WalkCycle на игроке хранит и состояние цикла
+  (Phase 0..1 — один цикл = ДВА шага; Intensity — сглаженная громкость эффекта), и настройки,
+  залитые из WalkConfig при рождении (StrideLength, BobAmplitudeX/Y, BobRollAngle, SmoothTime).
+  WalkCycleSystem (Simulation, строго ПОСЛЕ PlayerMovementSystem — IsGrounded достоверен только
+  после Move) считает путь из компонентов, а не из CharacterController.velocity:
+  Phase += input.magnitude(Clamp01) * Speed * dt / StrideLength, затем Mathf.Repeat(Phase, 1).
+  В воздухе путь не растёт. Intensity идёт MoveTowards к input на земле и к 0 иначе — без неё
+  камера при остановке залипает в перекошенном положении.
+  CameraWalkBobSystem (Presentation) прибавляет в CameraOffset три вклада с РАЗНЫМИ частотами:
+  вертикаль -A*cos(4π·Phase) → Position.y (обе ноги дают провал, 2 раза за цикл),
+  боковое A*sin(2π·Phase) → Position.x и крен A*sin(2π·Phase) → Rotation.z (1 раз за цикл).
+  Минус у вертикали обязателен: при Phase=0 нога бьёт по земле и голова должна быть ВНИЗУ.
+  Темп настраивается ТОЛЬКО через StrideLength, формулу не трогать. Roll сильнее всего укачивает.
+  FootstepEvent пока никем не вешается, FovDelta пока никем не применяется.
 - Взаимодействие сделано целиком: Interactor {Distance, Mask, SphereCastRadius} на игроке,
   InteractionRaycastSystem пускает SphereCast из головы и двигает тег Focused между целями
   (цель ищется через hit.collider.GetComponentInParent — коллайдеры часто на детях),
@@ -210,3 +227,13 @@ Assets/Game/
 - Inverted hull даёт равномерную «скорлупу» из геометрии: на кубах рвётся (нормали разорваны
   по рёбрам), дрожать по вершинам ему негде. Годится как статичная обводка, рисованная
   дрожащая линия требует экранного пространства.
+- Настройки эффекта лучше заливать из конфига в компонент при рождении сущности (authoring),
+  чем передавать SO в конструктор системы: система остаётся без Unity-зависимостей и переезжает
+  в следующую игру, а второй сущности можно дать свои числа. Конфиг читается один раз.
+- Периодический эффект раскладывается на три независимые «ручки», каждая со своим вопросом:
+  сколько раз повторяется за цикл (множитель частоты), где я в момент фазы 0 (выбор sin/cos
+  и знак), насколько сильно (амплитуда — её всегда подбирают в редакторе, а не выводят).
+  Разные вклады одного эффекта имеют РАЗНЫЕ частоты — путать их значит потерять ритм.
+- Поле настройки, забытое при заливке из конфига, даёт 0 → деление на ноль → Infinity/NaN.
+  NaN не бросает исключений, тихо расползается по всему конвейеру и убивает трансформ.
+  Проверять надо и код, и значение в самом .asset: default в C# не действует на созданный ассет.

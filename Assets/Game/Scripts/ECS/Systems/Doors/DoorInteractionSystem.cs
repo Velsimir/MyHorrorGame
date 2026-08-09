@@ -4,23 +4,30 @@ using Leopotam.EcsLite;
 
 namespace Game.Scripts.ECS.Systems.Doors
 {
-    public class DoorInteractionSystem : IEcsRunSystem
+    public class DoorInteractionSystem : IEcsInitSystem, IEcsRunSystem
     {
+        private EcsFilter _filter;
+        private EcsPool<Door> _poolDoor;
+        private EcsPool<Acting> _poolActing;
+
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+
+            _filter = world.Filter<Door>().Inc<InteractionRequest>().End();
+            _poolDoor = world.GetPool<Door>();
+            _poolActing = world.GetPool<Acting>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-
-            var filter = world.Filter<Door>().Inc<InteractionRequest>().End();
-            var pool = world.GetPool<Door>();
-            var poolActing = world.GetPool<Acting>();
-
-            foreach (var entity in filter)
+            foreach (var entity in _filter)
             {
-                ref var door = ref pool.Get(entity);
+                ref var door = ref _poolDoor.Get(entity);
                 door.IsOpen = !door.IsOpen;
                 
-                if (poolActing.Has(entity) == false)
-                    poolActing.Add(entity);
+                if (_poolActing.Has(entity) == false)
+                    _poolActing.Add(entity);
             }
         }
     }

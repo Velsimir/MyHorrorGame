@@ -5,36 +5,46 @@ using UnityEngine;
 
 namespace Game.Scripts.ECS.Systems.Camera
 {
-    public class CameraApplySystem : IEcsRunSystem
+    public class CameraApplySystem : IEcsInitSystem, IEcsRunSystem
     {
+        private EcsFilter _cameraFilter;
+        private EcsFilter _playerFilter;
+        private EcsPool<CinemachineRefs> _cinemachineRefsPool;
+        private EcsPool<CameraNoiseBlend> _cameraNoiseBlendPool;
+        private EcsPool<PlayerRefs> _playerRefsPool;
+        private EcsPool<CameraOffset> _cameraOffsetPool;
+
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+            _cameraFilter = world.Filter<CameraTag>().Inc<CinemachineRefs>().End();
+            _playerFilter = world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<CameraOffset>().Inc<CameraNoiseBlend>().End();
+            _cinemachineRefsPool = world.GetPool<CinemachineRefs>();
+            _cameraNoiseBlendPool = world.GetPool<CameraNoiseBlend>();
+            _playerRefsPool = world.GetPool<PlayerRefs>();
+            _cameraOffsetPool = world.GetPool<CameraOffset>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-            var cameraFilter = world.Filter<CameraTag>().Inc<CinemachineRefs>().End();
-            var playerFilter =  world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<CameraOffset>().Inc<CameraNoiseBlend>().End();
-            
-            if (playerFilter.GetEntitiesCount() == 0) { return; }
+            if (_playerFilter.GetEntitiesCount() == 0) { return; }
 
-            var player = playerFilter.GetRawEntities()[0];
-            var poolCameraCinemachineRefs = world.GetPool<CinemachineRefs>();
-            var cameraNoiseBlendPool = world.GetPool<CameraNoiseBlend>();
-            var playerRefsPool = world.GetPool<PlayerRefs>();
-            var cameraOffsetPool = world.GetPool<CameraOffset>();
-            
-            ref var playerCondition = ref cameraNoiseBlendPool.Get(player);
-            ref var playerRefs = ref playerRefsPool.Get(player);
-            ref var cameraOffset = ref cameraOffsetPool.Get(player);
-                
-            foreach (var cameraEntity in cameraFilter)
+            int player = _playerFilter.GetRawEntities()[0];
+
+            ref var noiseBlend = ref _cameraNoiseBlendPool.Get(player);
+            ref var playerRefs = ref _playerRefsPool.Get(player);
+            ref var cameraOffset = ref _cameraOffsetPool.Get(player);
+
+            playerRefs.CameraView.localPosition = cameraOffset.Position;
+            playerRefs.CameraView.localRotation = Quaternion.Euler(cameraOffset.Rotation);
+
+            foreach (int cameraEntity in _cameraFilter)
             {
-                ref var cinemachineRef = ref poolCameraCinemachineRefs.Get(cameraEntity);
+                ref var cinemachineRefs = ref _cinemachineRefsPool.Get(cameraEntity);
 
-                cinemachineRef.CameraMixing.Weight0 = playerCondition.Idle;
-                cinemachineRef.CameraMixing.Weight1 = playerCondition.Tense;
-                cinemachineRef.CameraMixing.Weight2 = playerCondition.Panic;
-                
-                playerRefs.CameraView.localPosition = cameraOffset.Position;
-                playerRefs.CameraView.localRotation = Quaternion.Euler(cameraOffset.Rotation);
+                cinemachineRefs.CameraMixing.Weight0 = noiseBlend.Idle;
+                cinemachineRefs.CameraMixing.Weight1 = noiseBlend.Tense;
+                cinemachineRefs.CameraMixing.Weight2 = noiseBlend.Panic;
             }
         }
     }

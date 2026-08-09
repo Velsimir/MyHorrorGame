@@ -8,33 +8,41 @@ using UnityEngine;
 
 namespace Game.Scripts.ECS.Systems
 {
-    public class FirstPersonLookRotationSystem : IEcsRunSystem
+    public class FirstPersonLookRotationSystem : IEcsInitSystem, IEcsRunSystem
     {
         private readonly PlayerConfig _playerConfig;
-        
+
+        private EcsFilter _filter;
+        private EcsPool<MouseInputDirection> _poolMouseInput;
+        private EcsPool<PlayerRefs> _poolPlayerRef;
+        private EcsPool<LookRotation> _poolLookRotation;
+
         public FirstPersonLookRotationSystem(PlayerConfig playerConfig)
         {
             _playerConfig = playerConfig;
         }
 
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+            _filter = world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<MouseInputDirection>().Inc<LookRotation>().End();
+            _poolMouseInput = world.GetPool<MouseInputDirection>();
+            _poolPlayerRef = world.GetPool<PlayerRefs>();
+            _poolLookRotation = world.GetPool<LookRotation>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-            var filter = world.Filter<PlayerTag>().Inc<PlayerRefs>().Inc<MouseInputDirection>().Inc<LookRotation>().End();
-            var poolMouseInput = world.GetPool<MouseInputDirection>();
-            var poolPlayerRef = world.GetPool<PlayerRefs>();
-            var poolLookRotation = world.GetPool<LookRotation>();
-
-            foreach (int entity in filter)
+            foreach (int entity in _filter)
             {
-                ref var mouseInput = ref poolMouseInput.Get(entity);
-                ref var playerRef = ref poolPlayerRef.Get(entity);
-                ref var lLookRotation = ref poolLookRotation.Get(entity);
+                ref var mouseInput = ref _poolMouseInput.Get(entity);
+                ref var playerRef = ref _poolPlayerRef.Get(entity);
+                ref var lLookRotation = ref _poolLookRotation.Get(entity);
                 
                 Rotate(ref mouseInput, ref playerRef, ref lLookRotation);
             }
         }
-        
+
         private void Rotate(ref MouseInputDirection mouseInputDirection, ref PlayerRefs playerRef, ref LookRotation lookRotation)
         {
             float mouseX = mouseInputDirection.Direction.x * _playerConfig.MouseSensitivityX;

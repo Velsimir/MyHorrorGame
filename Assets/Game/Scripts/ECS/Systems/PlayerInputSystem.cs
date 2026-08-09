@@ -6,10 +6,14 @@ using Leopotam.EcsLite;
 
 namespace Game.Scripts.ECS.Systems
 {
-    public class PlayerInputSystem : IEcsRunSystem
+    public class PlayerInputSystem : IEcsInitSystem, IEcsRunSystem
     {
         private readonly IInputService _inputService;
 
+        private EcsFilter _filter;
+        private EcsPool<HorizontalMovement> _horizontalPool;
+        private EcsPool<MouseInputDirection> _lookPool;
+        private EcsPool<InteractInput> _interactPool;
         private bool _interactWasPressed;
 
         public PlayerInputSystem(IInputService inputService)
@@ -17,27 +21,30 @@ namespace Game.Scripts.ECS.Systems
             _inputService = inputService;
         }
 
-        public void Run(IEcsSystems systems)
+        public void Init(IEcsSystems systems)
         {
             EcsWorld world = systems.GetWorld();
-            EcsFilter filter = world.Filter<PlayerTag>().Inc<HorizontalMovement>().Inc<MouseInputDirection>().Inc<InteractInput>().End();
-            EcsPool<HorizontalMovement> horizontalPool = world.GetPool<HorizontalMovement>();
-            EcsPool<MouseInputDirection> lookPool = world.GetPool<MouseInputDirection>();
-            EcsPool<InteractInput> interactPool = world.GetPool<InteractInput>();
-            
+            _filter = world.Filter<PlayerTag>().Inc<HorizontalMovement>().Inc<MouseInputDirection>().Inc<InteractInput>().End();
+            _horizontalPool = world.GetPool<HorizontalMovement>();
+            _lookPool = world.GetPool<MouseInputDirection>();
+            _interactPool = world.GetPool<InteractInput>();
+        }
+
+        public void Run(IEcsSystems systems)
+        {
             bool isPressed = _inputService.Interact.CurrentValue;
             bool justPressed = isPressed && _interactWasPressed == false;
             _interactWasPressed = isPressed;
             
-            foreach (int entity in filter)
+            foreach (int entity in _filter)
             {
-                ref HorizontalMovement horizontalMovement = ref horizontalPool.Get(entity);
-                ref MouseInputDirection mouseInputDirection = ref lookPool.Get(entity);
+                ref HorizontalMovement horizontalMovement = ref _horizontalPool.Get(entity);
+                ref MouseInputDirection mouseInputDirection = ref _lookPool.Get(entity);
 
                 mouseInputDirection.Direction = _inputService.Look.CurrentValue;
                 horizontalMovement.Direction = _inputService.Move.CurrentValue;
                 
-                ref InteractInput interactInput = ref interactPool.Get(entity);
+                ref InteractInput interactInput = ref _interactPool.Get(entity);
                 interactInput.IsInteractPressed = justPressed;
             }
         }

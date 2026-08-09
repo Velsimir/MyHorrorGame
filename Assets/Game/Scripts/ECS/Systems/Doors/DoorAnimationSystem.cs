@@ -5,18 +5,25 @@ using UnityEngine;
 
 namespace Game.Scripts.ECS.Systems.Doors
 {
-    public class DoorAnimationSystem : IEcsRunSystem
+    public class DoorAnimationSystem : IEcsInitSystem, IEcsRunSystem
     {
+        private EcsFilter _filter;
+        private EcsPool<Door> _pool;
+        private EcsPool<Acting> _poolActing;
+
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+            _filter = world.Filter<Door>().Inc<Acting>().End();
+            _pool = world.GetPool<Door>();
+            _poolActing = world.GetPool<Acting>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-            var filter = world.Filter<Door>().Inc<Acting>().End();
-            var pool = world.GetPool<Door>();
-            var poolActing = world.GetPool<Acting>();
-
-            foreach (var entity in filter)
+            foreach (var entity in _filter)
             {
-                ref var door = ref pool.Get(entity);
+                ref var door = ref _pool.Get(entity);
                 float targetAngle = door.IsOpen 
                     ? door.OpenAngle 
                     : door.CloseAngle;
@@ -25,7 +32,7 @@ namespace Game.Scripts.ECS.Systems.Doors
                 door.Pivot.localRotation = door.InitialRotation * Quaternion.Euler(0, door.CurrentAngle, 0);
                 
                 if (targetAngle == door.CurrentAngle)
-                    poolActing.Del(entity);
+                    _poolActing.Del(entity);
             }
         }
     }

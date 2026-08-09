@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Scripts.Configs.WalkConfig
   _bobAmplitudeX: 0.02
   _bobAmplitudeY: 0.04
-  _bobRollAngle: 0.7
+  _bobRollAngle: 0.25
   _smoothTime: 0.15
-  _strideLength: 1.75
+  _strideLength: 5.5

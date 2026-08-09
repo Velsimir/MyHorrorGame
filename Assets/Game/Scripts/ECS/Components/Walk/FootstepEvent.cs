@@ -1,4 +1,5 @@
-namespace Game.Scripts.ECS.Components.Player
+
+namespace Game.Scripts.ECS.Components.Walk
 {
     public struct FootstepEvent
     { }

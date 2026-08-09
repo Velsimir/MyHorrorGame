@@ -3,29 +3,37 @@ using Leopotam.EcsLite;
 
 namespace Game.Scripts.ECS.Systems.Interaction
 {
-    public class OutlineViewSystem : IEcsRunSystem
+    public class OutlineViewSystem : IEcsInitSystem, IEcsRunSystem
     {
+        private EcsFilter _filterNeedEnableOutline;
+        private EcsFilter _filterNeedDisableOutline;
+        private EcsPool<OutlineEnabled> _poolOutlineEnabled;
+        private EcsPool<OutlineRefs> _poolOutlineRefs;
+
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+            _filterNeedEnableOutline = world.Filter<Focused>().Inc<OutlineRefs>().Exc<OutlineEnabled>().End();
+            _filterNeedDisableOutline = world.Filter<OutlineEnabled>().Inc<OutlineRefs>().Exc<Focused>().End();
+
+            _poolOutlineEnabled = world.GetPool<OutlineEnabled>();
+            _poolOutlineRefs = world.GetPool<OutlineRefs>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-            var filterNeedEnableOutline = world.Filter<Focused>().Inc<OutlineRefs>().Exc<OutlineEnabled>().End();
-            var filterNeedDisableOutline = world.Filter<OutlineEnabled>().Inc<OutlineRefs>().Exc<Focused>().End();
-            
-            var poolOutlineEnabled = world.GetPool<OutlineEnabled>();
-            var poolOutlineRefs = world.GetPool<OutlineRefs>();
-
-            foreach (var entity in filterNeedDisableOutline)
+            foreach (var entity in _filterNeedDisableOutline)
             {
-                ref var outlineRefs = ref poolOutlineRefs.Get(entity);
+                ref var outlineRefs = ref _poolOutlineRefs.Get(entity);
                 outlineRefs.MeshRenderer.sharedMaterials = outlineRefs.Default;
-                poolOutlineEnabled.Del(entity);
+                _poolOutlineEnabled.Del(entity);
             }
 
-            foreach (var entity in filterNeedEnableOutline)
+            foreach (var entity in _filterNeedEnableOutline)
             {
-                ref var outlineRefs = ref poolOutlineRefs.Get(entity);
+                ref var outlineRefs = ref _poolOutlineRefs.Get(entity);
                 outlineRefs.MeshRenderer.sharedMaterials = outlineRefs.WithOutline;
-                poolOutlineEnabled.Add(entity);
+                _poolOutlineEnabled.Add(entity);
             }
         }
     }

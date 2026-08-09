@@ -3,17 +3,23 @@ using Leopotam.EcsLite;
 
 namespace Game.Scripts.ECS.Systems.Interaction
 {
-    public class ClearInteractionRequestSystem : IEcsRunSystem
+    public class ClearInteractionRequestSystem : IEcsInitSystem, IEcsRunSystem
     {
+        private EcsFilter _filter;
+        private EcsPool<InteractionRequest> _pool;
+
+        public void Init(IEcsSystems systems)
+        {
+            EcsWorld world = systems.GetWorld();
+
+            _filter = world.Filter<InteractionRequest>().End();
+            _pool = world.GetPool<InteractionRequest>();
+        }
+
         public void Run(IEcsSystems systems)
         {
-            var world = systems.GetWorld();
-            
-            var filter = world.Filter<InteractionRequest>().End();
-            var pool = world.GetPool<InteractionRequest>();
-            
-            foreach (var entity in filter)
-                pool.Del(entity);
+            foreach (var entity in _filter)
+                _pool.Del(entity);
         }
     }
 }
