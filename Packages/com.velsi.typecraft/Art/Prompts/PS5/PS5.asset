@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: PS5
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: ps5
+  _spriteAsset: {fileID: 11400000, guid: 04f767a20d22a924ab330b9c79fe13f1, type: 2}
+  _entries:
+  - _key: circle
+    _glyphName: PS5_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: cross
+    _glyphName: PS5_Cross
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad
+    _glyphName: PS5_Dpad
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_down
+    _glyphName: PS5_Dpad_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_left
+    _glyphName: PS5_Dpad_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_right
+    _glyphName: PS5_Dpad_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_up
+    _glyphName: PS5_Dpad_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l1
+    _glyphName: PS5_L1
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l2
+    _glyphName: PS5_L2
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick
+    _glyphName: PS5_Left_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick_click
+    _glyphName: PS5_Left_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: microphone
+    _glyphName: PS5_Microphone
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: options
+    _glyphName: PS5_Options
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: options_alt
+    _glyphName: PS5_Options_Alt
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r1
+    _glyphName: PS5_R1
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r2
+    _glyphName: PS5_R2
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick
+    _glyphName: PS5_Right_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick_click
+    _glyphName: PS5_Right_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: share
+    _glyphName: PS5_Share
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: share_alt
+    _glyphName: PS5_Share_Alt
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: square
+    _glyphName: PS5_Square
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: touch_pad
+    _glyphName: PS5_Touch_Pad
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: triangle
+    _glyphName: PS5_Triangle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/PS5
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

@@ -1,0 +1,2328 @@
+fileFormatVersion: 2
+guid: 66a6d458cedef0d4091446395fb336a6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 0_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3eb51f400b629469588ad24396a6c2
+      internalID: 481128748962605862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebf061dda9b35641a6980f68a2b5b0a
+      internalID: -8607476644449876275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf18f5fc67e287d428aaddadba9d342e
+      internalID: -2103095033018430429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07317f050915c404b9649dd0680e13c8
+      internalID: -5654076618404663378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c25ac5239b6f649be4e6bc998a3d15
+      internalID: 342996758680365574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b9159c5355c9a4f8c56e507755f9c1
+      internalID: 4111114945937701494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef41d59014fffe4d988fff4369b303b
+      internalID: -1667245777251064292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9a5baa5919b1f48ae565b0674d43be
+      internalID: 632975820528567415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31c2470a51563d4d931273a0fa87a6a
+      internalID: 8126505977222175839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4084b12df8f144fa63859a700cbcec
+      internalID: -6978132583312356448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4d78f3bb628114483ba9e77320e292
+      internalID: -1144517025006712182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6da44ca5ef5fb34f9d0a168b825ecf6
+      internalID: 1903923914806064071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5db637e81873d47b81b3ab451378f6
+      internalID: -3522669109706433909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97ae1a62e99c9d4d9ac10c6e80dcf85
+      internalID: 4344532172443474628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alt_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc64329393309bb4a8cb9efa51dbcbe6
+      internalID: 935921003014928802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_Down_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91435e588e0c9744aa74039561a8c891
+      internalID: 7663117164816146877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_Left_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222279164b04d384886ebeaf16d10a6f
+      internalID: 3695260670696834184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_Right_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 104
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae4e7678f59c0646bb6763be9a9830b
+      internalID: 1641170404336548972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_Up_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220892abb614d5f4ea313145eb966869
+      internalID: 1600016531441560640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asterisk_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb837b9589ef677439f3641e073ebbae
+      internalID: -276547652162766182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f508a9ee4fe393409097a77112c87c9
+      internalID: 4179549521900816627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Backspace_Alt_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42823a6267536b540a3d75a75ed75058
+      internalID: -3491285217308930839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Backspace_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e40a0b9483a1e34e97339b28722477b
+      internalID: -1594862513710744505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bracket_Left_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545aade7779de6045ab817402fa1441f
+      internalID: 3147080034786942053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bracket_Right_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d239d0cc956712459ea06a66633e327
+      internalID: 7947627360051318001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6766baa187742dd4ea7d79959f34331b
+      internalID: -2120289743367093297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caps_Lock_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 208
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a993bf53a57b23448a511d0f5bf5a8a
+      internalID: 6212198385593818847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Command_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb23fea0516cbae47b4389ef1d1c4db9
+      internalID: -6196452805904131978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ctrl_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78be30d5c8ada4b4fb8dc9c378624dad
+      internalID: -5876009418793570701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26132361c8791154186a4d961845df52
+      internalID: 3187089978719774046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Del_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed397b217e1ae14584d656ca11cded5
+      internalID: -2323467467736640259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e35ad3638780414bb0be3b9fc792d68
+      internalID: 4361879073273726116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: End_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0f58db7f77b3d4fa788319b81022f3
+      internalID: 7420360266163397588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enter_Alt_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcf3bc46099f7d4da690ee4202a2b15
+      internalID: 3966078702400300664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enter_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db05a03da5788bd45b00dc272e700767
+      internalID: 9051293128699902254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enter_Tall_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 312
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d92a75d73a4d8748b3bb36f69b75578
+      internalID: 3873535704098900090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esc_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93eabee96348dbd49891cd283f40b3a3
+      internalID: -3652375661380554836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa076c04a8df984dbda73b5866e673e
+      internalID: 7550846911585341088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F1_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae41a543bc3b6c4088fb6b074333a17
+      internalID: -6174643040218649551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F10_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1c389df63fa1444a0dd17126248e23
+      internalID: 552039287797978896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F11_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16036bcfee7f2dc4fa56a41a8dfe64a5
+      internalID: 5175140482526782432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F12_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99aad3555535323418234f8232dffbec
+      internalID: 116269421229238851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F2_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801eb810ece645e4bb0d2eac89dae319
+      internalID: 512020714888467377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F3_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c5dc403e004a04c99ce0ac63de2cc4
+      internalID: 4365946541273620007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F4_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 416
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a666ce111592a0f47adbd6ca3a0fa3f2
+      internalID: -3954922704928889994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F5_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a0b86ea51370a4a8e8feb7f62feeae
+      internalID: 6343534033219437353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F6_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fbc135b3b21b44e92c123665957a69
+      internalID: -7276449092902505736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F7_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8af9cf6ca872c4797d04f96a7194d5
+      internalID: 6360169049884324610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F8_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fbe0e83ca46ae459d2cb03de2b6aee
+      internalID: 8140447994957101078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: F9_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496a372e97b80f44ba4b6620337b9df0
+      internalID: 101545822307056492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: G_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b781f252efa0d41b22b67e4352f3ed
+      internalID: 6893942818786525817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: H_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec1b50ea844eb54d9feb6d214e789ca
+      internalID: 5357508556264902837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a9d215bada86b44a01a7b0ffe1afce
+      internalID: -8146258724239454428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 520
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b7b809515379a429c687bc955290c6
+      internalID: 8608817103171404970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insert_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60634c11fe8e7cd43b2b078476d7e472
+      internalID: 8862724052639449309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08620544eaeefde46a2a66d6311e3a54
+      internalID: 5355832860246420722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14f3175388763b4f8bd6d5f150bb7be
+      internalID: 6513820887608394194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64907028653c5d4489a7d367e6b34aec
+      internalID: -4514624037287831557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd2a695deccbcc4d88877864ebb0a85
+      internalID: 2315552879774334023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mark_Left_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7928761ee01074c4b92caec842a702be
+      internalID: 3877418513536259897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mark_Right_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3c2750b0e9e3e439446e6104bb3d8c
+      internalID: -5566900619966328122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minus_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6e7a250f31ec949a874481a8fb6fce
+      internalID: 7950715934779424839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_Left_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 624
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b058e1afe9bfab4699acd274e81ca8a
+      internalID: -4276612715779075539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_Middle_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91280bb21ce887040977b20996ac4af8
+      internalID: 7332652626324694982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_Right_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7425baaaac66c8d4b98abf642f20a061
+      internalID: 8093597636043000874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_Simple_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f79aca44362ee47bfb9dca2e76dd95
+      internalID: -2659754550522359447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eb596be7ca8fb468ce2cfeefbf6a31
+      internalID: -6139275278946019765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Num_Lock_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2cb17e83cabce44a6a93bdfd4ab679
+      internalID: -1489720212468137991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b40864f3650cb4082acac1f69e9bcb
+      internalID: -924746508814627454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03fb5cc4b7bf2f428dd359f72f6bd39
+      internalID: 7380440045974430430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page_Down_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb6a28881f5f2446aed545424a328d1
+      internalID: -3937819853785379871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Page_Up_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 728
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e05a4a793d03d64a8e4c1f68066af62
+      internalID: -2574368719083600038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plus_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b0cff9fd7171f4585ad7e929549b72
+      internalID: 8824175762766248990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plus_Tall_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383c44345ab74b44d977fc53e9b98e3d
+      internalID: -4800814157384067274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Print_Screen_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76af7e5ec3d976d4d8c6fd4aee48a61a
+      internalID: -2525730713589857977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Q_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4accdd3d939074a9c53ba306ad42a1
+      internalID: -3883220961084088201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Question_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bc25e1f1a38cc42b35871477629fdb
+      internalID: 4702464594101658627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quote_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4858480c6d8034e96bf39fdec532be
+      internalID: 6781107009812438819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd17200109e6693499c5b8d6980e0c5d
+      internalID: 3207982613790281044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6732f8f4da453e34983939be24b8148a
+      internalID: -5834249016292367578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Semicolon_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 832
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bed2763afe3a6248ae73bb837423475
+      internalID: -3751577819440620959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shift_Alt_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bec4d9fb299044b9a4e3c5092a2988
+      internalID: -5029702633787448014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shift_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4b1e7574a8600499130edbdcf1d96b
+      internalID: -4066406108220172299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1805d7c62df78418e16ec99f29eca5
+      internalID: 4829356117992933562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1e0686e76ea614ca42d1188a48743f
+      internalID: -964574616317645832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa24a5fec3a94dc4c986eb78b709c6c3
+      internalID: 5860199509479225277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tab_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaf298e1aa1f7b41abe679bed30e9e5
+      internalID: -7552397508293996800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilda_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aab3fb8c1e0654ab1bb494d06bfa1b
+      internalID: 8253723173150916303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: U_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c73b5fdccef4c14f8e4a2d5c57f2f86
+      internalID: 1316568101552358290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: V_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 936
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9baa0a3c438ae249b4ce121853ddf84
+      internalID: -988400688527286662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2d9e5bb751cce4abf7bad518079000
+      internalID: 4524962976630224875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3641b06f7fb76e4ea5a986428f2882f
+      internalID: -8132389346652505108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: X_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d516598184fdafa49ba5800e33ebb1b7
+      internalID: 6592930692247166506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Y_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1352
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb4a94929f357f4596442bbe4461572
+      internalID: -40676801301358767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z_Key_Dark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1456
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f98a3e654d3f1488d514df584092c9
+      internalID: -6580620618707348095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0a2736fe90f62114b91fcff8fe953044
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      0_Key_Dark: 481128748962605862
+      10_Key_Dark: -2103095033018430429
+      11_Key_Dark: -5654076618404663378
+      12_Key_Dark: 342996758680365574
+      1_Key_Dark: -8607476644449876275
+      2_Key_Dark: 4111114945937701494
+      3_Key_Dark: -1667245777251064292
+      4_Key_Dark: 632975820528567415
+      5_Key_Dark: 8126505977222175839
+      6_Key_Dark: -6978132583312356448
+      7_Key_Dark: -1144517025006712182
+      8_Key_Dark: 1903923914806064071
+      9_Key_Dark: -3522669109706433909
+      A_Key_Dark: 4344532172443474628
+      Alt_Key_Dark: 935921003014928802
+      Arrow_Down_Key_Dark: 7663117164816146877
+      Arrow_Left_Key_Dark: 3695260670696834184
+      Arrow_Right_Key_Dark: 1641170404336548972
+      Arrow_Up_Key_Dark: 1600016531441560640
+      Asterisk_Key_Dark: -276547652162766182
+      B_Key_Dark: 4179549521900816627
+      Backspace_Alt_Key_Dark: -3491285217308930839
+      Backspace_Key_Dark: -1594862513710744505
+      Bracket_Left_Key_Dark: 3147080034786942053
+      Bracket_Right_Key_Dark: 7947627360051318001
+      C_Key_Dark: -2120289743367093297
+      Caps_Lock_Key_Dark: 6212198385593818847
+      Command_Key_Dark: -6196452805904131978
+      Ctrl_Key_Dark: -5876009418793570701
+      D_Key_Dark: 3187089978719774046
+      Del_Key_Dark: -2323467467736640259
+      E_Key_Dark: 4361879073273726116
+      End_Key_Dark: 7420360266163397588
+      Enter_Alt_Key_Dark: 3966078702400300664
+      Enter_Key_Dark: 9051293128699902254
+      Enter_Tall_Key_Dark: 3873535704098900090
+      Esc_Key_Dark: -3652375661380554836
+      F10_Key_Dark: 552039287797978896
+      F11_Key_Dark: 5175140482526782432
+      F12_Key_Dark: 116269421229238851
+      F1_Key_Dark: -6174643040218649551
+      F2_Key_Dark: 512020714888467377
+      F3_Key_Dark: 4365946541273620007
+      F4_Key_Dark: -3954922704928889994
+      F5_Key_Dark: 6343534033219437353
+      F6_Key_Dark: -7276449092902505736
+      F7_Key_Dark: 6360169049884324610
+      F8_Key_Dark: 8140447994957101078
+      F9_Key_Dark: 101545822307056492
+      F_Key_Dark: 7550846911585341088
+      G_Key_Dark: 6893942818786525817
+      H_Key_Dark: 5357508556264902837
+      Home_Key_Dark: -8146258724239454428
+      I_Key_Dark: 8608817103171404970
+      Insert_Key_Dark: 8862724052639449309
+      J_Key_Dark: 5355832860246420722
+      K_Key_Dark: 6513820887608394194
+      L_Key_Dark: -4514624037287831557
+      M_Key_Dark: 2315552879774334023
+      Mark_Left_Key_Dark: 3877418513536259897
+      Mark_Right_Key_Dark: -5566900619966328122
+      Minus_Key_Dark: 7950715934779424839
+      Mouse_Left_Key_Dark: -4276612715779075539
+      Mouse_Middle_Key_Dark: 7332652626324694982
+      Mouse_Right_Key_Dark: 8093597636043000874
+      Mouse_Simple_Key_Dark: -2659754550522359447
+      N_Key_Dark: -6139275278946019765
+      Num_Lock_Key_Dark: -1489720212468137991
+      O_Key_Dark: -924746508814627454
+      P_Key_Dark: 7380440045974430430
+      Page_Down_Key_Dark: -3937819853785379871
+      Page_Up_Key_Dark: -2574368719083600038
+      Plus_Key_Dark: 8824175762766248990
+      Plus_Tall_Key_Dark: -4800814157384067274
+      Print_Screen_Key_Dark: -2525730713589857977
+      Q_Key_Dark: -3883220961084088201
+      Question_Key_Dark: 4702464594101658627
+      Quote_Key_Dark: 6781107009812438819
+      R_Key_Dark: 3207982613790281044
+      S_Key_Dark: -5834249016292367578
+      Semicolon_Key_Dark: -3751577819440620959
+      Shift_Alt_Key_Dark: -5029702633787448014
+      Shift_Key_Dark: -4066406108220172299
+      Slash_Key_Dark: 4829356117992933562
+      Space_Key_Dark: -964574616317645832
+      T_Key_Dark: 5860199509479225277
+      Tab_Key_Dark: -7552397508293996800
+      Tilda_Key_Dark: 8253723173150916303
+      U_Key_Dark: 1316568101552358290
+      V_Key_Dark: -988400688527286662
+      W_Key_Dark: 4524962976630224875
+      Win_Key_Dark: -8132389346652505108
+      X_Key_Dark: 6592930692247166506
+      Y_Key_Dark: -40676801301358767
+      Z_Key_Dark: -6580620618707348095
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

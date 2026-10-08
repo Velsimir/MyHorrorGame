@@ -1,0 +1,42 @@
+{
+    "name": "Velsi.Typecraft.Editor",
+    "rootNamespace": "Velsi.Typecraft.Editor",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Velsi.Typecraft.InputSystem",
+        "Velsi.Typecraft.Localization",
+        "Unity.TextMeshPro",
+        "Unity.2D.Sprite.Editor",
+        "Unity.InputSystem",
+        "Unity.Localization",
+        "Unity.Localization.Editor",
+        "TMPEffects"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "TYPECRAFT_INPUTSYSTEM"
+        },
+        {
+            "name": "com.unity.localization",
+            "expression": "1.4.0",
+            "define": "TYPECRAFT_LOCALIZATION"
+        },
+        {
+            "name": "com.luca3317.tmpeffects",
+            "expression": "0.3.0",
+            "define": "TYPECRAFT_TMPEFFECTS"
+        }
+    ],
+    "noEngineReferences": false
+}

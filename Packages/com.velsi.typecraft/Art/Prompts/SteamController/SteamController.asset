@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: SteamController
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: steamcontroller
+  _spriteAsset: {fileID: 11400000, guid: fb09b29d29e141246b71c773a763969b, type: 2}
+  _entries:
+  - _key: a
+    _glyphName: Steam_A
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: b
+    _glyphName: Steam_B
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: back
+    _glyphName: Steam_Back
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: gyro
+    _glyphName: Steam_Gyro
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: lb
+    _glyphName: Steam_LB
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_grip
+    _glyphName: Steam_Left_Grip
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track
+    _glyphName: Steam_Left_Track
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track_center
+    _glyphName: Steam_Left_Track_Center
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track_down
+    _glyphName: Steam_Left_Track_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track_left
+    _glyphName: Steam_Left_Track_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track_right
+    _glyphName: Steam_Left_Track_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track_up
+    _glyphName: Steam_Left_Track_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: lt
+    _glyphName: Steam_LT
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: rb
+    _glyphName: Steam_RB
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_grip
+    _glyphName: Steam_Right_Grip
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track
+    _glyphName: Steam_Right_Track
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track_center
+    _glyphName: Steam_Right_Track_Center
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track_down
+    _glyphName: Steam_Right_Track_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track_left
+    _glyphName: Steam_Right_Track_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track_right
+    _glyphName: Steam_Right_Track_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track_up
+    _glyphName: Steam_Right_Track_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: rt
+    _glyphName: Steam_RT
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: start
+    _glyphName: Steam_Start
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: stick
+    _glyphName: Steam_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: system
+    _glyphName: Steam_System
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tilt_pitch
+    _glyphName: Steam_Tilt_Pitch
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tilt_roll
+    _glyphName: Steam_Tilt_Roll
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tilt_yaw
+    _glyphName: Steam_Tilt_Yaw
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: x
+    _glyphName: Steam_X
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: y
+    _glyphName: Steam_Y
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/SteamController
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

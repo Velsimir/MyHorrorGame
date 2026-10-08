@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: KeyboardMouse_Blanks
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: keyboardmouse_blanks
+  _spriteAsset: {fileID: 11400000, guid: b1120c084b587174aa7f77f923211271, type: 2}
+  _entries:
+  - _key: black_enter
+    _glyphName: Blank_Black_Enter
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: black_mouse
+    _glyphName: Blank_Black_Mouse
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: black_normal
+    _glyphName: Blank_Black_Normal
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: black_super_wide
+    _glyphName: Blank_Black_Super_Wide
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: black_tall
+    _glyphName: Blank_Black_tall
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: black_wide
+    _glyphName: Blank_Black_Wide
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_enter
+    _glyphName: Blank_White_Enter
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_mouse
+    _glyphName: Blank_White_Mouse
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_normal
+    _glyphName: Blank_White_Normal
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_super_wide
+    _glyphName: Blank_White_Super_Wide
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_tall
+    _glyphName: Blank_White_Tall
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: white_wide
+    _glyphName: Blank_White_Wide
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/KeyboardMouse_Blanks
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

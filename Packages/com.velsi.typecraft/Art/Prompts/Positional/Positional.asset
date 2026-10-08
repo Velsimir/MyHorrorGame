@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: Positional
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: positional
+  _spriteAsset: {fileID: 11400000, guid: a3359c6935ceea7469c376ec887117ff, type: 2}
+  _entries:
+  - _key: controller_disconnected
+    _glyphName: Controller_Disconnected
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: positional_prompts_down
+    _glyphName: Positional_Prompts_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: positional_prompts_left
+    _glyphName: Positional_Prompts_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: positional_prompts_right
+    _glyphName: Positional_Prompts_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: positional_prompts_up
+    _glyphName: Positional_Prompts_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/Positional
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

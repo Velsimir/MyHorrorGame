@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: XboxOne
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: xboxone
+  _spriteAsset: {fileID: 11400000, guid: e314ceb27dca42c4fa02c27644250f7d, type: 2}
+  _entries:
+  - _key: a
+    _glyphName: XboxOne_A
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: b
+    _glyphName: XboxOne_B
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad
+    _glyphName: XboxOne_Dpad
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_down
+    _glyphName: XboxOne_Dpad_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_left
+    _glyphName: XboxOne_Dpad_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_right
+    _glyphName: XboxOne_Dpad_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_up
+    _glyphName: XboxOne_Dpad_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: lb
+    _glyphName: XboxOne_LB
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick
+    _glyphName: XboxOne_Left_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick_click
+    _glyphName: XboxOne_Left_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: lt
+    _glyphName: XboxOne_LT
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: menu
+    _glyphName: XboxOne_Menu
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: rb
+    _glyphName: XboxOne_RB
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick
+    _glyphName: XboxOne_Right_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick_click
+    _glyphName: XboxOne_Right_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: rt
+    _glyphName: XboxOne_RT
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: windows
+    _glyphName: XboxOne_Windows
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: x
+    _glyphName: XboxOne_X
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: y
+    _glyphName: XboxOne_Y
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/XboxOne
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

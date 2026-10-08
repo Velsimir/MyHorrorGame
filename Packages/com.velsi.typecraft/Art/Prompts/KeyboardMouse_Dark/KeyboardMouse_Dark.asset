@@ -1,0 +1,500 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: KeyboardMouse_Dark
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: keyboardmouse_dark
+  _spriteAsset: {fileID: 11400000, guid: 2de6dc3faedbdef4d81fa305e38ff069, type: 2}
+  _entries:
+  - _key: 0
+    _glyphName: 0_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 1
+    _glyphName: 1_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 10
+    _glyphName: 10_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 11
+    _glyphName: 11_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 12
+    _glyphName: 12_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 2
+    _glyphName: 2_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 3
+    _glyphName: 3_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 4
+    _glyphName: 4_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 5
+    _glyphName: 5_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 6
+    _glyphName: 6_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 7
+    _glyphName: 7_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 8
+    _glyphName: 8_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: 9
+    _glyphName: 9_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: a
+    _glyphName: A_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: alt
+    _glyphName: Alt_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_down
+    _glyphName: Arrow_Down_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_left
+    _glyphName: Arrow_Left_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_right
+    _glyphName: Arrow_Right_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_up
+    _glyphName: Arrow_Up_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: asterisk
+    _glyphName: Asterisk_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: b
+    _glyphName: B_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: backspace
+    _glyphName: Backspace_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: backspace_alt
+    _glyphName: Backspace_Alt_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: bracket_left
+    _glyphName: Bracket_Left_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: bracket_right
+    _glyphName: Bracket_Right_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: c
+    _glyphName: C_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: caps_lock
+    _glyphName: Caps_Lock_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: command
+    _glyphName: Command_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: ctrl
+    _glyphName: Ctrl_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: d
+    _glyphName: D_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: del
+    _glyphName: Del_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: e
+    _glyphName: E_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: end
+    _glyphName: End_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: enter
+    _glyphName: Enter_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: enter_alt
+    _glyphName: Enter_Alt_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: enter_tall
+    _glyphName: Enter_Tall_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: esc
+    _glyphName: Esc_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f
+    _glyphName: F_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f1
+    _glyphName: F1_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f10
+    _glyphName: F10_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f11
+    _glyphName: F11_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f12
+    _glyphName: F12_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f2
+    _glyphName: F2_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f3
+    _glyphName: F3_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f4
+    _glyphName: F4_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f5
+    _glyphName: F5_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f6
+    _glyphName: F6_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f7
+    _glyphName: F7_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f8
+    _glyphName: F8_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: f9
+    _glyphName: F9_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: g
+    _glyphName: G_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: h
+    _glyphName: H_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: home
+    _glyphName: Home_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: i
+    _glyphName: I_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: insert
+    _glyphName: Insert_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: j
+    _glyphName: J_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: k
+    _glyphName: K_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l
+    _glyphName: L_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: m
+    _glyphName: M_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mark_left
+    _glyphName: Mark_Left_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mark_right
+    _glyphName: Mark_Right_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: minus
+    _glyphName: Minus_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mouse_left
+    _glyphName: Mouse_Left_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mouse_middle
+    _glyphName: Mouse_Middle_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mouse_right
+    _glyphName: Mouse_Right_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: mouse_simple
+    _glyphName: Mouse_Simple_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: n
+    _glyphName: N_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: num_lock
+    _glyphName: Num_Lock_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: o
+    _glyphName: O_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: p
+    _glyphName: P_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: page_down
+    _glyphName: Page_Down_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: page_up
+    _glyphName: Page_Up_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: plus
+    _glyphName: Plus_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: plus_tall
+    _glyphName: Plus_Tall_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: print_screen
+    _glyphName: Print_Screen_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: q
+    _glyphName: Q_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: question
+    _glyphName: Question_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: quote
+    _glyphName: Quote_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r
+    _glyphName: R_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: s
+    _glyphName: S_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: semicolon
+    _glyphName: Semicolon_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: shift
+    _glyphName: Shift_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: shift_alt
+    _glyphName: Shift_Alt_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: slash
+    _glyphName: Slash_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: space
+    _glyphName: Space_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: t
+    _glyphName: T_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tab
+    _glyphName: Tab_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tilda
+    _glyphName: Tilda_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: u
+    _glyphName: U_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: v
+    _glyphName: V_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: w
+    _glyphName: W_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: win
+    _glyphName: Win_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: x
+    _glyphName: X_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: y
+    _glyphName: Y_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: z
+    _glyphName: Z_Key_Dark
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/KeyboardMouse_Dark
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

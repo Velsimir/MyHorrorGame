@@ -1,0 +1,23 @@
+{
+    "name": "Velsi.Typecraft.Runtime",
+    "rootNamespace": "Velsi.Typecraft",
+    "references": [
+        "Unity.TextMeshPro",
+        "TMPEffects"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.luca3317.tmpeffects",
+            "expression": "0.3.0",
+            "define": "TYPECRAFT_TMPEFFECTS"
+        }
+    ],
+    "noEngineReferences": false
+}

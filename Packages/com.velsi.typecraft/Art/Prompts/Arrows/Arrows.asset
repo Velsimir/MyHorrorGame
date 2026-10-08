@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: Arrows
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: arrows
+  _spriteAsset: {fileID: 11400000, guid: 17a4f67e87f7655499ca450804959744, type: 2}
+  _entries:
+  - _key: arrow_cross
+    _glyphName: Directional_Arrow_Cross
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_diagonal
+    _glyphName: Directional_Arrow_Diagonal
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_full_circle
+    _glyphName: Directional_Arrow_Full_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_half_circle
+    _glyphName: Directional_Arrow_Half_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_horizontal
+    _glyphName: Directional_Arrow_Horizontal
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_quarter_circle
+    _glyphName: Directional_Arrow_Quarter_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_sides
+    _glyphName: Directional_Arrow_Sides
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_straight
+    _glyphName: Directional_Arrow_Straight
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: arrow_vertical
+    _glyphName: Directional_Arrow_Vertical
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/Arrows
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

@@ -1,0 +1,31 @@
+{
+    "name": "Velsi.Typecraft.Samples.SimpleDialogue",
+    "rootNamespace": "Velsi.Typecraft.Samples.SimpleDialogue",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.InputSystem",
+        "TMPEffects"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "TYPECRAFT_SAMPLE_INPUTSYSTEM"
+        },
+        {
+            "name": "com.luca3317.tmpeffects",
+            "expression": "0.3.0",
+            "define": "TYPECRAFT_SAMPLE_TMPEFFECTS"
+        }
+    ],
+    "noEngineReferences": false
+}

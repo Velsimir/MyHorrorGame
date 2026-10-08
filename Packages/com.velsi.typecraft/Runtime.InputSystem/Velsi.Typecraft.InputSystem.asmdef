@@ -1,0 +1,26 @@
+{
+    "name": "Velsi.Typecraft.InputSystem",
+    "rootNamespace": "Velsi.Typecraft.InputSystem",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "TYPECRAFT_INPUTSYSTEM"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "TYPECRAFT_INPUTSYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

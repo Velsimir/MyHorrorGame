@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: SteamDeck
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: steamdeck
+  _spriteAsset: {fileID: 11400000, guid: 8dec19f4fecee274abdfa6f93f11b2fb, type: 2}
+  _entries:
+  - _key: a
+    _glyphName: SteamDeck_A
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: b
+    _glyphName: SteamDeck_B
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dots
+    _glyphName: SteamDeck_Dots
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad
+    _glyphName: SteamDeck_Dpad
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_down
+    _glyphName: SteamDeck_Dpad_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_left
+    _glyphName: SteamDeck_Dpad_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_right
+    _glyphName: SteamDeck_Dpad_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: dpad_up
+    _glyphName: SteamDeck_Dpad_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: gyro
+    _glyphName: SteamDeck_Gyro
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: inventory
+    _glyphName: SteamDeck_Inventory
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l1
+    _glyphName: SteamDeck_L1
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l2
+    _glyphName: SteamDeck_L2
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l4
+    _glyphName: SteamDeck_L4
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: l5
+    _glyphName: SteamDeck_L5
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick
+    _glyphName: SteamDeck_Left_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_stick_click
+    _glyphName: SteamDeck_Left_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: left_track
+    _glyphName: SteamDeck_Left_Track
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: menu
+    _glyphName: SteamDeck_Menu
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: minus
+    _glyphName: SteamDeck_Minus
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: plus
+    _glyphName: SteamDeck_Plus
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: power
+    _glyphName: SteamDeck_Power
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r1
+    _glyphName: SteamDeck_R1
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r2
+    _glyphName: SteamDeck_R2
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r4
+    _glyphName: SteamDeck_R4
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: r5
+    _glyphName: SteamDeck_R5
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick
+    _glyphName: SteamDeck_Right_Stick
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_stick_click
+    _glyphName: SteamDeck_Right_Stick_Click
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: right_track
+    _glyphName: SteamDeck_Right_Track
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: square
+    _glyphName: SteamDeck_Square
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: steam
+    _glyphName: SteamDeck_Steam
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: x
+    _glyphName: SteamDeck_X
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: y
+    _glyphName: SteamDeck_Y
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/SteamDeck
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

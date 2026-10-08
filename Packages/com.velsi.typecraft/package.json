@@ -1,0 +1,33 @@
+{
+  "name": "com.velsi.typecraft",
+  "version": "0.1.0",
+  "displayName": "Typecraft",
+  "description": "Text toolkit for TextMeshPro: short markup tags, style and icon libraries, device-aware input prompts, font roles per locale, TMPEffects and Unity Localization integration.",
+  "unity": "6000.0",
+  "author": { "name": "Velsi" },
+  "dependencies": {
+    "com.unity.ugui": "2.0.0",
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.physics2d": "1.0.0"
+  },
+  "keywords": [ "text", "tmp", "textmeshpro", "localization", "input prompts", "rich text" ],
+  "samples": [
+    {
+      "displayName": "Simple Dialogue",
+      "description": "Tutorial: a dialogue box with styles, icons, input prompts, TMPEffects, a custom tag and live language/device switching. Учебный сэмпл: диалог со стилями, иконками, подсказками ввода и переключением языка.",
+      "path": "Samples~/SimpleDialogue"
+    },
+    {
+      "displayName": "Branching Dialogue",
+      "description": "Dialogue module: a dialogue box with portraits, choices with Disable/Hide conditions, a flag set by a note in the world, subtitles and a dialogue event that opens a door. Сэмпл диалогов: окно с портретами, выборы с условиями, флаг от записки, субтитры, событие.",
+      "path": "Samples~/BranchingDialogue"
+    },
+    {
+      "displayName": "Extra Input Prompts",
+      "description": "Legacy and niche controller prompt sets (Xbox 360, PS3, Vita, Move, Wii, Wii U, Ouya, Stadia, Luna, VR) and controller diagrams.",
+      "path": "Samples~/ExtraPrompts"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8b4545da39f464a992a9ba35efe66c, type: 3}
+  m_Name: MarkupLayer_SimpleDialogue
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Text.MarkupLayer
+  _tableId: SimpleDialogue
+  _entries:
+  - _key: sample.greeting
+    _locale: en
+    _markup: '[title]Lighthouse[/title]
+
+      Hello, {player:name}. The keeper left
+      hours ago.'
+    _source: 'Lighthouse
+
+      Hello, {player:name}. The keeper left hours ago.'
+  - _key: sample.greeting
+    _locale: ru
+    _markup: "[title]\u041C\u0430\u044F\u043A[/title]\n\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439,
+      {player:name}. \u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C
+      \u0443\u0448\u0451\u043B \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0447\u0430\u0441\u043E\u0432 \u043D\u0430\u0437\u0430\u0434."
+    _source: "\u041C\u0430\u044F\u043A\n\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439,
+      {player:name}. \u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C
+      \u0443\u0448\u0451\u043B \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0447\u0430\u0441\u043E\u0432 \u043D\u0430\u0437\u0430\u0434."
+  - _key: sample.greeting
+    _locale: zh-Hans
+    _markup: "[title]\u706F\u5854[/title]\n\u4F60\u597D\uFF0C{player:name}\u3002\u770B\u5B88\u4EBA\u51E0\u4E2A\u5C0F\u65F6\u524D\u5C31\u79BB\u5F00\u4E86\u3002"
+    _source: "\u706F\u5854\n\u4F60\u597D\uFF0C{player:name}\u3002\u770B\u5B88\u4EBA\u51E0\u4E2A\u5C0F\u65F6\u524D\u5C31\u79BB\u5F00\u4E86\u3002"
+  - _key: sample.lamp
+    _locale: en
+    _markup: "The lamp is <wave>still burning</wave>\u2026<!wait=0.6> who lit it?"
+    _source: "The lamp is still burning\u2026 who lit it?"
+  - _key: sample.lamp
+    _locale: ru
+    _markup: "\u041B\u0430\u043C\u043F\u0430 <wave>\u0432\u0441\u0451 \u0435\u0449\u0451
+      \u0433\u043E\u0440\u0438\u0442</wave>\u2026<!wait=0.6> \u043A\u0442\u043E \u0435\u0451
+      \u0437\u0430\u0436\u0451\u0433?"
+    _source: "\u041B\u0430\u043C\u043F\u0430 \u0432\u0441\u0451 \u0435\u0449\u0451
+      \u0433\u043E\u0440\u0438\u0442\u2026 \u043A\u0442\u043E \u0435\u0451 \u0437\u0430\u0436\u0451\u0433?"
+  - _key: sample.lamp
+    _locale: zh-Hans
+    _markup: "\u706F<wave>\u8FD8\u4EAE\u7740</wave>\u2026\u2026<!wait=0.6>\u662F\u8C01\u70B9\u7684\uFF1F"
+    _source: "\u706F\u8FD8\u4EAE\u7740\u2026\u2026\u662F\u8C01\u70B9\u7684\uFF1F"
+  - _key: sample.hint
+    _locale: en
+    _markup: '[hint]Press {key:Interact} to take the lamp.[/hint]'
+    _source: Press {key:Interact} to take the lamp.
+  - _key: sample.hint
+    _locale: ru
+    _markup: "[hint]\u041D\u0430\u0436\u043C\u0438 {key:Interact}, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u0437\u044F\u0442\u044C \u043B\u0430\u043C\u043F\u0443.[/hint]"
+    _source: "\u041D\u0430\u0436\u043C\u0438 {key:Interact}, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u0437\u044F\u0442\u044C \u043B\u0430\u043C\u043F\u0443."
+  - _key: sample.hint
+    _locale: zh-Hans
+    _markup: "[hint]\u6309 {key:Interact} \u62FF\u8D77\u706F\u3002[/hint]"
+    _source: "\u6309 {key:Interact} \u62FF\u8D77\u706F\u3002"
+  - _key: sample.whisper
+    _locale: en
+    _markup: '[whisper]Don''t turn around.[/whisper]'
+    _source: Don't turn around.
+  - _key: sample.whisper
+    _locale: ru
+    _markup: "[whisper]\u041D\u0435 \u043E\u0431\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0439\u0441\u044F.[/whisper]"
+    _source: "\u041D\u0435 \u043E\u0431\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0439\u0441\u044F."
+  - _key: sample.whisper
+    _locale: zh-Hans
+    _markup: "[whisper]\u522B\u56DE\u5934\u3002[/whisper]"
+    _source: "\u522B\u56DE\u5934\u3002"
+  - _key: sample.door
+    _locale: en
+    _markup: The door behind you is [warn]open[/warn].
+    _source: The door behind you is open.
+  - _key: sample.door
+    _locale: ru
+    _markup: "\u0414\u0432\u0435\u0440\u044C \u0437\u0430 \u0442\u0432\u043E\u0435\u0439
+      \u0441\u043F\u0438\u043D\u043E\u0439 [warn]\u043E\u0442\u043A\u0440\u044B\u0442\u0430[/warn]."
+    _source: "\u0414\u0432\u0435\u0440\u044C \u0437\u0430 \u0442\u0432\u043E\u0435\u0439
+      \u0441\u043F\u0438\u043D\u043E\u0439 \u043E\u0442\u043A\u0440\u044B\u0442\u0430."
+  - _key: sample.door
+    _locale: zh-Hans
+    _markup: "\u4F60\u8EAB\u540E\u7684\u95E8[warn]\u5F00\u7740[/warn]\u3002"
+    _source: "\u4F60\u8EAB\u540E\u7684\u95E8\u5F00\u7740\u3002"

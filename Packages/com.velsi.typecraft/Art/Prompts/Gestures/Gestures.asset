@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: Gestures
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: gestures
+  _spriteAsset: {fileID: 11400000, guid: 612e73f97e6a532498d61b4d064be6bb, type: 2}
+  _entries:
+  - _key: double_rotate
+    _glyphName: Gesture_Double_Rotate
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: double_tap
+    _glyphName: Gesture_Double_Tap
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: finger_front
+    _glyphName: Gesture_Finger_Front
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: finger_side
+    _glyphName: Gesture_Finger_Side
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: full_circle
+    _glyphName: Gesture_Full_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: half_circle
+    _glyphName: Gesture_Half_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: hold
+    _glyphName: Gesture_Hold
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: quarter_circle
+    _glyphName: Gesture_Quarter_Circle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: scroll_down
+    _glyphName: Gesture_Scroll_Down
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: scroll_left
+    _glyphName: Gesture_Scroll_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: scroll_right
+    _glyphName: Gesture_Scroll_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: scroll_up
+    _glyphName: Gesture_Scroll_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_bottom
+    _glyphName: Gesture_Swipe_Bottom
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_bottom_left
+    _glyphName: Gesture_Swipe_Bottom_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_bottom_right
+    _glyphName: Gesture_Swipe_Bottom_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_left
+    _glyphName: Gesture_Swipe_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_right
+    _glyphName: Gesture_Swipe_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_top_left
+    _glyphName: Gesture_Swipe_Top_Left
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_top_right
+    _glyphName: Gesture_Swipe_Top_Right
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: swipe_up
+    _glyphName: Gesture_Swipe_Up
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: tap
+    _glyphName: Gesture_Tap
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: zoom_in
+    _glyphName: Gesture_Zoom_In
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: zoom_out
+    _glyphName: Gesture_Zoom_Out
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: Packages/com.velsi.typecraft/Art~/Prompts/Gestures
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0
