@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4471939862725502565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1c888a8af36584781ab02d09901fc2, type: 3}
+  m_Name: Show Animations
+  m_EditorClassIdentifier: TMPEffects::TMPEffects.Databases.AnimationDatabase.TMPShowAnimationDatabase
+  showAnimations:
+    _serializedList:
+    - Key: char
+      Value: {fileID: 11400000, guid: d82e51bb982c27c47a8814341550d76a, type: 2}
+    - Key: shake
+      Value: {fileID: 11400000, guid: 7ff686710e747034e9b6413be079b56a, type: 2}
+    - Key: spread
+      Value: {fileID: 11400000, guid: 747c7167c5d13a24dae0f420c3da1a8a, type: 2}
+    - Key: pivot
+      Value: {fileID: 11400000, guid: fa0673e18b43a904ca0a847d165d724f, type: 2}
+    - Key: move
+      Value: {fileID: 11400000, guid: 108b496c4e18ae84e8e10d75c99e52ca, type: 2}
+    - Key: grow
+      Value: {fileID: 11400000, guid: 6dd68f0151965bf4896d33309fe4bad4, type: 2}
+    - Key: fade
+      Value: {fileID: 11400000, guid: 76f36d696eb3a6d4a87af67ab4aae6a8, type: 2}
+--- !u!114 &-3451643102804107510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337bd111296f6ee4cabd2caa57986019, type: 3}
+  m_Name: Basic Animations
+  m_EditorClassIdentifier: TMPEffects::TMPEffects.Databases.AnimationDatabase.TMPBasicAnimationDatabase
+  animations:
+    _serializedList:
+    - Key: sketchy
+      Value: {fileID: 11400000, guid: 5e21d8a0006f1fd44bae0336d8dba7c2, type: 2}
+    - Key: dangle
+      Value: {fileID: 11400000, guid: 9891902e99ccfbd4f99f359f1d6d1fd8, type: 2}
+    - Key: shear
+      Value: {fileID: 11400000, guid: 5fb2a430e51fbd74587058748c541053, type: 2}
+    - Key: wave
+      Value: {fileID: 11400000, guid: caf90dcc4db077248b4aef29741767e8, type: 2}
+    - Key: grow
+      Value: {fileID: 11400000, guid: 30d2435db910b094bacfda24efefc008, type: 2}
+    - Key: swing
+      Value: {fileID: 11400000, guid: 1f630aff11d4b334c87d691870092917, type: 2}
+    - Key: palette
+      Value: {fileID: 11400000, guid: 88202588c4dc013488ae14da87d7be47, type: 2}
+    - Key: spread
+      Value: {fileID: 11400000, guid: 779ca4742eec2944792561b0ad03c0f8, type: 2}
+    - Key: char
+      Value: {fileID: 11400000, guid: d6826c460579f67428d39f869dbe772e, type: 2}
+    - Key: funky
+      Value: {fileID: 11400000, guid: 505ebfd45a10d324a875fe622a58721b, type: 2}
+    - Key: shake
+      Value: {fileID: 11400000, guid: c9bdffa471e19f74d8eecca2e98ff7a5, type: 2}
+    - Key: jump
+      Value: {fileID: 11400000, guid: ef05f38e6d7c12742bfb6b8777ef7289, type: 2}
+    - Key: fade
+      Value: {fileID: 11400000, guid: e491ab084191bcd41943f54d470627c3, type: 2}
+    - Key: pivot
+      Value: {fileID: 11400000, guid: c7da9492e365c2a4a993bc557235af1a, type: 2}
+    - Key: pivotc
+      Value: {fileID: 11400000, guid: 0c88b7ebe02d2fe419c8bdbec8a8d764, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1899aee2d84fa48a4562b19deb09c6, type: 3}
+  m_Name: TypecraftAnimationDatabase
+  m_EditorClassIdentifier: TMPEffects::TMPEffects.Databases.AnimationDatabase.TMPAnimationDatabase
+  basicAnimationDatabase: {fileID: -3451643102804107510}
+  showAnimationDatabase: {fileID: -4471939862725502565}
+  hideAnimationDatabase: {fileID: 6999195315120038732}
+  prevBasicAnimationDatabase: {fileID: -3451643102804107510}
+  prevShowAnimationDatabase: {fileID: -4471939862725502565}
+  prevHideAnimationDatabase: {fileID: 6999195315120038732}
+--- !u!114 &6999195315120038732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c2324e8bb51204f9baab003106ec53, type: 3}
+  m_Name: Hide Animations
+  m_EditorClassIdentifier: TMPEffects::TMPEffects.Databases.AnimationDatabase.TMPHideAnimationDatabase
+  hideAnimations:
+    _serializedList:
+    - Key: grow
+      Value: {fileID: 11400000, guid: 24b89a3d9f2eaa84ab1f744155c108a3, type: 2}
+    - Key: shake
+      Value: {fileID: 11400000, guid: a8d1eaa017b36aa45ba73e3972d0a777, type: 2}
+    - Key: spread
+      Value: {fileID: 11400000, guid: 4dabd2eadc1eba049af839f1abfa4bef, type: 2}
+    - Key: pivot
+      Value: {fileID: 11400000, guid: 93a8d51de9ba84c498f47da11c769baf, type: 2}
+    - Key: char
+      Value: {fileID: 11400000, guid: afe5af1083ddb1f4695fef19a77421c8, type: 2}
+    - Key: fade
+      Value: {fileID: 11400000, guid: 8e33c09cfcadddb429127412e4187d31, type: 2}
+    - Key: move
+      Value: {fileID: 11400000, guid: 01ef5b43ef2248240ac83f2dbdbb2495, type: 2}

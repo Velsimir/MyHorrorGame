@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b21c7aad542a02428bd207ffc3f8270, type: 3}
+  m_Name: TypecraftSettings
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.TypecraftSettings
+  _styles: {fileID: 11400000, guid: da74872069edd3046b747a82d665af9e, type: 2}
+  _fonts: {fileID: 11400000, guid: 63d47a96dda774e4197cb7563b4fc86e, type: 2}
+  _iconSets: []
+  _inputGlyphs: {fileID: 11400000, guid: cde09e265e27b544e97fdf876ae6426c, type: 2}
+  _textSource: {fileID: 11400000, guid: 09ba4a7a140527446be779b6e63cd153, type: 2}
+  _markupLayers:
+  - {fileID: 11400000, guid: d839d7f80aaa2e645ad989774bfa265a, type: 2}
+  _autoTags: []
+  _animationDatabase: {fileID: 11400000, guid: b66ab63ffd3237b4bb543ce317a41fa3, type: 2}
+  _defaultLocale: en
+  _defaultFontRole: Body
+  _defaultDesktopDevice: 0
+  _defaultMobileDevice: 6

@@ -1,0 +1,4 @@
+﻿key,comment,en,ru,zh-Hans
+ui.door.locked,Подсказка у запертой двери,The door is [warn]locked[/warn]. Press {key:Interact} to inspect the lock.,"Дверь [warn]заперта[/warn]. Нажми {key:Interact}, чтобы осмотреть замок.",门[warn]锁着[/warn]。按 {key:Interact} 检查门锁。
+ui.whisper.still_here,Шёпот после закрытия двери,[whisper]It is still here…[/whisper],[whisper]Он всё ещё здесь…[/whisper],
+ui.location.basement,Заголовок локации,[title]Basement[/title],[title]Подвал[/title],[title]地下室[/title]

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60da5efb81f7beb488443e5c21b9fa29, type: 3}
+  m_Name: StyleLibrary
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Styles.StyleLibrary
+  _styles:
+  - _id: warn
+    _displayName: Warning
+    _fontRole: 
+    _materialPreset: 
+    _useColor: 1
+    _color: {r: 0.89, g: 0.36, b: 0.29, a: 1}
+    _gradient: {fileID: 0}
+    _bold: 0
+    _italic: 0
+    _underline: 0
+    _case: 0
+    _sizePercent: 0
+    _characterSpacingEm: 0
+    _effectTag: 
+    _autoTagWords: []
+  - _id: whisper
+    _displayName: Whisper
+    _fontRole: 
+    _materialPreset: 
+    _useColor: 1
+    _color: {r: 0.6, g: 0.65, b: 0.68, a: 1}
+    _gradient: {fileID: 0}
+    _bold: 0
+    _italic: 1
+    _underline: 0
+    _case: 0
+    _sizePercent: 0
+    _characterSpacingEm: 0.04
+    _effectTag: 
+    _autoTagWords: []
+  - _id: title
+    _displayName: Title
+    _fontRole: 
+    _materialPreset: 
+    _useColor: 0
+    _color: {r: 1, g: 1, b: 1, a: 1}
+    _gradient: {fileID: 0}
+    _bold: 0
+    _italic: 0
+    _underline: 0
+    _case: 1
+    _sizePercent: 130
+    _characterSpacingEm: 0.15
+    _effectTag: 
+    _autoTagWords: []
+  - _id: hint
+    _displayName: Hint
+    _fontRole: 
+    _materialPreset: 
+    _useColor: 1
+    _color: {r: 0.85, g: 0.8, b: 0.6, a: 1}
+    _gradient: {fileID: 0}
+    _bold: 0
+    _italic: 0
+    _underline: 0
+    _case: 0
+    _sizePercent: 85
+    _characterSpacingEm: 0
+    _effectTag: 
+    _autoTagWords: []

@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0f311350df5c04383c207def31f4ee, type: 3}
+  m_Name: InputGlyphProfile
+  m_EditorClassIdentifier: Velsi.Typecraft.InputSystem::Velsi.Typecraft.InputSystem.InputGlyphProfile
+  _actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _families:
+  - _family: 0
+    _icons: {fileID: 11400000, guid: 599c7c3670ea6dc42b414e14b1be7ff3, type: 2}
+    _hasFallback: 0
+    _fallback: 0
+    _controls:
+    - _control: leftShift
+      _iconKey: shift
+    - _control: rightShift
+      _iconKey: shift
+    - _control: shift
+      _iconKey: shift
+    - _control: leftCtrl
+      _iconKey: ctrl
+    - _control: rightCtrl
+      _iconKey: ctrl
+    - _control: ctrl
+      _iconKey: ctrl
+    - _control: leftAlt
+      _iconKey: alt
+    - _control: rightAlt
+      _iconKey: alt
+    - _control: alt
+      _iconKey: alt
+    - _control: leftMeta
+      _iconKey: win
+    - _control: rightMeta
+      _iconKey: win
+    - _control: escape
+      _iconKey: esc
+    - _control: delete
+      _iconKey: del
+    - _control: upArrow
+      _iconKey: arrow_up
+    - _control: downArrow
+      _iconKey: arrow_down
+    - _control: leftArrow
+      _iconKey: arrow_left
+    - _control: rightArrow
+      _iconKey: arrow_right
+    - _control: pageUp
+      _iconKey: page_up
+    - _control: pageDown
+      _iconKey: page_down
+    - _control: capsLock
+      _iconKey: caps_lock
+    - _control: numLock
+      _iconKey: num_lock
+    - _control: printScreen
+      _iconKey: print_screen
+    - _control: leftBracket
+      _iconKey: bracket_left
+    - _control: rightBracket
+      _iconKey: bracket_right
+    - _control: backquote
+      _iconKey: tilda
+    - _control: equals
+      _iconKey: plus
+    - _control: numpadPlus
+      _iconKey: plus
+    - _control: numpadMinus
+      _iconKey: minus
+    - _control: numpadMultiply
+      _iconKey: asterisk
+    - _control: numpadEnter
+      _iconKey: enter
+    - _control: leftButton
+      _iconKey: mouse_left
+    - _control: rightButton
+      _iconKey: mouse_right
+    - _control: middleButton
+      _iconKey: mouse_middle
+    - _control: delta
+      _iconKey: mouse_simple
+    - _control: position
+      _iconKey: mouse_simple
+    - _control: scroll
+      _iconKey: mouse_middle
+    - _control: numpad0
+      _iconKey: 0
+    - _control: numpad1
+      _iconKey: 1
+    - _control: numpad2
+      _iconKey: 2
+    - _control: numpad3
+      _iconKey: 3
+    - _control: numpad4
+      _iconKey: 4
+    - _control: numpad5
+      _iconKey: 5
+    - _control: numpad6
+      _iconKey: 6
+    - _control: numpad7
+      _iconKey: 7
+    - _control: numpad8
+      _iconKey: 8
+    - _control: numpad9
+      _iconKey: 9
+  - _family: 1
+    _icons: {fileID: 11400000, guid: 0f0da632869a65445b0a06f9ac7da0ca, type: 2}
+    _hasFallback: 0
+    _fallback: 0
+    _controls:
+    - _control: buttonSouth
+      _iconKey: a
+    - _control: buttonEast
+      _iconKey: b
+    - _control: buttonWest
+      _iconKey: x
+    - _control: buttonNorth
+      _iconKey: y
+    - _control: leftShoulder
+      _iconKey: lb
+    - _control: rightShoulder
+      _iconKey: rb
+    - _control: leftTrigger
+      _iconKey: lt
+    - _control: rightTrigger
+      _iconKey: rt
+    - _control: start
+      _iconKey: menu
+    - _control: select
+      _iconKey: view
+    - _control: leftStick
+      _iconKey: left_stick
+    - _control: rightStick
+      _iconKey: right_stick
+    - _control: leftStickPress
+      _iconKey: left_stick_click
+    - _control: rightStickPress
+      _iconKey: right_stick_click
+    - _control: dpad
+      _iconKey: dpad
+    - _control: dpad/up
+      _iconKey: dpad_up
+    - _control: dpad/down
+      _iconKey: dpad_down
+    - _control: dpad/left
+      _iconKey: dpad_left
+    - _control: dpad/right
+      _iconKey: dpad_right
+  - _family: 2
+    _icons: {fileID: 11400000, guid: 70ba38f29c933ba409507cd7c9520e0d, type: 2}
+    _hasFallback: 1
+    _fallback: 1
+    _controls:
+    - _control: buttonSouth
+      _iconKey: cross
+    - _control: buttonEast
+      _iconKey: circle
+    - _control: buttonWest
+      _iconKey: square
+    - _control: buttonNorth
+      _iconKey: triangle
+    - _control: leftShoulder
+      _iconKey: l1
+    - _control: rightShoulder
+      _iconKey: r1
+    - _control: leftTrigger
+      _iconKey: l2
+    - _control: rightTrigger
+      _iconKey: r2
+    - _control: start
+      _iconKey: options
+    - _control: select
+      _iconKey: share
+    - _control: leftStick
+      _iconKey: left_stick
+    - _control: rightStick
+      _iconKey: right_stick
+    - _control: leftStickPress
+      _iconKey: left_stick_click
+    - _control: rightStickPress
+      _iconKey: right_stick_click
+    - _control: dpad
+      _iconKey: dpad
+    - _control: dpad/up
+      _iconKey: dpad_up
+    - _control: dpad/down
+      _iconKey: dpad_down
+    - _control: dpad/left
+      _iconKey: dpad_left
+    - _control: dpad/right
+      _iconKey: dpad_right
+    - _control: touchpadButton
+      _iconKey: touch_pad
+  - _family: 3
+    _icons: {fileID: 11400000, guid: d20e3100ce951754596a06adc7b5e655, type: 2}
+    _hasFallback: 1
+    _fallback: 1
+    _controls:
+    - _control: buttonSouth
+      _iconKey: b
+    - _control: buttonEast
+      _iconKey: a
+    - _control: buttonWest
+      _iconKey: y
+    - _control: buttonNorth
+      _iconKey: x
+    - _control: leftShoulder
+      _iconKey: lb
+    - _control: rightShoulder
+      _iconKey: rb
+    - _control: leftTrigger
+      _iconKey: lt
+    - _control: rightTrigger
+      _iconKey: rt
+    - _control: start
+      _iconKey: plus
+    - _control: select
+      _iconKey: minus
+    - _control: leftStick
+      _iconKey: left_stick
+    - _control: rightStick
+      _iconKey: right_stick
+    - _control: leftStickPress
+      _iconKey: left_stick_click
+    - _control: rightStickPress
+      _iconKey: right_stick_click
+    - _control: dpad
+      _iconKey: dpad
+    - _control: dpad/up
+      _iconKey: dpad_up
+    - _control: dpad/down
+      _iconKey: dpad_down
+    - _control: dpad/left
+      _iconKey: dpad_left
+    - _control: dpad/right
+      _iconKey: dpad_right
+    - _control: home
+      _iconKey: home
+  - _family: 4
+    _icons: {fileID: 11400000, guid: 24999d602b1360e4aa66f58f2afca24c, type: 2}
+    _hasFallback: 1
+    _fallback: 1
+    _controls:
+    - _control: buttonSouth
+      _iconKey: a
+    - _control: buttonEast
+      _iconKey: b
+    - _control: buttonWest
+      _iconKey: x
+    - _control: buttonNorth
+      _iconKey: y
+    - _control: leftShoulder
+      _iconKey: l1
+    - _control: rightShoulder
+      _iconKey: r1
+    - _control: leftTrigger
+      _iconKey: l2
+    - _control: rightTrigger
+      _iconKey: r2
+    - _control: start
+      _iconKey: menu
+    - _control: select
+      _iconKey: square
+    - _control: leftStick
+      _iconKey: left_stick
+    - _control: rightStick
+      _iconKey: right_stick
+    - _control: leftStickPress
+      _iconKey: left_stick_click
+    - _control: rightStickPress
+      _iconKey: right_stick_click
+    - _control: dpad
+      _iconKey: dpad
+    - _control: dpad/up
+      _iconKey: dpad_up
+    - _control: dpad/down
+      _iconKey: dpad_down
+    - _control: dpad/left
+      _iconKey: dpad_left
+    - _control: dpad/right
+      _iconKey: dpad_right
+  - _family: 5
+    _icons: {fileID: 0}
+    _hasFallback: 1
+    _fallback: 1
+    _controls: []
+  - _family: 6
+    _icons: {fileID: 11400000, guid: 1184027e3ff55c64fadcd0d7b711457c, type: 2}
+    _hasFallback: 0
+    _fallback: 0
+    _controls: []
+  _overrides: []

@@ -20,6 +20,11 @@
 - Полноценные файлы и классы — только по явной просьбе.
 - Указывать на ошибки и запахи в существующем коде — обязательно, с объяснением «почему».
 - Общение на русском языке.
+- **Исключение — пакет Typecraft** (`Packages/com.velsi.typecraft`): инструмент для текста
+  целиком пишет ассистент, по согласованному плану из 6 этапов, включая модуль диалогов
+  (графы диалогов, проигрыватель, выводы, вкладка «Диалоги»). Модуль не зависит от ECS/Zenject
+  и переносится между проектами. Интеграцию Typecraft в геймплей этой игры (ECS-системы,
+  запуск диалогов по взаимодействию, ввод) по-прежнему пишет автор.
 
 ## Технологии
 
@@ -31,6 +36,11 @@
 - Ввод:新 Input System (v1.18)
 - Камера: Cinemachine 3.1.7 (CinemachineCamera + CinemachineBrain, имена 3.x)
 - Addressables 2.8.1 (настроены, пока не используются в коде)
+- TMPEffects 0.3.2 (git, тег запинен; снимок на случай недоступности — в
+  `Packages/com.velsi.typecraft/Vendor~/`)
+- Unity Localization 1.5.13 (бэкенд текстов Typecraft через `ITextSource`)
+- Typecraft — свой embedded-пакет `Packages/com.velsi.typecraft`, namespace `Velsi.Typecraft.*`,
+  будет вынесен в отдельный git. Исходники арта в `Art~/` (не импортируются), атласы в `Art/`
 - NuGetForUnity — менеджер .NET-пакетов; его пакеты лежат в `Assets/Packages/`, не редактировать руками
 
 ## Структура
@@ -146,6 +156,51 @@ Assets/Game/
   (Focused × OutlineEnabled) переключает renderer.sharedMaterials между двумя готовыми
   массивами. Шейдер — inverted hull (Position × Size, Cull Front, Cast Shadows выкл).
 - Addressables настроены, загрузка контента через них не реализована.
+- Typecraft: все 6 этапов готовы (арт и атласы подсказок ввода, ядро рантайма, окно
+  `Window → Typecraft`, Ctrl+Alt+T, вкладки «Редактор», «Локализация», «Библиотека», «Шрифты»;
+  встраивание: `[TypecraftMarkup]`, «Edit in Typecraft» у string-полей, `TypecraftEditor.Edit`,
+  `MarkupTextField`; сэмпл `Samples~/SimpleDialogue`; документация в README и `Documentation~/EXTENDING.md`). Источник строк —
+  встроенные таблицы (`TableTextSource` + `StringTable_Main` в конфигах Typecraft), языки en (основной),
+  ru, zh-Hans и виртуальный `pseudo`; Unity Localization остаётся опциональным адаптером
+  (`UnityLocalizationTextSource`). Для zh-Hans — статический шрифт `Assets/Game/Art/Fonts/NotoSansSC-Regular zh-Hans SDF.asset`
+  (только символы из строк; исходник Noto Sans SC, OFL, лицензия рядом). После новых китайских строк —
+  «Пересобрать» во вкладке «Шрифты», иначе флаг «нет символа». Ресурсы TMPEffects импортированы
+  в `Assets/TMPEffects` (без них нет встроенных анимаций). Настройки —
+  `Assets/Game/Resources/TypecraftSettings.asset`, конфиги — `Assets/Game/Resources/Configs/Typecraft/`.
+  Разметка: `{key:Action}` — глиф по текущему биндингу действия из `InputActions`, `{icon}` /
+  `{set/icon}` — иконка, `[style]…[/style]` — стиль, `<…>` — TMP/TMPEffects как есть, `\` — экранирование.
+  Шрифты/иконки/материалы TMP находит через `TMP_Text.OnFontAssetRequest/OnSpriteAssetRequest`,
+  класть их в Resources не нужно. Для Touch глифов нет (у действий нет touch-биндингов) —
+  нужны оверрайды в InputGlyphProfile.
+- Typecraft, доработки после 6 этапов:
+  - Иконки в тексте: опорная точка — левый нижний угол (стоит на строке как заглавная), пивот
+    спрайта не влияет. Стандарт картинки — квадрат 128×128, рисунок в 104×104 (поля 12 px),
+    шаблон `Documentation~/IconTemplate_128.png`. Подгонка (смещение/масштаб) — у набора и у
+    иконки в «Библиотеке». Проверка картинок при добавлении; для базовых наборов пакета отключена.
+  - Слой разметки: в таблице — только текст для переводчика и токены `{…}` (порядок слов разный
+    по языкам); оформление `[style]` и `<…>` — в `MarkupLayer` (один на таблицу, у проекта
+    `MarkupLayer_Main` рядом со `StringTable_Main`, список в `TypecraftSettings`). Запись хранит
+    снимок строки таблицы; не совпал — в игре чистый текст, во вкладке «Локализация» ⚠ и
+    «Перенести теги». Правка слов в редакторе — диалог «записать в таблицу».
+    `ITextSource` поменялся: `BaseLocale` + `Request(table, key, locale, Action<TextEntry>)`.
+  - Синхронизация таблиц (CSV/TSV, `.xlsx`, Google Sheets по открытой ссылке) — только в
+    редакторе, настройки источников в `ProjectSettings/TypecraftTableSync.asset`.
+  - Свои материалы и эффекты: пресеты материалов в `Configs/Typecraft/Materials/` (по материалу
+    на каждый шрифт роли), свои эффекты и база анимаций проекта в `Configs/Typecraft/Effects/`
+    (`TypecraftAnimationDatabase`, ссылка в `TypecraftSettings._animationDatabase`; встроенные
+    анимации в ней по ссылкам). Вручную добавленный `TMPAnimator` нужно переключить на эту базу.
+  - Переименование стиля/иконки переписывает теги в таблицах, слоях, открытых и закрытых
+    сценах, префабах и полях `[TypecraftMarkup]`; префабы и закрытые сцены сохраняются сразу,
+    без Undo.
+  - Модуль диалогов (`Runtime.Dialogue`, `Editor.Dialogue`, `Editor.Dialogue.Graph`): шаблон
+    `DialogueAsset` (ноды через `[SerializeReference]`), `SpeakerProfile`, флаги
+    `DialogueVariables`/`DialogueVariableCatalog`, проигрыватель `DialogueRunner` на чистом C#;
+    в сцене — `DialoguePlayer` на объекте + выводы (`DialogueBoxPresenter`, `SubtitlePresenter`,
+    `WorldTextPresenter`), `DialogueTrigger`, `DialogueInputAdvance`. Флаги игры —
+    `DialogueGlobals` (подменяемые через `SetVariables`). Вкладка «Диалоги»: доска на GraphView в
+    отдельной сборке (без неё — вид списком), проигрывание в окне, «Проверить все». Диалоги по
+    умолчанию в `Assets/Game/Dialogues` (не Resources). Сэмпл `Samples~/BranchingDialogue`.
+    Подключение к этой игре (ECS-мост к `DialoguePlayer`, ввод) пишет автор.
 
 ## Принципы и грабли, накопленные в этом проекте
 
