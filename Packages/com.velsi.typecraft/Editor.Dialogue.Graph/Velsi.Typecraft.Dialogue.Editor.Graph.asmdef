@@ -1,0 +1,23 @@
+{
+    "name": "Velsi.Typecraft.Dialogue.Editor.Graph",
+    "rootNamespace": "Velsi.Typecraft.Dialogue.Editor.Graph",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Velsi.Typecraft.Dialogue",
+        "Velsi.Typecraft.Editor",
+        "Velsi.Typecraft.Dialogue.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "!TYPECRAFT_NO_DIALOGUE_GRAPH"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

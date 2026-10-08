@@ -1,0 +1,25 @@
+{
+    "name": "Velsi.Typecraft.Dialogue",
+    "rootNamespace": "Velsi.Typecraft.Dialogue",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "TMPEffects"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.luca3317.tmpeffects",
+            "expression": "0.3.0",
+            "define": "TYPECRAFT_TMPEFFECTS"
+        }
+    ],
+    "noEngineReferences": false
+}

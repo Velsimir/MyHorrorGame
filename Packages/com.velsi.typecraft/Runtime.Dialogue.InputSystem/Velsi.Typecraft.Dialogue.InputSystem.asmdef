@@ -1,0 +1,25 @@
+{
+    "name": "Velsi.Typecraft.Dialogue.InputSystem",
+    "rootNamespace": "Velsi.Typecraft.Dialogue.InputSystem",
+    "references": [
+        "Velsi.Typecraft.Dialogue",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "TYPECRAFT_INPUTSYSTEM"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "TYPECRAFT_INPUTSYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

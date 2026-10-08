@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211ad55201324af4d9baa5251d6c7b2d, type: 3}
+  m_Name: Dialogue_Keeper
+  m_EditorClassIdentifier: Velsi.Typecraft.Dialogue::Velsi.Typecraft.Dialogue.DialogueAsset
+  _id: 233ad85f3f00467e9a3b885e3ebbdcd0
+  _defaultTable: BranchingDialogue
+  _startNode: cd87f18dd11f47e3ae10e640fc358297
+  _nodes:
+  - rid: 2111072416571064479
+  - rid: 2111072416571064480
+  - rid: 2111072416571064481
+  - rid: 2111072416571064482
+  - rid: 2111072416571064483
+  - rid: 2111072416571064484
+  - rid: 2111072416571064485
+  - rid: 2111072416571064486
+  - rid: 2111072416571064487
+  - rid: 2111072416571064488
+  - rid: 2111072416571064489
+  - rid: 2111072416571064490
+  - rid: 2111072416571064491
+  references:
+    version: 2
+    RefIds:
+    - rid: 2111072416571064479
+      type: {class: StartNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: cd87f18dd11f47e3ae10e640fc358297
+        _position: {x: 0, y: 0}
+        _next: 04089c8a0ca843839f12407556609a94
+    - rid: 2111072416571064480
+      type: {class: BranchNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 04089c8a0ca843839f12407556609a94
+        _position: {x: 340, y: 0}
+        _cases:
+        - _condition:
+            _mode: 0
+            _clauses:
+            - _variable: note_found
+              _comparison: 0
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _next: 30442f9aab454f35bee61c99cc8c797b
+        _else: b143f3a3a7854237a3addd7d6295dd53
+    - rid: 2111072416571064481
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: b143f3a3a7854237a3addd7d6295dd53
+        _position: {x: 680, y: 114.00001}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: keeper.greet
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: f6fb54dcce0f4401953f41777bcc3f8f
+    - rid: 2111072416571064482
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 30442f9aab454f35bee61c99cc8c797b
+        _position: {x: 680, y: -114.00001}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: angry
+        _table: 
+        _key: keeper.greet_note
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: f6fb54dcce0f4401953f41777bcc3f8f
+    - rid: 2111072416571064483
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: f6fb54dcce0f4401953f41777bcc3f8f
+        _position: {x: 1020, y: 0}
+        _speaker: {fileID: 11400000, guid: c2865bac25c4a6c499767fe64da72753, type: 2}
+        _emotion: worried
+        _table: 
+        _key: eli.ask
+        _variants:
+        - _condition:
+            _mode: 0
+            _clauses:
+            - _variable: note_found
+              _comparison: 0
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _key: eli.ask_note
+          _emotion: neutral
+        _advance: 0
+        _seconds: 0
+        _next: 8e3f8491cca742ccb084822c744b98a9
+    - rid: 2111072416571064484
+      type: {class: ChoiceNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 8e3f8491cca742ccb084822c744b98a9
+        _position: {x: 1360, y: 0}
+        _options:
+        - _table: 
+          _key: choice.who
+          _condition:
+            _mode: 0
+            _clauses: []
+          _whenUnavailable: 0
+          _next: aeb30ab4c6cf4326aee3bcc420ded310
+        - _table: 
+          _key: choice.note
+          _condition:
+            _mode: 0
+            _clauses:
+            - _variable: note_found
+              _comparison: 0
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _whenUnavailable: 1
+          _next: 76809a3277c74019aab54321800f9802
+        - _table: 
+          _key: choice.nothing
+          _condition:
+            _mode: 0
+            _clauses:
+            - _variable: note_found
+              _comparison: 1
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _whenUnavailable: 0
+          _next: b85c71f49c194ba6bc703f2d5d3e042c
+        - _table: 
+          _key: choice.leave
+          _condition:
+            _mode: 0
+            _clauses: []
+          _whenUnavailable: 0
+          _next: 57dc09ca61b24880b6c920a95e8e4891
+    - rid: 2111072416571064485
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: aeb30ab4c6cf4326aee3bcc420ded310
+        _position: {x: 1700, y: -285}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: keeper.who
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 57dc09ca61b24880b6c920a95e8e4891
+    - rid: 2111072416571064486
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 76809a3277c74019aab54321800f9802
+        _position: {x: 1700, y: -95}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: angry
+        _table: 
+        _key: keeper.note
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: c6729277dd164f1fafbf0e1404d92cc8
+    - rid: 2111072416571064487
+      type: {class: EventNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: c6729277dd164f1fafbf0e1404d92cc8
+        _position: {x: 2040, y: -95}
+        _eventName: door
+        _argument: open
+        _next: e5366dddc4f14a2e9023fa4da4e5c6af
+    - rid: 2111072416571064488
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: e5366dddc4f14a2e9023fa4da4e5c6af
+        _position: {x: 2380, y: -95}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: smile
+        _table: 
+        _key: keeper.door
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 73a41fb1d84247f28240460efa0113a0
+    - rid: 2111072416571064489
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: b85c71f49c194ba6bc703f2d5d3e042c
+        _position: {x: 1700, y: 95}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: keeper.nothing
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 73a41fb1d84247f28240460efa0113a0
+    - rid: 2111072416571064490
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 57dc09ca61b24880b6c920a95e8e4891
+        _position: {x: 2040, y: 285}
+        _speaker: {fileID: 11400000, guid: 325f463ac9f607f4983f3e22c4a9a68f, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: keeper.bye
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 73a41fb1d84247f28240460efa0113a0
+    - rid: 2111072416571064491
+      type: {class: EndNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 73a41fb1d84247f28240460efa0113a0
+        _position: {x: 2720, y: 0}

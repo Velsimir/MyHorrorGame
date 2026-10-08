@@ -1,0 +1,19 @@
+{
+    "name": "Velsi.Typecraft.Samples.BranchingDialogue.Editor",
+    "rootNamespace": "Velsi.Typecraft.Samples.BranchingDialogue.Editor",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Velsi.Typecraft.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,248 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928545dc5ece41e4b9fcad6829c3378f, type: 3}
+  m_Name: StringTable_BranchingDialogue
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Text.Tables.StringTable
+  _tableId: BranchingDialogue
+  _entries:
+  - _key: speaker.eli
+    _comment: "\u0418\u043C\u044F \u0438\u0433\u0440\u043E\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Eli
+    - _locale: ru
+      _text: "\u042D\u043B\u0438"
+    - _locale: zh-Hans
+      _text: "\u4F0A\u83B1"
+  - _key: speaker.keeper
+    _comment: "\u0418\u043C\u044F \u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044F"
+    _values:
+    - _locale: en
+      _text: Keeper
+    - _locale: ru
+      _text: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C"
+    - _locale: zh-Hans
+      _text: "\u770B\u5B88\u4EBA"
+  - _key: keeper.greet
+    _comment: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435,
+      \u0437\u0430\u043F\u0438\u0441\u043A\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430"
+    _values:
+    - _locale: en
+      _text: Late visitor. The lamp needs no help tonight.
+    - _locale: ru
+      _text: "\u041F\u043E\u0437\u0434\u043D\u0438\u0439 \u0433\u043E\u0441\u0442\u044C.
+        \u041B\u0430\u043C\u043F\u0435 \u0441\u0435\u0433\u043E\u0434\u043D\u044F
+        \u043F\u043E\u043C\u043E\u0449\u044C \u043D\u0435 \u043D\u0443\u0436\u043D\u0430."
+    - _locale: zh-Hans
+      _text: "\u8FD9\u4E48\u665A\u8FD8\u6709\u5BA2\u4EBA\u3002\u4ECA\u665A\u706F\u4E0D\u9700\u8981\u5E2E\u5FD9\u3002"
+  - _key: keeper.greet_note
+    _comment: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435
+      \u043F\u043E\u0441\u043B\u0435 \u0437\u0430\u043F\u0438\u0441\u043A\u0438 (\u0432\u0435\u0442\u043A\u0430
+      Branch)"
+    _values:
+    - _locale: en
+      _text: You went upstairs. You read it, didn't you?
+    - _locale: ru
+      _text: "\u0422\u044B \u043F\u043E\u0434\u043D\u0438\u043C\u0430\u043B\u0441\u044F
+        \u043D\u0430\u0432\u0435\u0440\u0445. \u0422\u044B \u0435\u0451 \u043F\u0440\u043E\u0447\u0451\u043B,
+        \u0434\u0430?"
+    - _locale: zh-Hans
+      _text: "\u4F60\u4E0A\u697C\u4E86\u3002\u4F60\u8BFB\u8FC7\u4E86\uFF0C\u5BF9\u5427\uFF1F"
+  - _key: eli.ask
+    _comment: "\u0420\u0435\u043F\u043B\u0438\u043A\u0430 \u0438\u0433\u0440\u043E\u043A\u0430
+      \u0431\u0435\u0437 \u0437\u0430\u043F\u0438\u0441\u043A\u0438"
+    _values:
+    - _locale: en
+      _text: I'm looking for the old keeper.
+    - _locale: ru
+      _text: "\u042F \u0438\u0449\u0443 \u043F\u0440\u0435\u0436\u043D\u0435\u0433\u043E
+        \u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044F."
+    - _locale: zh-Hans
+      _text: "\u6211\u5728\u627E\u4EE5\u524D\u7684\u770B\u5B88\u4EBA\u3002"
+  - _key: eli.ask_note
+    _comment: "\u0412\u0430\u0440\u0438\u0430\u043D\u0442 \u0440\u0435\u043F\u043B\u0438\u043A\u0438
+      \u0438\u0433\u0440\u043E\u043A\u0430 \u043F\u0440\u0438 note_found"
+    _values:
+    - _locale: en
+      _text: I found a note upstairs. It's signed "K."
+    - _locale: ru
+      _text: "\u041D\u0430\u0432\u0435\u0440\u0445\u0443 \u044F \u043D\u0430\u0448\u0451\u043B
+        \u0437\u0430\u043F\u0438\u0441\u043A\u0443. \u041F\u043E\u0434\u043F\u0438\u0441\u0430\u043D\u043E
+        \xAB\u041A.\xBB"
+    - _locale: zh-Hans
+      _text: "\u6211\u5728\u697C\u4E0A\u627E\u5230\u4E00\u5F20\u7EB8\u6761\uFF0C\u7F72\u540D\u662F\u201CK\u201D\u3002"
+  - _key: choice.who
+    _comment: "\u0412\u044B\u0431\u043E\u0440: \u0432\u0441\u0435\u0433\u0434\u0430
+      \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D"
+    _values:
+    - _locale: en
+      _text: Who lit the lamp?
+    - _locale: ru
+      _text: "\u041A\u0442\u043E \u0437\u0430\u0436\u0451\u0433 \u043B\u0430\u043C\u043F\u0443?"
+    - _locale: zh-Hans
+      _text: "\u706F\u662F\u8C01\u70B9\u7684\uFF1F"
+  - _key: choice.note
+    _comment: "\u0412\u044B\u0431\u043E\u0440: \u043D\u0435\u0430\u043A\u0442\u0438\u0432\u0435\u043D
+      \u0431\u0435\u0437 note_found (Disable)"
+    _values:
+    - _locale: en
+      _text: Ask about the note
+    - _locale: ru
+      _text: "\u0421\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u043E \u0437\u0430\u043F\u0438\u0441\u043A\u0435"
+    - _locale: zh-Hans
+      _text: "\u95EE\u95EE\u7EB8\u6761\u7684\u4E8B"
+  - _key: choice.nothing
+    _comment: "\u0412\u044B\u0431\u043E\u0440: \u0441\u043A\u0440\u044B\u0442 \u043F\u0440\u0438
+      note_found (Hide)"
+    _values:
+    - _locale: en
+      _text: I found nothing upstairs.
+    - _locale: ru
+      _text: "\u041D\u0430\u0432\u0435\u0440\u0445\u0443 \u043D\u0438\u0447\u0435\u0433\u043E
+        \u043D\u0435\u0442."
+    - _locale: zh-Hans
+      _text: "\u697C\u4E0A\u4EC0\u4E48\u4E5F\u6CA1\u6709\u3002"
+  - _key: choice.leave
+    _comment: "\u0412\u044B\u0431\u043E\u0440: \u0443\u0439\u0442\u0438"
+    _values:
+    - _locale: en
+      _text: Leave
+    - _locale: ru
+      _text: "\u0423\u0439\u0442\u0438"
+    - _locale: zh-Hans
+      _text: "\u79BB\u5F00"
+  - _key: keeper.who
+    _comment: "\u041E\u0442\u0432\u0435\u0442 \u043D\u0430 \xAB\u043A\u0442\u043E
+      \u0437\u0430\u0436\u0451\u0433\xBB"
+    _values:
+    - _locale: en
+      _text: Nobody. It lights itself when someone is about to arrive.
+    - _locale: ru
+      _text: "\u041D\u0438\u043A\u0442\u043E. \u041E\u043D\u0430 \u0437\u0430\u0433\u043E\u0440\u0430\u0435\u0442\u0441\u044F
+        \u0441\u0430\u043C\u0430, \u043A\u043E\u0433\u0434\u0430 \u043A\u0442\u043E-\u0442\u043E
+        \u0434\u043E\u043B\u0436\u0435\u043D \u043F\u0440\u0438\u0439\u0442\u0438."
+    - _locale: zh-Hans
+      _text: "\u6CA1\u4EBA\u70B9\u3002\u6709\u4EBA\u8981\u6765\u7684\u65F6\u5019\uFF0C\u5B83\u81EA\u5DF1\u5C31\u4EAE\u4E86\u3002"
+  - _key: keeper.nothing
+    _comment: "\u041E\u0442\u0432\u0435\u0442 \u043D\u0430 \xAB\u043D\u0438\u0447\u0435\u0433\u043E
+      \u043D\u0435\u0442\xBB"
+    _values:
+    - _locale: en
+      _text: Then look again. More carefully.
+    - _locale: ru
+      _text: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438
+        \u0435\u0449\u0451 \u0440\u0430\u0437. \u0412\u043D\u0438\u043C\u0430\u0442\u0435\u043B\u044C\u043D\u0435\u0435."
+    - _locale: zh-Hans
+      _text: "\u90A3\u5C31\u518D\u770B\u4E00\u904D\u3002\u4ED4\u7EC6\u70B9\u3002"
+  - _key: keeper.note
+    _comment: "\u041E\u0442\u0432\u0435\u0442 \u043F\u0440\u043E \u0437\u0430\u043F\u0438\u0441\u043A\u0443"
+    _values:
+    - _locale: en
+      _text: Then you know why the door stays shut.
+    - _locale: ru
+      _text: "\u0422\u043E\u0433\u0434\u0430 \u0442\u044B \u0437\u043D\u0430\u0435\u0448\u044C,
+        \u043F\u043E\u0447\u0435\u043C\u0443 \u0434\u0432\u0435\u0440\u044C \u0437\u0430\u043F\u0435\u0440\u0442\u0430."
+    - _locale: zh-Hans
+      _text: "\u90A3\u4F60\u5C31\u77E5\u9053\u95E8\u4E3A\u4EC0\u4E48\u4E00\u76F4\u5173\u7740\u4E86\u3002"
+  - _key: keeper.door
+    _comment: "\u041F\u043E\u0441\u043B\u0435 \u0441\u043E\u0431\u044B\u0442\u0438\u044F
+      door/open"
+    _values:
+    - _locale: en
+      _text: Fine. It's open. Don't say I didn't warn you.
+    - _locale: ru
+      _text: "\u041B\u0430\u0434\u043D\u043E. \u041E\u043D\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u0430.
+        \u041D\u0435 \u0433\u043E\u0432\u043E\u0440\u0438, \u0447\u0442\u043E \u044F
+        \u043D\u0435 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0430\u043B."
+    - _locale: zh-Hans
+      _text: "\u597D\u5427\u3002\u95E8\u5F00\u4E86\u3002\u522B\u8BF4\u6211\u6CA1\u8B66\u544A\u8FC7\u4F60\u3002"
+  - _key: keeper.bye
+    _comment: "\u041F\u0440\u043E\u0449\u0430\u043D\u0438\u0435"
+    _values:
+    - _locale: en
+      _text: Mind the stairs on your way out.
+    - _locale: ru
+      _text: "\u041E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u0435\u0435 \u043D\u0430
+        \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0435."
+    - _locale: zh-Hans
+      _text: "\u4E0B\u697C\u7684\u65F6\u5019\u5C0F\u5FC3\u53F0\u9636\u3002"
+  - _key: note.text
+    _comment: "\u0422\u0435\u043A\u0441\u0442 \u0437\u0430\u043F\u0438\u0441\u043A\u0438
+      \u0432 \u043C\u0438\u0440\u0435 (World Text)"
+    _values:
+    - _locale: en
+      _text: "If the lamp is burning, do not open the door. \u2014 K."
+    - _locale: ru
+      _text: "\u0415\u0441\u043B\u0438 \u043B\u0430\u043C\u043F\u0430 \u0433\u043E\u0440\u0438\u0442
+        \u2014 \u043D\u0435 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0439 \u0434\u0432\u0435\u0440\u044C.
+        \u2014 \u041A."
+    - _locale: zh-Hans
+      _text: "\u706F\u4EAE\u7740\u7684\u65F6\u5019\uFF0C\u4E0D\u8981\u5F00\u95E8\u3002\u2014\u2014K"
+  - _key: eli.thought
+    _comment: "\u041C\u044B\u0441\u043B\u044C \u043F\u0440\u0438 \u0432\u0445\u043E\u0434\u0435
+      \u0432 \u0437\u043E\u043D\u0443 (\u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044B)"
+    _values:
+    - _locale: en
+      _text: Cold in here. Someone was here a minute ago.
+    - _locale: ru
+      _text: "\u0417\u0434\u0435\u0441\u044C \u0445\u043E\u043B\u043E\u0434\u043D\u043E.
+        \u041A\u0442\u043E-\u0442\u043E \u0431\u044B\u043B \u0442\u0443\u0442 \u043C\u0438\u043D\u0443\u0442\u0443
+        \u043D\u0430\u0437\u0430\u0434."
+    - _locale: zh-Hans
+      _text: "\u8FD9\u91CC\u597D\u51B7\u3002\u521A\u624D\u8FD8\u6709\u4EBA\u5728\u3002"
+  - _key: ui.talk
+    _comment: "\u041A\u043D\u043E\u043F\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Talk to the keeper
+    - _locale: ru
+      _text: "\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0441\u043E
+        \u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u0435\u043C"
+    - _locale: zh-Hans
+      _text: "\u548C\u770B\u5B88\u4EBA\u8BF4\u8BDD"
+  - _key: ui.read
+    _comment: "\u041A\u043D\u043E\u043F\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Read the note
+    - _locale: ru
+      _text: "\u041F\u0440\u043E\u0447\u0438\u0442\u0430\u0442\u044C \u0437\u0430\u043F\u0438\u0441\u043A\u0443"
+    - _locale: zh-Hans
+      _text: "\u8BFB\u7EB8\u6761"
+  - _key: ui.zone
+    _comment: "\u041A\u043D\u043E\u043F\u043A\u0430: \u0432\u0445\u043E\u0434 \u0432
+      \u0437\u043E\u043D\u0443"
+    _values:
+    - _locale: en
+      _text: Step into the cold
+    - _locale: ru
+      _text: "\u0412\u043E\u0439\u0442\u0438 \u0432 \u0445\u043E\u043B\u043E\u0434"
+    - _locale: zh-Hans
+      _text: "\u8D70\u8FDB\u5BD2\u6C14\u4E2D"
+  - _key: ui.next
+    _comment: "\u041A\u043D\u043E\u043F\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Next
+    - _locale: ru
+      _text: "\u0414\u0430\u043B\u0435\u0435"
+    - _locale: zh-Hans
+      _text: "\u7EE7\u7EED"
+  - _key: ui.reset
+    _comment: "\u041A\u043D\u043E\u043F\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Reset flags
+    - _locale: ru
+      _text: "\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u0444\u043B\u0430\u0433\u0438"
+    - _locale: zh-Hans
+      _text: "\u91CD\u7F6E\u6807\u8BB0"

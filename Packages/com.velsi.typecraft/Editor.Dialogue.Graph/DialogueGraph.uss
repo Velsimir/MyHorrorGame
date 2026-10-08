@@ -1,0 +1,124 @@
+.dlg-graph {
+    flex-grow: 1;
+}
+
+.dlg-graph GridBackground {
+    --grid-background-color: rgb(36, 36, 36);
+    --line-color: rgba(255, 255, 255, 0.04);
+    --thick-line-color: rgba(255, 255, 255, 0.09);
+    --spacing: 20;
+}
+
+.dlg-graph MiniMap {
+    background-color: rgba(28, 28, 28, 0.85);
+    border-color: rgb(25, 25, 25);
+}
+
+.dlg-gnode {
+    min-width: 180px;
+    max-width: 300px;
+}
+
+.dlg-gnode #node-border {
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgb(25, 25, 25);
+}
+
+.dlg-gnode #title {
+    height: 26px;
+    padding-left: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dlg-gnode #title-label {
+    -unity-font-style: bold;
+    font-size: 12px;
+    color: rgb(235, 235, 235);
+    margin: 4px 6px;
+}
+
+.dlg-gnode.dlg-node--speech #title {
+    background-color: rgb(43, 82, 120);
+}
+
+.dlg-gnode.dlg-node--logic #title {
+    background-color: rgb(88, 64, 120);
+}
+
+.dlg-gnode.dlg-node--flow #title {
+    background-color: rgb(72, 72, 72);
+}
+
+.dlg-gnode.dlg-gnode--start #title {
+    background-color: rgb(60, 92, 64);
+}
+
+.dlg-gnode #contents {
+    background-color: rgb(50, 50, 50);
+}
+
+.dlg-gnode #extension {
+    background-color: rgb(46, 46, 46);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dlg-gnode #output .unity-text-element,
+.dlg-gnode #output Label {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dlg-gnode__body {
+    padding: 4px 8px 6px 8px;
+    max-width: 280px;
+}
+
+.dlg-gnode__body > Label {
+    white-space: normal;
+}
+
+.dlg-gnode__speaker {
+    -unity-font-style: bold;
+    color: rgb(150, 195, 235);
+    margin-bottom: 2px;
+}
+
+.dlg-gnode__text {
+    color: rgb(220, 215, 205);
+}
+
+.dlg-gnode__key {
+    margin-top: 3px;
+    font-size: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.dlg-gnode__note {
+    margin-top: 2px;
+    font-size: 10px;
+    color: rgb(170, 160, 200);
+}
+
+.dlg-gnode.dlg-node--warning #node-border {
+    border-width: 2px;
+    border-color: rgb(214, 160, 60);
+}
+
+.dlg-gnode.dlg-node--error #node-border {
+    border-width: 2px;
+    border-color: rgb(214, 80, 70);
+}
+
+.dlg-gnode.dlg-node--current #node-border {
+    border-width: 3px;
+    border-color: rgb(110, 210, 120);
+}
+
+.dlg-gnode.dlg-node--current #title {
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(110, 210, 120);
+}

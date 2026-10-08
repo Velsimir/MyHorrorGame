@@ -1,0 +1,35 @@
+{
+    "name": "Velsi.Typecraft.Dialogue.Editor",
+    "rootNamespace": "Velsi.Typecraft.Dialogue.Editor",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Velsi.Typecraft.Dialogue",
+        "Velsi.Typecraft.Editor",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.InputSystem",
+        "TMPEffects"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "TYPECRAFT_INPUTSYSTEM"
+        },
+        {
+            "name": "com.luca3317.tmpeffects",
+            "expression": "0.3.0",
+            "define": "TYPECRAFT_TMPEFFECTS"
+        }
+    ],
+    "noEngineReferences": false
+}
