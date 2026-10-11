@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Art;
-using Velsi.Typecraft.Editor.Window;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Preview;
 
 namespace Velsi.Typecraft.Editor.Library
@@ -32,24 +32,24 @@ namespace Velsi.Typecraft.Editor.Library
             window._texture = texture;
             window._fileName = fileName;
             window._problems = problems;
-            window.minSize = window.maxSize = new Vector2(460f, 300f);
+            window.minSize = new Vector2(460f, 300f);
             window.ShowModalUtility();
             return window._choice;
         }
 
         private void CreateGUI()
         {
-            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(TypecraftWindow.StylePath);
-            if (styleSheet != null)
-                rootVisualElement.styleSheets.Add(styleSheet);
+            TypecraftLayout.Dialog(rootVisualElement);
             rootVisualElement.AddToClassList("tc-check");
 
             var title = new Label($"«{_fileName}» может некорректно отображаться в тексте");
             title.AddToClassList("tc-lib__title");
             rootVisualElement.Add(title);
 
+            ScrollView problems = TypecraftLayout.VerticalScroll("tc-check__problems");
             foreach (string problem in _problems)
-                rootVisualElement.Add(new Label("• " + problem) { name = "tc-check__problem" });
+                problems.Add(new Label("• " + problem) { name = "tc-check__problem" });
+            rootVisualElement.Add(problems);
 
             var hint = new Label($"Стандарт: PNG {IconImageCheck.StandardSize}×{IconImageCheck.StandardSize} с прозрачностью, рисунок в центре, поля по {IconImageCheck.StandardMargin} px.");
             hint.AddToClassList("tc-lib__hint");

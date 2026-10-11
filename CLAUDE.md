@@ -159,7 +159,7 @@ Assets/Game/
 - Typecraft: все 6 этапов готовы (арт и атласы подсказок ввода, ядро рантайма, окно
   `Window → Typecraft`, Ctrl+Alt+T, вкладки «Редактор», «Локализация», «Библиотека», «Шрифты»;
   встраивание: `[TypecraftMarkup]`, «Edit in Typecraft» у string-полей, `TypecraftEditor.Edit`,
-  `MarkupTextField`; сэмпл `Samples~/SimpleDialogue`; документация в README и `Documentation~/EXTENDING.md`). Источник строк —
+  `MarkupTextField`; сэмпл `Samples~/SimpleDialogue`; документация: README, `Documentation~/API.ru.md`/`API.en.md` (код), `Manual.ru.md`/`Manual.en.md` (интерфейс), `ART_RULES.ru.md`/`.en.md`; поставка — `.tgz` с окном Welcome и автоустановкой TMPEffects). Источник строк —
   встроенные таблицы (`TableTextSource` + `StringTable_Main` в конфигах Typecraft), языки en (основной),
   ru, zh-Hans и виртуальный `pseudo`; Unity Localization остаётся опциональным адаптером
   (`UnityLocalizationTextSource`). Для zh-Hans — статический шрифт `Assets/Game/Art/Fonts/NotoSansSC-Regular zh-Hans SDF.asset`

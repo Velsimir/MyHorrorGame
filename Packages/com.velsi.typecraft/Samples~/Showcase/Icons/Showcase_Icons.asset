@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e450e145ab47a4991a321436a7ff3b, type: 3}
+  m_Name: Showcase_Icons
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Library.IconSet
+  _setId: showcase
+  _spriteAsset: {fileID: 11400000, guid: ad6bab8cc0b0f26449cf21722847ff00, type: 2}
+  _entries:
+  - _key: candle
+    _glyphName: candle
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: key
+    _glyphName: key
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  - _key: lamp
+    _glyphName: lamp
+    _tintable: 0
+    _offset: {x: 0, y: 0}
+    _scale: 1
+  _buildSettings:
+    _sourceFolder: 
+    _includeSubfolders: 1
+    _padding: 4
+    _maxAtlasSize: 4096
+    _filterMode: 1
+    _verticalOffset: 0
+    _tintableByDefault: 0

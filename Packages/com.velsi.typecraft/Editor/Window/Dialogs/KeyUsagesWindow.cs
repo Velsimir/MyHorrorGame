@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -24,12 +25,14 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
 
             VisualElement root = rootVisualElement;
             root.Clear();
+            TypecraftLayout.Dialog(root);
             root.style.paddingLeft = root.style.paddingRight = 8;
             root.style.paddingTop = root.style.paddingBottom = 6;
 
             var header = new Label($"«{key}» ({table}) — мест: {usages.Count}. Клик — перейти.");
             header.style.unityFontStyleAndWeight = FontStyle.Bold;
             header.style.marginBottom = 4;
+            header.style.whiteSpace = WhiteSpace.Normal;
             root.Add(header);
 
             var list = new ListView(_usages, 34f, MakeItem, BindItem)
@@ -55,7 +58,9 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             title.style.unityFontStyleAndWeight = FontStyle.Bold;
             item.Add(title);
 
+            title.AddToClassList("tc-ellipsis");
             var location = new Label { name = "location" };
+            location.AddToClassList("tc-ellipsis");
             location.style.color = new Color(0.65f, 0.65f, 0.65f);
             item.Add(location);
             return item;

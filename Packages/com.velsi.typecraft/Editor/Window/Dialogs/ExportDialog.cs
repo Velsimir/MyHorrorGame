@@ -6,6 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -53,12 +54,12 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             _table = table;
 
             VisualElement root = rootVisualElement;
+            TypecraftLayout.Dialog(root);
             root.style.paddingLeft = root.style.paddingRight = 12;
             root.style.paddingTop = root.style.paddingBottom = 10;
 
             var header = new Label("Выгрузить строки таблиц");
-            header.style.unityFontStyleAndWeight = FontStyle.Bold;
-            header.style.fontSize = 14;
+            header.AddToClassList("tc-dialog__title");
             header.style.marginBottom = 6;
             root.Add(header);
 
@@ -86,10 +87,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             spacer.style.flexGrow = 1;
             root.Add(spacer);
 
-            var buttons = new VisualElement();
-            buttons.style.flexDirection = FlexDirection.Row;
-            buttons.style.justifyContent = Justify.FlexEnd;
-            buttons.style.marginTop = 10;
+            VisualElement buttons = TypecraftLayout.ButtonRow();
             root.Add(buttons);
             buttons.Add(new Button(Export) { text = "Экспорт…" });
             buttons.Add(new Button(Close) { text = "Отмена" });

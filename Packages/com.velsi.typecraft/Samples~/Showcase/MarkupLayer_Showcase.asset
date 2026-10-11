@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8b4545da39f464a992a9ba35efe66c, type: 3}
+  m_Name: MarkupLayer_Showcase
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Text.MarkupLayer
+  _tableId: Showcase
+  _entries:
+  - _key: ui.title
+    _locale: en
+    _markup: '[title]Lighthouse Keeper[/title]'
+    _source: Lighthouse Keeper
+  - _key: ui.title
+    _locale: ru
+    _markup: "[title]\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C
+      \u043C\u0430\u044F\u043A\u0430[/title]"
+    _source: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C \u043C\u0430\u044F\u043A\u0430"
+  - _key: ui.title
+    _locale: zh-Hans
+    _markup: "[title]\u706F\u5854\u770B\u5B88\u4EBA[/title]"
+    _source: "\u706F\u5854\u770B\u5B88\u4EBA"
+  - _key: ui.hint
+    _locale: en
+    _markup: '[hint]Press {key:Interact} to light the {candle}[/hint]'
+    _source: Press {key:Interact} to light the {candle}
+  - _key: ui.hint
+    _locale: ru
+    _markup: "[hint]\u041D\u0430\u0436\u043C\u0438 {key:Interact}, \u0447\u0442\u043E\u0431\u044B
+      \u0437\u0430\u0436\u0435\u0447\u044C {candle}[/hint]"
+    _source: "\u041D\u0430\u0436\u043C\u0438 {key:Interact}, \u0447\u0442\u043E\u0431\u044B
+      \u0437\u0430\u0436\u0435\u0447\u044C {candle}"
+  - _key: ui.hint
+    _locale: zh-Hans
+    _markup: "[hint]\u6309 {key:Interact} \u70B9\u71C3{candle}[/hint]"
+    _source: "\u6309 {key:Interact} \u70B9\u71C3{candle}"
+  - _key: ui.warning
+    _locale: en
+    _markup: The stairs are [warn]slippery[/warn], <wave>careful</wave>
+    _source: The stairs are slippery, careful
+  - _key: ui.warning
+    _locale: ru
+    _markup: "\u0421\u0442\u0443\u043F\u0435\u043D\u0438 [warn]\u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435[/warn],
+      <wave>\u043E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u0435\u0435</wave>"
+    _source: "\u0421\u0442\u0443\u043F\u0435\u043D\u0438 \u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435,
+      \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u0435\u0435"
+  - _key: ui.whisper
+    _locale: en
+    _markup: '[whisper]Did you hear that?[/whisper]'
+    _source: Did you hear that?
+  - _key: ui.whisper
+    _locale: ru
+    _markup: "[whisper]\u0422\u044B \u0441\u043B\u044B\u0448\u0430\u043B \u044D\u0442\u043E?[/whisper]"
+    _source: "\u0422\u044B \u0441\u043B\u044B\u0448\u0430\u043B \u044D\u0442\u043E?"
+  - _key: ui.stale
+    _locale: en
+    _markup: '[title]The old lighthouse[/title]'
+    _source: The old lighthouse
+  - _key: ui.stale
+    _locale: ru
+    _markup: "[title]\u0421\u0442\u0430\u0440\u044B\u0439 \u043C\u0430\u044F\u043A[/title]"
+    _source: "\u0421\u0442\u0430\u0440\u044B\u0439 \u043C\u0430\u044F\u043A"
+  - _key: keeper.greet
+    _locale: en
+    _markup: Who goes there? The stairs are [warn]slippery[/warn], <shake>mind your
+      step</shake>.
+    _source: Who goes there? The stairs are slippery, mind your step.
+  - _key: keeper.greet
+    _locale: ru
+    _markup: "\u041A\u0442\u043E \u0438\u0434\u0451\u0442? \u0421\u0442\u0443\u043F\u0435\u043D\u0438
+      [warn]\u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435[/warn], <shake>\u0441\u043C\u043E\u0442\u0440\u0438
+      \u043F\u043E\u0434 \u043D\u043E\u0433\u0438</shake>."
+    _source: "\u041A\u0442\u043E \u0438\u0434\u0451\u0442? \u0421\u0442\u0443\u043F\u0435\u043D\u0438
+      \u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435, \u0441\u043C\u043E\u0442\u0440\u0438
+      \u043F\u043E\u0434 \u043D\u043E\u0433\u0438."
+  - _key: keeper.greet_friend
+    _locale: en
+    _markup: 'Ah, Eli. [whisper]Back again?[/whisper]'
+    _source: Ah, Eli. Back again?
+  - _key: keeper.greet_friend
+    _locale: ru
+    _markup: "\u0410, \u042D\u043B\u0438. [whisper]\u041E\u043F\u044F\u0442\u044C
+      \u0442\u044B?[/whisper]"
+    _source: "\u0410, \u042D\u043B\u0438. \u041E\u043F\u044F\u0442\u044C \u0442\u044B?"

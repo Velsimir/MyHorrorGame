@@ -7,6 +7,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -53,12 +54,12 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
         {
             _table = table;
             VisualElement root = rootVisualElement;
+            TypecraftLayout.Dialog(root);
             root.style.paddingLeft = root.style.paddingRight = 12;
             root.style.paddingTop = root.style.paddingBottom = 10;
 
             var header = new Label($"Откуда синхронизировать таблицу «{table}»");
-            header.style.unityFontStyleAndWeight = FontStyle.Bold;
-            header.style.fontSize = 14;
+            header.AddToClassList("tc-dialog__title");
             root.Add(header);
 
             var note = new Label("Первая строка — заголовки: key, необязательная comment, дальше коды языков (en, ru, zh-Hans…). Настройка хранится в ProjectSettings/TypecraftTableSync.asset.");
@@ -72,9 +73,8 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             root.Add(_kind);
 
             _fileRow = new VisualElement();
-            _fileRow.style.flexDirection = FlexDirection.Row;
+            _fileRow.AddToClassList("tc-lib__row");
             _path = new TextField("Файл") { value = current?.Path ?? string.Empty, isDelayed = true };
-            _path.style.flexGrow = 1;
             _path.RegisterValueChangedCallback(_ => Refresh());
             _fileRow.Add(_path);
             _fileRow.Add(new Button(Browse) { text = "…", tooltip = "Выбрать файл" });
@@ -101,10 +101,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             spacer.style.flexGrow = 1;
             root.Add(spacer);
 
-            var buttons = new VisualElement();
-            buttons.style.flexDirection = FlexDirection.Row;
-            buttons.style.justifyContent = Justify.FlexEnd;
-            buttons.style.marginTop = 10;
+            VisualElement buttons = TypecraftLayout.ButtonRow();
             root.Add(buttons);
 
             if (current != null)

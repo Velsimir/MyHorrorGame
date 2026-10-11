@@ -12,6 +12,7 @@ using Velsi.Typecraft.Editor.Library;
 using Velsi.Typecraft.Editor.Localization;
 using Velsi.Typecraft.Editor.Window.Dialogs;
 using Velsi.Typecraft.Editor.Window.Effects;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Markup;
 using Velsi.Typecraft.Fonts;
 using Velsi.Typecraft.Library;
@@ -25,6 +26,7 @@ namespace Velsi.Typecraft.Editor.Window
         private readonly VisualElement _detail;
         private readonly Button _fromText;
         private readonly FormOverlay _overlay = new FormOverlay();
+        private readonly ColumnsLayout _columns;
 
         private IconSet _set;
         private string _styleId;
@@ -52,17 +54,15 @@ namespace Velsi.Typecraft.Editor.Window
             _fromText = new Button(CreateStyleFromText) { text = "Стиль из TMP_Text", tooltip = "Создать стиль по выделенному в сцене TMP_Text: шрифт, цвет, начертание, регистр, интервал" };
             toolbar.Add(_fromText);
 
-            var body = new VisualElement();
-            body.AddToClassList("tc-lib__body");
-            Add(body);
-
-            _list = new ScrollView();
-            _list.AddToClassList("tc-lib__list");
-            body.Add(_list);
+            _list = TypecraftLayout.VerticalScroll("tc-lib__list");
 
             _detail = new VisualElement();
             _detail.AddToClassList("tc-lib__detail");
-            body.Add(_detail);
+            _detail.AddToClassList(TypecraftLayout.FitClass);
+
+            _columns = new ColumnsLayout("Library", _list, _detail, null, 220f, 0f, 0f);
+            toolbar.Insert(0, _columns.MenuButton);
+            Add(_columns);
             Add(_overlay);
 
             Reload();
@@ -231,7 +231,11 @@ namespace Velsi.Typecraft.Editor.Window
             item.EnableInClassList("tc-lib__item--selected", selected);
             item.Add(new Label(title) { name = "title" });
             item.Add(new Label(note ?? string.Empty) { name = "note" });
-            item.RegisterCallback<PointerDownEvent>(_ => onClick());
+            item.RegisterCallback<PointerDownEvent>(_ =>
+            {
+                onClick();
+                _columns.HideList();
+            });
             _list.Add(item);
         }
 
@@ -399,7 +403,7 @@ namespace Velsi.Typecraft.Editor.Window
             }) { text = "Удалить" });
             panel.Add(header);
 
-            var scroll = new ScrollView();
+            ScrollView scroll = TypecraftLayout.VerticalScroll();
             scroll.style.flexGrow = 1;
             scroll.Add(new InspectorElement(asset));
             panel.Add(scroll);

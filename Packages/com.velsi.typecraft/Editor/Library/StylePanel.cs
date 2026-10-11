@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Preview;
 using Velsi.Typecraft.Fonts;
 using Velsi.Typecraft.Styles;
@@ -37,8 +38,7 @@ namespace Velsi.Typecraft.Editor.Library
             header.Add(new Button(Remove) { text = "Удалить" });
             Add(header);
 
-            var form = new ScrollView();
-            form.AddToClassList("tc-lib__form");
+            ScrollView form = TypecraftLayout.VerticalScroll("tc-lib__form");
             Add(form);
 
             var id = new TextField("Id") { isDelayed = true, value = Id, tooltip = "Имя тега: [id]текст[/id]. При переименовании теги в таблицах и сценах переписываются" };

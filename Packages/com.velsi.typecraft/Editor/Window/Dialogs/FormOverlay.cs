@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -73,14 +74,16 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
 
             var body = new VisualElement();
             body.AddToClassList("tc-form__body");
+            TypecraftLayout.Responsive(body, 640f, "tc-form__body--narrow");
             Add(body);
 
-            Fields = new ScrollView();
-            Fields.AddToClassList("tc-form__fields");
+            Fields = TypecraftLayout.VerticalScroll("tc-form__fields");
+            Fields.AddToClassList(TypecraftLayout.FitClass);
             body.Add(Fields);
 
             Side = new VisualElement();
             Side.AddToClassList("tc-form__side");
+            Side.AddToClassList(TypecraftLayout.FitClass);
             body.Add(Side);
 
             var footer = new VisualElement();

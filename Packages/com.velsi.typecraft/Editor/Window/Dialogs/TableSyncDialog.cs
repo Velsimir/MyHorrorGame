@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -42,24 +43,20 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             _options = new TableSyncOptions();
 
             VisualElement root = rootVisualElement;
+            TypecraftLayout.Dialog(root);
             root.style.paddingLeft = root.style.paddingRight = 12;
             root.style.paddingTop = root.style.paddingBottom = 10;
 
             var header = new Label($"Таблица «{plan.Table}»" + (string.IsNullOrEmpty(plan.Origin) ? string.Empty : $" ← {plan.Origin}"));
-            header.style.unityFontStyleAndWeight = FontStyle.Bold;
-            header.style.fontSize = 14;
-            header.style.whiteSpace = WhiteSpace.Normal;
+            header.AddToClassList("tc-dialog__title");
             root.Add(header);
 
-            var scroll = new ScrollView();
+            ScrollView scroll = TypecraftLayout.VerticalScroll();
             scroll.style.flexGrow = 1;
             root.Add(scroll);
             _content = scroll.contentContainer;
 
-            var buttons = new VisualElement();
-            buttons.style.flexDirection = FlexDirection.Row;
-            buttons.style.justifyContent = Justify.FlexEnd;
-            buttons.style.marginTop = 10;
+            VisualElement buttons = TypecraftLayout.ButtonRow();
             root.Add(buttons);
 
             _apply = new Button(() => Close(_options)) { text = "Применить" };
@@ -158,6 +155,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
         private VisualElement Toggle(string label, bool value, System.Action<bool> changed)
         {
             var toggle = new Toggle(label) { value = value };
+            toggle.AddToClassList("tc-toggle-line");
             toggle.style.marginTop = 4;
             toggle.RegisterValueChangedCallback(evt =>
             {

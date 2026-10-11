@@ -1,0 +1,19 @@
+{
+    "name": "Velsi.Typecraft.Samples.Showcase.Editor",
+    "rootNamespace": "Velsi.Typecraft.Samples.Showcase.Editor",
+    "references": [
+        "Velsi.Typecraft.Runtime",
+        "Velsi.Typecraft.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Art;
 using Velsi.Typecraft.Editor.Window.Drawer;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Preview;
 using Velsi.Typecraft.Library;
 
@@ -46,8 +47,7 @@ namespace Velsi.Typecraft.Editor.Library
             hint.AddToClassList("tc-lib__hint");
             Add(hint);
 
-            _grid = new ScrollView();
-            _grid.AddToClassList("tc-lib__icons");
+            _grid = TypecraftLayout.VerticalScroll("tc-lib__icons");
             _grid.contentContainer.AddToClassList("tc-lib__icons-content");
             Add(_grid);
 

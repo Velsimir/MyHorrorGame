@@ -1,0 +1,154 @@
+.tcw-root {
+    flex-grow: 1;
+}
+
+.tcw-scroll {
+    flex-grow: 1;
+}
+
+.tcw-scroll .unity-scroll-view__content-container {
+    padding: 12px 16px;
+}
+
+.tcw-header {
+    margin-bottom: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tcw-header__title {
+    flex-direction: row;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.tcw-header__title > #name {
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.tcw-header__title > #version {
+    margin-left: 8px;
+    margin-bottom: 3px;
+    opacity: 0.6;
+}
+
+.tcw-lang {
+    flex-direction: row;
+}
+
+.tcw-lang > Button {
+    margin: 0;
+    min-width: 34px;
+}
+
+.tcw-lang--on {
+    background-color: rgba(80, 140, 230, 0.45);
+}
+
+.tcw-about {
+    width: 100%;
+    margin-top: 6px;
+    white-space: normal;
+    opacity: 0.85;
+}
+
+.tcw-section {
+    margin-top: 14px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    -unity-font-style: bold;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(128, 128, 128, 0.35);
+    padding-bottom: 2px;
+}
+
+.tcw-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 4px;
+    border-radius: 3px;
+}
+
+.tcw-row:hover {
+    background-color: rgba(128, 128, 128, 0.08);
+}
+
+.tcw-row__mark {
+    width: 22px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    align-self: flex-start;
+    margin-top: 1px;
+}
+
+.tcw-row--done > .tcw-row__mark {
+    color: rgb(90, 190, 110);
+}
+
+.tcw-row--missing > .tcw-row__mark {
+    color: rgb(230, 150, 60);
+}
+
+.tcw-row--step > .tcw-row__mark {
+    opacity: 0.6;
+}
+
+.tcw-row__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    min-width: 160px;
+}
+
+.tcw-row__title {
+    -unity-font-style: bold;
+}
+
+.tcw-row__info {
+    white-space: normal;
+    opacity: 0.75;
+}
+
+.tcw-row > Button {
+    margin-left: 22px;
+    flex-shrink: 0;
+    min-width: 110px;
+}
+
+.tcw-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tcw-buttons > Button {
+    margin: 2px 4px 2px 0;
+}
+
+.tcw-note {
+    white-space: normal;
+    padding: 6px 8px;
+    margin-top: 6px;
+    border-radius: 3px;
+    background-color: rgba(80, 140, 230, 0.18);
+}
+
+.tcw-note--error {
+    background-color: rgba(220, 70, 60, 0.22);
+}
+
+.tcw-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    border-top-width: 1px;
+    border-top-color: rgba(128, 128, 128, 0.35);
+}
+
+.tcw-footer > #hint {
+    opacity: 0.6;
+}

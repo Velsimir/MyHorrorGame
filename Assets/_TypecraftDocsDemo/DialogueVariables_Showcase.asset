@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6bbd9721894ab458e97374fb59ae81, type: 3}
+  m_Name: DialogueVariables_Showcase
+  m_EditorClassIdentifier: Velsi.Typecraft.Dialogue::Velsi.Typecraft.Dialogue.DialogueVariableCatalog
+  _variables:
+  - _name: has_matches
+    _type: 0
+    _default:
+      _type: 0
+      _bool: 0
+      _int: 0
+      _float: 0
+      _string: 
+    _description: Eli took the matches
+  - _name: lamp_lit
+    _type: 0
+    _default:
+      _type: 0
+      _bool: 0
+      _int: 0
+      _float: 0
+      _string: 
+    _description: The lamp is burning
+  - _name: trust
+    _type: 1
+    _default:
+      _type: 1
+      _bool: 0
+      _int: 0
+      _float: 0
+      _string: 
+    _description: How much the keeper trusts Eli

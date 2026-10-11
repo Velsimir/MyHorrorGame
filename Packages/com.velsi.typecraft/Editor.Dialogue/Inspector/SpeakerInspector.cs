@@ -94,7 +94,7 @@ namespace Velsi.Typecraft.Dialogue.Editor.Inspector
                 emotion.RegisterValueChangedCallback(evt => Edit("эмоция портрета", () => entry.Emotion = evt.newValue));
                 row.Add(emotion);
                 var sprite = new ObjectField { objectType = typeof(Sprite), allowSceneObjects = false, value = entry.Sprite };
-                sprite.style.flexGrow = 1;
+                sprite.AddToClassList("dlg-portrait__sprite");
                 sprite.RegisterValueChangedCallback(evt => Edit("спрайт портрета", () => entry.Sprite = evt.newValue as Sprite));
                 row.Add(sprite);
                 row.Add(ConditionEditor.SmallButton("✕", "Удалить портрет", () => Edit("удаление портрета", () => speaker.Portraits.Remove(entry), true)));

@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Fonts;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Fonts;
 using Velsi.Typecraft.Text;
 
@@ -45,17 +46,10 @@ namespace Velsi.Typecraft.Editor.Window
             toolbar.Add(new Button(() => EditorGUIUtility.PingObject(_profile)) { text = "▸", tooltip = "Показать профиль шрифтов" });
             toolbar.Add(new Button(Reload) { text = "⟳", tooltip = "Перепроверить покрытие символов" });
 
-            _grid = new ScrollView();
-            _grid.AddToClassList("tc-fonts__grid");
-            Add(_grid);
+            _grid = TypecraftLayout.VerticalScroll("tc-fonts__grid");
 
-            var bottom = new VisualElement();
-            bottom.AddToClassList("tc-fonts__bottom");
-            Add(bottom);
-
-            var build = new VisualElement();
-            build.AddToClassList("tc-fonts__build");
-            bottom.Add(build);
+            ScrollView build = TypecraftLayout.VerticalScroll("tc-fonts__build");
+            build.AddToClassList(TypecraftLayout.FitClass);
 
             var buildTitle = new Label("Статический шрифт по набору символов");
             buildTitle.AddToClassList("tc-lib__title");
@@ -73,9 +67,12 @@ namespace Velsi.Typecraft.Editor.Window
             _buildResult.AddToClassList("tc-fonts__result");
             build.Add(_buildResult);
 
-            _roleDetail = new ScrollView();
-            _roleDetail.AddToClassList("tc-fonts__role");
-            bottom.Add(_roleDetail);
+            _roleDetail = TypecraftLayout.VerticalScroll("tc-fonts__role");
+            _roleDetail.AddToClassList(TypecraftLayout.FitClass);
+
+            var bottom = new SplitPane("Fonts.Build", build, _roleDetail, true, 420f, 200f, 160f, 160f) { NarrowWidth = 600f };
+            bottom.AddToClassList("tc-fonts__bottom");
+            Add(new SplitPane("Fonts.Bottom", _grid, bottom, false, 230f, 230f, 100f, 100f) { Vertical = true });
 
             Reload();
         }

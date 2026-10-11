@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
 using Velsi.Typecraft.Editor.Setup;
 using Velsi.Typecraft.Editor.Window.Dialogs;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Markup;
 using Velsi.Typecraft.Editor.Window.Preview;
 using Velsi.Typecraft.Fonts;
@@ -30,7 +31,7 @@ namespace Velsi.Typecraft.Editor.Window
             ("Разметка расходится", CellIssue.MarkupMismatch)
         };
 
-        private readonly VisualElement _body;
+        private readonly SplitPane _body;
         private readonly Label _backendLabel;
         private readonly DropdownField _tableField;
         private readonly DropdownField _filterField;
@@ -126,21 +127,18 @@ namespace Velsi.Typecraft.Editor.Window
             _syncStatus.style.display = DisplayStyle.None;
             Add(_syncStatus);
 
-            _body = new VisualElement();
-            _body.AddToClassList("tc-loc__body");
-            Add(_body);
-
             _gridHost = new VisualElement();
             _gridHost.AddToClassList("tc-loc__grid-host");
-            _body.Add(_gridHost);
 
             _cellPanel = new VisualElement();
             _cellPanel.AddToClassList("tc-loc__cell-panel");
-            _body.Add(_cellPanel);
 
-            var editorColumn = new ScrollView();
-            editorColumn.AddToClassList("tc-loc__cell-editor");
-            _cellPanel.Add(editorColumn);
+            _body = new SplitPane("Localization.Cell", _gridHost, _cellPanel, false, 230f, 230f, 100f, 100f) { Vertical = true };
+            _body.AddToClassList("tc-loc__body");
+            Add(_body);
+
+            ScrollView editorColumn = TypecraftLayout.VerticalScroll("tc-loc__cell-editor");
+            editorColumn.AddToClassList(TypecraftLayout.FitClass);
 
             var header = new VisualElement();
             header.AddToClassList("tc-loc__cell-header");
@@ -198,7 +196,7 @@ namespace Velsi.Typecraft.Editor.Window
             var previewHost = new VisualElement();
             previewHost.AddToClassList("tc-loc__preview");
             previewHost.Add(_preview.Element);
-            _cellPanel.Add(previewHost);
+            _cellPanel.Add(new SplitPane("Localization.Preview", editorColumn, previewHost, false, 360f, 110f, 160f, 200f) { NarrowWidth = 600f });
 
             Undo.undoRedoPerformed += OnUndoRedo;
             Reload();
@@ -508,7 +506,7 @@ namespace Velsi.Typecraft.Editor.Window
             _grid?.RefreshItems();
         }
 
-        private void ShowCell(bool show) => _cellPanel.style.display = show ? DisplayStyle.Flex : DisplayStyle.None;
+        private void ShowCell(bool show) => _body.SetFixedVisible(show);
 
         private void OnCellChanged(string value)
         {

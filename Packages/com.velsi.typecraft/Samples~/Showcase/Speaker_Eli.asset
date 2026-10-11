@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceded574d63cca345bce8aba8d785d0b, type: 3}
+  m_Name: Speaker_Eli
+  m_EditorClassIdentifier: Velsi.Typecraft.Dialogue::Velsi.Typecraft.Dialogue.SpeakerProfile
+  _id: eli
+  _nameTable: Showcase
+  _nameKey: speaker.eli
+  _styleId: 
+  _portraits:
+  - _emotion: neutral
+    _sprite: {fileID: 21300000, guid: 6216c494e36ba2546af31bc0ed3ec937, type: 3}
+  - _emotion: worried
+    _sprite: {fileID: 21300000, guid: b1de5e96c09c5544d8ab84de3b56502e, type: 3}
+  _defaultPortrait: {fileID: 21300000, guid: 6216c494e36ba2546af31bc0ed3ec937, type: 3}
+  _voiceBlip: {fileID: 0}
+  _side: 1

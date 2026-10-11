@@ -1,0 +1,18 @@
+{
+    "name": "Velsi.Typecraft.Editor.Welcome",
+    "rootNamespace": "Velsi.Typecraft.Editor.Welcome",
+    "references": [
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211ad55201324af4d9baa5251d6c7b2d, type: 3}
+  m_Name: Dialogue_Showcase
+  m_EditorClassIdentifier: Velsi.Typecraft.Dialogue::Velsi.Typecraft.Dialogue.DialogueAsset
+  _id: 6126e646a379403698594590f9da081f
+  _defaultTable: Showcase
+  _startNode: b1177ccb3b464430b5ff97e6830e2521
+  _nodes:
+  - rid: 2111072431855370317
+  - rid: 2111072431855370318
+  - rid: 2111072431855370319
+  - rid: 2111072431855370320
+  - rid: 2111072431855370321
+  - rid: 2111072431855370322
+  - rid: 2111072431855370323
+  - rid: 2111072431855370324
+  - rid: 2111072431855370325
+  - rid: 2111072431855370326
+  - rid: 2111072431855370327
+  - rid: 2111072431855370328
+  - rid: 2111072431855370329
+  references:
+    version: 2
+    RefIds:
+    - rid: 2111072431855370317
+      type: {class: StartNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: b1177ccb3b464430b5ff97e6830e2521
+        _position: {x: 0, y: 150}
+        _next: 1886f1ef85004991b5906e10887972ec
+    - rid: 2111072431855370318
+      type: {class: BranchNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 1886f1ef85004991b5906e10887972ec
+        _position: {x: 220, y: 130}
+        _cases:
+        - _condition:
+            _mode: 0
+            _clauses:
+            - _variable: lamp_lit
+              _comparison: 0
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _next: 0e0a1d0a587f4aa09a0a2a0be7e72ce8
+        _else: 8059b6c6f50b43b683a509b694666b9a
+    - rid: 2111072431855370319
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 8059b6c6f50b43b683a509b694666b9a
+        _position: {x: 440, y: 250}
+        _speaker: {fileID: 11400000, guid: 3feaa5c35c868ca4aab28a7362da1c11, type: 2}
+        _emotion: angry
+        _table: 
+        _key: keeper.greet
+        _variants:
+        - _condition:
+            _mode: 0
+            _clauses:
+            - _variable: trust
+              _comparison: 5
+              _value:
+                _type: 1
+                _bool: 0
+                _int: 1
+                _float: 0
+                _string: 
+          _key: keeper.greet_friend
+          _emotion: smile
+        _advance: 0
+        _seconds: 0
+        _next: 4a4160d330b4463e98401a72ac1e3454
+    - rid: 2111072431855370320
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 0e0a1d0a587f4aa09a0a2a0be7e72ce8
+        _position: {x: 1420, y: -150}
+        _speaker: {fileID: 11400000, guid: 3feaa5c35c868ca4aab28a7362da1c11, type: 2}
+        _emotion: smile
+        _table: 
+        _key: keeper.thanks
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: a461272fb991494f959ebddea888f102
+    - rid: 2111072431855370321
+      type: {class: ChoiceNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 4a4160d330b4463e98401a72ac1e3454
+        _position: {x: 700, y: 230}
+        _options:
+        - _table: 
+          _key: choice.who
+          _condition:
+            _mode: 0
+            _clauses: []
+          _whenUnavailable: 0
+          _next: 76afa75005b34bedb0254aa8af53961f
+        - _table: 
+          _key: choice.matches
+          _condition:
+            _mode: 0
+            _clauses:
+            - _variable: has_matches
+              _comparison: 1
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _whenUnavailable: 0
+          _next: 55fe98c01ebd4d868ccde7ee30333147
+        - _table: 
+          _key: choice.light
+          _condition:
+            _mode: 0
+            _clauses:
+            - _variable: has_matches
+              _comparison: 0
+              _value:
+                _type: 0
+                _bool: 0
+                _int: 0
+                _float: 0
+                _string: 
+          _whenUnavailable: 1
+          _next: 405ca2c136534a8e94a5748507b958d1
+        - _table: 
+          _key: choice.leave
+          _condition:
+            _mode: 0
+            _clauses: []
+          _whenUnavailable: 0
+          _next: a461272fb991494f959ebddea888f102
+    - rid: 2111072431855370322
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 76afa75005b34bedb0254aa8af53961f
+        _position: {x: 940, y: 250}
+        _speaker: {fileID: 11400000, guid: 3feaa5c35c868ca4aab28a7362da1c11, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: keeper.who
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: eb394a1bdf024441bb49d4bd7f0094d9
+    - rid: 2111072431855370323
+      type: {class: SetVariablesNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: eb394a1bdf024441bb49d4bd7f0094d9
+        _position: {x: 1180, y: 250}
+        _assignments:
+        - _name: trust
+          _operation: 1
+          _value:
+            _type: 1
+            _bool: 0
+            _int: 1
+            _float: 0
+            _string: 
+        _next: 4a4160d330b4463e98401a72ac1e3454
+    - rid: 2111072431855370324
+      type: {class: SetVariablesNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 55fe98c01ebd4d868ccde7ee30333147
+        _position: {x: 940, y: 460}
+        _assignments:
+        - _name: has_matches
+          _operation: 0
+          _value:
+            _type: 0
+            _bool: 1
+            _int: 0
+            _float: 0
+            _string: 
+        _next: b558b11cfeb84803901e29f5f148dc2d
+    - rid: 2111072431855370325
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: b558b11cfeb84803901e29f5f148dc2d
+        _position: {x: 1180, y: 460}
+        _speaker: {fileID: 11400000, guid: 00e6fe7dc4c573747995e204e87eabd3, type: 2}
+        _emotion: worried
+        _table: 
+        _key: eli.got_matches
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 4a4160d330b4463e98401a72ac1e3454
+    - rid: 2111072431855370326
+      type: {class: LineNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 405ca2c136534a8e94a5748507b958d1
+        _position: {x: 940, y: 40}
+        _speaker: {fileID: 11400000, guid: 00e6fe7dc4c573747995e204e87eabd3, type: 2}
+        _emotion: neutral
+        _table: 
+        _key: eli.lighting
+        _variants: []
+        _advance: 0
+        _seconds: 0
+        _next: 2fb06653ef8f47eda2cd78a159833355
+    - rid: 2111072431855370327
+      type: {class: SetVariablesNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 2fb06653ef8f47eda2cd78a159833355
+        _position: {x: 1180, y: 40}
+        _assignments:
+        - _name: lamp_lit
+          _operation: 0
+          _value:
+            _type: 0
+            _bool: 1
+            _int: 0
+            _float: 0
+            _string: 
+        _next: 4e4b311aa56647a58bca0402c64d8e2d
+    - rid: 2111072431855370328
+      type: {class: EventNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: 4e4b311aa56647a58bca0402c64d8e2d
+        _position: {x: 1420, y: 40}
+        _eventName: lamp
+        _argument: on
+        _next: 0e0a1d0a587f4aa09a0a2a0be7e72ce8
+    - rid: 2111072431855370329
+      type: {class: EndNode, ns: Velsi.Typecraft.Dialogue, asm: Velsi.Typecraft.Dialogue}
+      data:
+        _id: a461272fb991494f959ebddea888f102
+        _position: {x: 1660, y: 100}

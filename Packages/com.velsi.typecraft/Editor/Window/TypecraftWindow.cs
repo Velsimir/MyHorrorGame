@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Targets;
 
 namespace Velsi.Typecraft.Editor.Window
@@ -33,7 +34,7 @@ namespace Velsi.Typecraft.Editor.Window
         {
             var window = GetWindow<TypecraftWindow>();
             window.titleContent = new GUIContent("Typecraft");
-            window.minSize = new Vector2(720f, 480f);
+            window.minSize = new Vector2(420f, 360f);
             return window;
         }
 
@@ -73,6 +74,7 @@ namespace Velsi.Typecraft.Editor.Window
                 rootVisualElement.styleSheets.Add(styleSheet);
 
             rootVisualElement.AddToClassList("tc-root");
+            TypecraftLayout.TruncatedTooltips(rootVisualElement);
 
             _tabBar = new VisualElement();
             _tabBar.AddToClassList("tc-tabs");

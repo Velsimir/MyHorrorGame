@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Dialogue.Editor.Model;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Dialogue.Editor.Board
 {
@@ -12,7 +13,7 @@ namespace Velsi.Typecraft.Dialogue.Editor.Board
     {
         private const float Indent = 18f;
 
-        private readonly ScrollView _scroll = new ScrollView();
+        private readonly ScrollView _scroll = TypecraftLayout.VerticalScroll();
         private readonly Dictionary<string, VisualElement> _rows = new Dictionary<string, VisualElement>(StringComparer.Ordinal);
         private readonly Dictionary<string, DialogueIssueSeverity> _issues = new Dictionary<string, DialogueIssueSeverity>(StringComparer.Ordinal);
 

@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928545dc5ece41e4b9fcad6829c3378f, type: 3}
+  m_Name: StringTable_Showcase
+  m_EditorClassIdentifier: Velsi.Typecraft.Runtime::Velsi.Typecraft.Text.Tables.StringTable
+  _tableId: Showcase
+  _entries:
+  - _key: ui.title
+    _comment: "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A \u0441\u0446\u0435\u043D\u044B"
+    _values:
+    - _locale: en
+      _text: Lighthouse Keeper
+    - _locale: ru
+      _text: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C \u043C\u0430\u044F\u043A\u0430"
+    - _locale: zh-Hans
+      _text: "\u706F\u5854\u770B\u5B88\u4EBA"
+  - _key: ui.hint
+    _comment: "\u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0430 \u0432\u0432\u043E\u0434\u0430
+      \u0438 \u0438\u043A\u043E\u043D\u043A\u0430"
+    _values:
+    - _locale: en
+      _text: Press {key:Interact} to light the {candle}
+    - _locale: ru
+      _text: "\u041D\u0430\u0436\u043C\u0438 {key:Interact}, \u0447\u0442\u043E\u0431\u044B
+        \u0437\u0430\u0436\u0435\u0447\u044C {candle}"
+    - _locale: zh-Hans
+      _text: "\u6309 {key:Interact} \u70B9\u71C3{candle}"
+  - _key: ui.warning
+    _comment: "\u0421\u0442\u0438\u043B\u044C \u0438 \u044D\u0444\u0444\u0435\u043A\u0442"
+    _values:
+    - _locale: en
+      _text: The stairs are slippery, careful
+    - _locale: ru
+      _text: "\u0421\u0442\u0443\u043F\u0435\u043D\u0438 \u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435,
+        \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u0435\u0435"
+  - _key: ui.whisper
+    _comment: 
+    _values:
+    - _locale: en
+      _text: Did you hear that?
+    - _locale: ru
+      _text: "\u0422\u044B \u0441\u043B\u044B\u0448\u0430\u043B \u044D\u0442\u043E?"
+  - _key: ui.items
+    _comment: "\u0418\u043A\u043E\u043D\u043A\u0438 \u0438\u0437 \u043D\u0430\u0431\u043E\u0440\u0430
+      Showcase_Icons"
+    _values:
+    - _locale: en
+      _text: Take the {key} and the {lamp}
+    - _locale: ru
+      _text: "\u0412\u043E\u0437\u044C\u043C\u0438 {key} \u0438 {lamp}"
+  - _key: ui.untranslated
+    _comment: "\u041D\u0435\u0442 \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0430
+      \u043D\u0430 ru"
+    _values:
+    - _locale: en
+      _text: This string has no translation yet
+  - _key: ui.stale
+    _comment: "\u0421\u0442\u0440\u043E\u043A\u0443 \u043F\u043E\u043C\u0435\u043D\u044F\u043B\u0438
+      \u043F\u043E\u0441\u043B\u0435 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u044F"
+    _values:
+    - _locale: en
+      _text: The ancient lighthouse
+    - _locale: ru
+      _text: "\u0421\u0442\u0430\u0440\u044B\u0439 \u043C\u0430\u044F\u043A"
+  - _key: speaker.eli
+    _comment: "\u0418\u043C\u044F \u0433\u043E\u0432\u043E\u0440\u044F\u0449\u0435\u0433\u043E"
+    _values:
+    - _locale: en
+      _text: Eli
+    - _locale: ru
+      _text: "\u042D\u043B\u0438"
+  - _key: speaker.keeper
+    _comment: "\u0418\u043C\u044F \u0433\u043E\u0432\u043E\u0440\u044F\u0449\u0435\u0433\u043E"
+    _values:
+    - _locale: en
+      _text: Keeper
+    - _locale: ru
+      _text: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C"
+  - _key: keeper.greet
+    _comment: 
+    _values:
+    - _locale: en
+      _text: Who goes there? The stairs are slippery, mind your step.
+    - _locale: ru
+      _text: "\u041A\u0442\u043E \u0438\u0434\u0451\u0442? \u0421\u0442\u0443\u043F\u0435\u043D\u0438
+        \u0441\u043A\u043E\u043B\u044C\u0437\u043A\u0438\u0435, \u0441\u043C\u043E\u0442\u0440\u0438
+        \u043F\u043E\u0434 \u043D\u043E\u0433\u0438."
+  - _key: keeper.greet_friend
+    _comment: "\u0412\u0430\u0440\u0438\u0430\u043D\u0442 \u0440\u0435\u043F\u043B\u0438\u043A\u0438
+      \u043F\u0440\u0438 trust >= 1"
+    _values:
+    - _locale: en
+      _text: Ah, Eli. Back again?
+    - _locale: ru
+      _text: "\u0410, \u042D\u043B\u0438. \u041E\u043F\u044F\u0442\u044C \u0442\u044B?"
+  - _key: keeper.who
+    _comment: 
+    _values:
+    - _locale: en
+      _text: The keeper. The sea took my name long ago.
+    - _locale: ru
+      _text: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C. \u041C\u043E\u0451
+        \u0438\u043C\u044F \u0434\u0430\u0432\u043D\u043E \u0437\u0430\u0431\u0440\u0430\u043B\u043E
+        \u043C\u043E\u0440\u0435."
+  - _key: eli.got_matches
+    _comment: 
+    _values:
+    - _locale: en
+      _text: Got the matches. The {lamp} on top needs a flame.
+    - _locale: ru
+      _text: "\u0421\u043F\u0438\u0447\u043A\u0438 \u0443 \u043C\u0435\u043D\u044F.
+        {lamp} \u043D\u0430\u0432\u0435\u0440\u0445\u0443 \u0436\u0434\u0451\u0442
+        \u043E\u0433\u043D\u044F."
+  - _key: eli.lighting
+    _comment: 
+    _values:
+    - _locale: en
+      _text: Here goes nothing.
+    - _locale: ru
+      _text: "\u0411\u044B\u043B\u0430 \u043D\u0435 \u0431\u044B\u043B\u0430."
+  - _key: keeper.thanks
+    _comment: 
+    _values:
+    - _locale: en
+      _text: The lamp is burning. Thank you, Eli.
+    - _locale: ru
+      _text: "\u041B\u0430\u043C\u043F\u0430 \u0433\u043E\u0440\u0438\u0442. \u0421\u043F\u0430\u0441\u0438\u0431\u043E,
+        \u042D\u043B\u0438."
+  - _key: choice.who
+    _comment: "\u0412\u044B\u0431\u043E\u0440"
+    _values:
+    - _locale: en
+      _text: Who are you?
+    - _locale: ru
+      _text: "\u041A\u0442\u043E \u0432\u044B?"
+  - _key: choice.matches
+    _comment: "\u0412\u044B\u0431\u043E\u0440, \u0441\u043A\u0440\u044B\u0442 \u043F\u043E\u0441\u043B\u0435
+      has_matches"
+    _values:
+    - _locale: en
+      _text: Take the matches
+    - _locale: ru
+      _text: "\u0412\u0437\u044F\u0442\u044C \u0441\u043F\u0438\u0447\u043A\u0438"
+  - _key: choice.light
+    _comment: "\u0412\u044B\u0431\u043E\u0440, \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D
+      \u0431\u0435\u0437 has_matches"
+    _values:
+    - _locale: en
+      _text: Light the lamp
+    - _locale: ru
+      _text: "\u0417\u0430\u0436\u0435\u0447\u044C \u043B\u0430\u043C\u043F\u0443"
+  - _key: choice.leave
+    _comment: "\u0412\u044B\u0431\u043E\u0440"
+    _values:
+    - _locale: en
+      _text: Leave
+    - _locale: ru
+      _text: "\u0423\u0439\u0442\u0438"

@@ -11,6 +11,7 @@ using Velsi.Typecraft.Dialogue.Editor.Model;
 using Velsi.Typecraft.Dialogue.Editor.Playback;
 using Velsi.Typecraft.Editor.Localization;
 using Velsi.Typecraft.Editor.Window;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Object = UnityEngine.Object;
 
 namespace Velsi.Typecraft.Dialogue.Editor
@@ -37,6 +38,8 @@ namespace Velsi.Typecraft.Dialogue.Editor
         private readonly Button _collapse;
         private readonly DialoguePlaybackPanel _playback;
         private readonly DialogueIssuesPanel _problems;
+        private readonly ColumnsLayout _columns;
+        private readonly SplitPane _split;
 
         private IDialogueBoardView _board;
         private DialogueAsset _asset;
@@ -109,21 +112,16 @@ namespace Velsi.Typecraft.Dialogue.Editor
             });
             toolbar.Add(_localeField);
 
-            var body = new VisualElement();
-            body.AddToClassList("tc-lib__body");
-            Add(body);
-
-            _list = new ScrollView();
-            _list.AddToClassList("tc-lib__list");
-            body.Add(_list);
+            _list = TypecraftLayout.VerticalScroll("tc-lib__list");
 
             _boardHost = new VisualElement();
             _boardHost.AddToClassList("dlg-board");
-            body.Add(_boardHost);
 
-            _inspectorHost = new ScrollView();
-            _inspectorHost.AddToClassList("dlg-side");
-            body.Add(_inspectorHost);
+            _inspectorHost = TypecraftLayout.VerticalScroll("dlg-side");
+            _inspectorHost.AddToClassList(TypecraftLayout.FitClass);
+
+            _columns = new ColumnsLayout("Dialogues", _list, _boardHost, _inspectorHost, 220f, 380f, 260f);
+            toolbar.Insert(0, _columns.MenuButton);
 
             var dock = new VisualElement();
             dock.AddToClassList("dlg-dock");
@@ -144,7 +142,8 @@ namespace Velsi.Typecraft.Dialogue.Editor
             _dockContent = new VisualElement();
             _dockContent.AddToClassList("dlg-dock__content");
             dock.Add(_dockContent);
-            Add(dock);
+            _split = new SplitPane("Dialogues.Dock", _columns, dock, false, 300f, 300f, 120f, 160f) { Vertical = true };
+            Add(_split);
 
             _playback = new DialoguePlaybackPanel(this);
             _problems = new DialogueIssuesPanel(Reveal);
@@ -475,6 +474,7 @@ namespace Velsi.Typecraft.Dialogue.Editor
             SessionState.SetString(DockSession, (open ? "open" : "closed") + "/" + (_page == DockPage.Problems ? "problems" : "playback"));
             _collapse.text = open ? "▾" : "▴";
             _dockContent.style.display = open ? DisplayStyle.Flex : DisplayStyle.None;
+            _split?.SetFixedAuto(!open);
             _playPage.EnableInClassList("dlg-dock__page--active", open && _page == DockPage.Playback);
             _problemsPage.EnableInClassList("dlg-dock__page--active", open && _page == DockPage.Problems);
 
@@ -728,8 +728,10 @@ namespace Velsi.Typecraft.Dialogue.Editor
             item.Add(new Label(DialogueTexts.Shorten(note, 24)) { name = "note" });
             item.RegisterCallback<PointerDownEvent>(evt =>
             {
-                if (evt.button == 0)
-                    click();
+                if (evt.button != 0)
+                    return;
+                click();
+                _columns.HideList();
             });
             if (menu != null)
             {

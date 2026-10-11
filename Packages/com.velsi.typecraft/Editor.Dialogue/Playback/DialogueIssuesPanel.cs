@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Dialogue.Editor.Model;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Dialogue.Editor.Playback
 {
@@ -37,8 +38,7 @@ namespace Velsi.Typecraft.Dialogue.Editor.Playback
             header.Add(new Button(CheckAll) { text = "Проверить все", tooltip = "Проверить все диалоги проекта" });
             Add(header);
 
-            _list = new ScrollView();
-            _list.AddToClassList("dlg-problems__list");
+            _list = TypecraftLayout.VerticalScroll("dlg-problems__list");
             Add(_list);
         }
 

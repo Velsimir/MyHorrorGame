@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Dialogue.Editor.Inspector;
 using Velsi.Typecraft.Dialogue.Editor.Model;
+using Velsi.Typecraft.Editor.Window.Layout;
 using Velsi.Typecraft.Editor.Window.Preview;
 using Velsi.Typecraft.Fonts;
 using Velsi.Typecraft.Markup;
@@ -114,6 +115,7 @@ namespace Velsi.Typecraft.Dialogue.Editor.Playback
 
             var flags = new VisualElement();
             flags.AddToClassList("dlg-play__flags");
+            flags.AddToClassList(TypecraftLayout.FitClass);
             var flagsHeader = Row("dlg-play__header");
             _flagsTitle = new Label("Флаги проигрывания");
             _flagsTitle.AddToClassList("tc-lib__section");
@@ -123,10 +125,8 @@ namespace Velsi.Typecraft.Dialogue.Editor.Playback
             _resetFlags.AddToClassList("dlg-small");
             flagsHeader.Add(_resetFlags);
             flags.Add(flagsHeader);
-            _flagsList = new ScrollView();
-            _flagsList.AddToClassList("dlg-play__flag-list");
+            _flagsList = TypecraftLayout.VerticalScroll("dlg-play__flag-list");
             flags.Add(_flagsList);
-            Add(flags);
 
             var center = new VisualElement();
             center.AddToClassList("dlg-play__center");
@@ -189,7 +189,6 @@ namespace Velsi.Typecraft.Dialogue.Editor.Playback
             _portraitRight.AddToClassList("dlg-play__portrait");
             _box.Add(_portraitRight);
             center.Add(_box);
-            Add(center);
 
             var log = new VisualElement();
             log.AddToClassList("dlg-play__log");
@@ -202,10 +201,12 @@ namespace Velsi.Typecraft.Dialogue.Editor.Playback
             clear.AddToClassList("dlg-small");
             logHeader.Add(clear);
             log.Add(logHeader);
-            _logView = new ScrollView();
-            _logView.AddToClassList("dlg-play__log-list");
+            _logView = TypecraftLayout.VerticalScroll("dlg-play__log-list");
             log.Add(_logView);
-            Add(log);
+
+            var columns = new ColumnsLayout("Dialogues.Playback", flags, center, log, 240f, 320f, 120f, 760f);
+            controls.Insert(0, columns.MenuButton);
+            Add(columns);
 
             ShowIdle("Нажми «▶ С начала» или выдели ноду и «▶ С выделенной». Игра не нужна, флаги — свои, игровые не трогаются.");
         }

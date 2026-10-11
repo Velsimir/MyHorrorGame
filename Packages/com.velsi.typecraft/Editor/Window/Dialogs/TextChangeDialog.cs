@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Velsi.Typecraft.Editor.Localization;
+using Velsi.Typecraft.Editor.Window.Layout;
 
 namespace Velsi.Typecraft.Editor.Window.Dialogs
 {
@@ -34,12 +35,12 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
         private void Build(string subject, string before, string after, string restoreRefusal)
         {
             VisualElement root = rootVisualElement;
+            TypecraftLayout.Dialog(root);
             root.style.paddingLeft = root.style.paddingRight = 12;
             root.style.paddingTop = root.style.paddingBottom = 10;
 
             var header = new Label($"Изменились слова строки {subject}");
-            header.style.unityFontStyleAndWeight = FontStyle.Bold;
-            header.style.fontSize = 14;
+            header.AddToClassList("tc-dialog__title");
             root.Add(header);
 
             var note = new Label("Слова — текст для переводчика, он хранится в таблице. Оформление (стили и теги) хранится в слое разметки и на таблицу не влияет.");
@@ -48,7 +49,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
             note.style.marginBottom = 8;
             root.Add(note);
 
-            var scroll = new ScrollView();
+            ScrollView scroll = TypecraftLayout.VerticalScroll();
             scroll.style.flexGrow = 1;
             root.Add(scroll);
 
@@ -65,10 +66,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
                 root.Add(refusal);
             }
 
-            var buttons = new VisualElement();
-            buttons.style.flexDirection = FlexDirection.Row;
-            buttons.style.justifyContent = Justify.FlexEnd;
-            buttons.style.marginTop = 10;
+            VisualElement buttons = TypecraftLayout.ButtonRow();
             root.Add(buttons);
 
             var write = new Button(() => Close(TextChangeChoice.WriteTable)) { text = "Записать в таблицу", tooltip = "Таблица получит новый текст без оформления, слой — оформление" };
@@ -94,6 +92,7 @@ namespace Velsi.Typecraft.Editor.Window.Dialogs
 
             var caption = new Label(title);
             caption.style.unityFontStyleAndWeight = FontStyle.Bold;
+            caption.style.whiteSpace = WhiteSpace.Normal;
             caption.style.marginBottom = 2;
             block.Add(caption);
 
